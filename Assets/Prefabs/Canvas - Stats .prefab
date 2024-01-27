@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _contentFitter: {fileID: 7910897559790704981}
-  _boostPrefab: {fileID: 4543986411201401831, guid: 6571df0a3279e104b845921f1ec27f71,
+  _boostDescriptionTemplate: {fileID: 4516608491251705782, guid: 6571df0a3279e104b845921f1ec27f71,
     type: 3}
 --- !u!1 &6764723325065147863
 GameObject:

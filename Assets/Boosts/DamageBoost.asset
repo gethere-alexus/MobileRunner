@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90e8c1e36f2e83d40b793467d4449d37, type: 3}
-  m_Name: CriticalDamageBoost
+  m_Name: DamageBoost
   m_EditorClassIdentifier: 
-  _boost: 2
-  _boostSprite: {fileID: 21300000, guid: 3c6f5b7a54bd84489ba7d655c5b7b812, type: 3}
+  _boost: 0
+  _boostSprite: {fileID: 21300000, guid: 413710b631bd5493ebbf1a29b2d82eb3, type: 3}
