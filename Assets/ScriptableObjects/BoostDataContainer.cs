@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum BoostType {HealthBoost, DamageBoost, CriticalDamageBoost}
+public enum BoostType {HealthBoost, DamageBoost, CriticalDamageBoost, LuckBoost,FireRateBoost}
 
 [CreateAssetMenu(fileName = "Boost")]
 public class BoostDataContainer : ScriptableObject

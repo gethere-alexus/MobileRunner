@@ -31821,7 +31821,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Markus Outfit
   _price: 15000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 475
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 275
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 50
 --- !u!1 &1762018171577595643
 GameObject:
   m_ObjectHideFlags: 0
@@ -31963,7 +31969,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Segun Helmet
   _price: 750000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 400
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 5000
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 1050
 --- !u!4 &1762018171585207168
 Transform:
   m_ObjectHideFlags: 0
@@ -32137,7 +32149,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Ninja Mask
   _price: 250000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 375
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 4000
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 950
 --- !u!137 &1762018171734029664
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -32279,7 +32297,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Ninja Kimono
   _price: 1800000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 15000
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 10000
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 4000
 --- !u!4 &1762018171750538104
 Transform:
   m_ObjectHideFlags: 0
@@ -32391,6 +32415,8 @@ GameObject:
   - component: {fileID: 1762018171813021273}
   - component: {fileID: 1762018171813021274}
   - component: {fileID: 1762018171813021276}
+  - component: {fileID: 1762018171813021277}
+  - component: {fileID: 1762018171813021278}
   - component: {fileID: 1762018171813021275}
   m_Layer: 0
   m_Name: PlayerCharacter
@@ -32582,6 +32608,8 @@ MonoBehaviour:
   - {fileID: 1762018171813021273}
   - {fileID: 1762018171813021276}
   - {fileID: 1762018171813021274}
+  - {fileID: 1762018171813021277}
+  - {fileID: 1762018171813021278}
 --- !u!114 &1762018171813021276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32596,6 +32624,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _appliableBoost: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
   _value: 75
+  _maxValue: 99999
+  _defaultValue: 0
+  _defaultMaxValue: 0
+--- !u!114 &1762018171813021277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762018171813021258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa1ffe9a73b3ab648866aa2e80bddc2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _appliableBoost: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+  _value: 10
+  _maxValue: 99999
+  _defaultValue: 0
+  _defaultMaxValue: 0
+--- !u!114 &1762018171813021278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762018171813021258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ddbbc061d91fd04ab90561c3212b1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _appliableBoost: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+  _value: 30
   _maxValue: 99999
   _defaultValue: 0
   _defaultMaxValue: 0
@@ -32740,7 +32802,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Hazard Protection
   _price: 250000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 3000
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 1400
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 1000
 --- !u!1 &1762018171840880901
 GameObject:
   m_ObjectHideFlags: 0
@@ -32882,7 +32950,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Knight Helmet
   _price: 1500
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 75
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 40
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 45
 --- !u!4 &1762018171845461240
 Transform:
   m_ObjectHideFlags: 0
@@ -33024,7 +33098,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Cowboy Style
   _price: 25000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 450
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 325
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 125
 --- !u!1 &1762018171878210366
 GameObject:
   m_ObjectHideFlags: 0
@@ -33198,7 +33278,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Knight Armor
   _price: 4500
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 75
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 100
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 55
 --- !u!137 &1762018171902780624
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -33342,11 +33428,11 @@ MonoBehaviour:
   _price: 1000
   _appearanceBoosts:
   - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
-    _boostValue: 12
-  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
-    _boostValue: 13
+    _boostValue: 25
   - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
-    _boostValue: 14
+    _boostValue: 25
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 25
 --- !u!1 &1762018171915888554
 GameObject:
   m_ObjectHideFlags: 0
@@ -33614,7 +33700,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Bear Head
   _price: 2500
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 50
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 35
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 30
 --- !u!4 &1762018171975366152
 Transform:
   m_ObjectHideFlags: 0
@@ -33788,7 +33880,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Fearfull Clown Suit
   _price: 7500
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 275
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 100
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 125
 --- !u!1 &1762018172009923163
 GameObject:
   m_ObjectHideFlags: 0
@@ -33962,7 +34060,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Gazmask
   _price: 25000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 200
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 1000
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 500
 --- !u!1 &1762018172022046890
 GameObject:
   m_ObjectHideFlags: 0
@@ -34136,7 +34240,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Unknown Citizen Suit
   _price: 10000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 325
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 175
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 100
 --- !u!1 &1762018172086044795
 GameObject:
   m_ObjectHideFlags: 0
@@ -34516,7 +34626,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Alice Head
   _price: 1500
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 25
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 25
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 25
 --- !u!1 &1762018172317893448
 GameObject:
   m_ObjectHideFlags: 0
@@ -34658,7 +34774,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Futuristic Robot
   _price: 1000000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 10000
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 5000
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 2000
 --- !u!1 &1762018172344836369
 GameObject:
   m_ObjectHideFlags: 0
@@ -34800,7 +34922,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Segun Armor
   _price: 2500000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 30000
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 50000
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 5000
 --- !u!1 &1762018172349576179
 GameObject:
   m_ObjectHideFlags: 0
@@ -35003,9 +35131,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e462fb4caa76bbb4ea7a59e5c6164ab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Futuristic Robot Head
+  _name: Futuristic Robot
   _price: 300000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 300
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 2000
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 750
 --- !u!1 &1762018172420833384
 GameObject:
   m_ObjectHideFlags: 0
@@ -35305,7 +35439,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: 'Bear Costume '
   _price: 2500
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 50
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 60
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 40
 --- !u!1 &1762018172619376027
 GameObject:
   m_ObjectHideFlags: 0
@@ -35479,7 +35619,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Rambo Top
   _price: 45000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 750
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 600
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 100
 --- !u!1 &1762018172658603324
 GameObject:
   m_ObjectHideFlags: 0
@@ -35621,7 +35767,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Fearfull Mask
   _price: 7500
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 75
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 100
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 125
 --- !u!1 &1762018172660834514
 GameObject:
   m_ObjectHideFlags: 0
@@ -35797,7 +35949,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Thief Mask
   _price: 20000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 1500
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 650
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 250
 --- !u!1 &1762018172684530822
 GameObject:
   m_ObjectHideFlags: 0
@@ -35969,9 +36127,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e462fb4caa76bbb4ea7a59e5c6164ab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Green Ranger Head
+  _name: Green Ranger
   _price: 500000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 250
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 4500
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 500
 --- !u!1 &1762018172753342296
 GameObject:
   m_ObjectHideFlags: 0
@@ -36113,7 +36277,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Markus Cover
   _price: 10000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 275
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 325
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 200
 --- !u!1 &1762018172801845624
 GameObject:
   m_ObjectHideFlags: 0
@@ -36326,7 +36496,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Astroneer Helmet
   _price: 100000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 15000
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 5000
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 850
 --- !u!4 &1762018172851648936
 Transform:
   m_ObjectHideFlags: 0
@@ -36566,7 +36742,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Chicken Head
   _price: 4500
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 150
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 75
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 100
 --- !u!1 &1762018172949937345
 GameObject:
   m_ObjectHideFlags: 0
@@ -36708,7 +36890,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Military Camo
   _price: 5000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 150
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 75
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 100
 --- !u!1 &1762018172965836168
 GameObject:
   m_ObjectHideFlags: 0
@@ -37031,7 +37219,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Thief Outfit
   _price: 100000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 1500
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 650
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 250
 --- !u!1 &1762018173097657045
 GameObject:
   m_ObjectHideFlags: 0
@@ -37205,7 +37399,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Cold War Uniform
   _price: 65000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 1000
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 750
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 75
 --- !u!4 &1762018173208828864
 Transform:
   m_ObjectHideFlags: 0
@@ -37347,7 +37547,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Invader Head
   _price: 1500000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 50000
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 75000
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 1250
 --- !u!1 &1762018173243836483
 GameObject:
   m_ObjectHideFlags: 0
@@ -37489,7 +37695,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Invader Suit
   _price: 9000000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 90000
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 50000
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 400
 --- !u!1 &1762018173279737377
 GameObject:
   m_ObjectHideFlags: 0
@@ -37631,7 +37843,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Chicken Costume
   _price: 6250
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 230
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 75
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 100
 --- !u!1 &1762018173287485264
 GameObject:
   m_ObjectHideFlags: 0
@@ -37807,11 +38025,11 @@ MonoBehaviour:
   _price: 500
   _appearanceBoosts:
   - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
-    _boostValue: 1
-  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
-    _boostValue: 2
+    _boostValue: 10
   - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
-    _boostValue: 3
+    _boostValue: 10
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 10
 --- !u!1 &1762018173311802898
 GameObject:
   m_ObjectHideFlags: 0
@@ -37953,7 +38171,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Cowboy Hat
   _price: 12500
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 125
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 300
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 125
 --- !u!1 &1762018173387575342
 GameObject:
   m_ObjectHideFlags: 0
@@ -38127,7 +38351,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Cold War Helmet
   _price: 17500
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 750
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 1000
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 250
 --- !u!1 &1762018173474586516
 GameObject:
   m_ObjectHideFlags: 0
@@ -38269,7 +38499,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Rambo Head
   _price: 15000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 100
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 600
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 200
 --- !u!1 &1762018173528130234
 GameObject:
   m_ObjectHideFlags: 0
@@ -38411,7 +38647,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Astroneer Bottom
   _price: 1500000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 15000
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 5000
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 200
 --- !u!1 &1762018173537558002
 GameObject:
   m_ObjectHideFlags: 0
@@ -38553,7 +38795,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Green Ranger
   _price: 750000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 7500
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 3500
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 500
 --- !u!1 &1762018173562919260
 GameObject:
   m_ObjectHideFlags: 0
@@ -38728,11 +38976,11 @@ MonoBehaviour:
   _price: 500
   _appearanceBoosts:
   - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
-    _boostValue: 4
+    _boostValue: 10
   - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
-    _boostValue: 5
+    _boostValue: 10
   - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
-    _boostValue: 6
+    _boostValue: 10
 --- !u!1 &1762018173589534402
 GameObject:
   m_ObjectHideFlags: 0
@@ -38937,7 +39185,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Cartoon Box
   _price: 6000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 325
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 100
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 175
 --- !u!64 &1778824305059280601
 MeshCollider:
   m_ObjectHideFlags: 0

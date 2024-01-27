@@ -28,5 +28,6 @@ public abstract class PlayerStat : MonoBehaviour, IBoostable
     
     public BoostDataContainer AppliableBoost => _appliableBoost;
     public virtual int BoostableValue => _value;
+    public virtual int DefaultBoostableValue => _defaultValue;
     public virtual int BoostImpact => _value - _defaultValue;
 }
