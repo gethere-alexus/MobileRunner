@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -9,16 +10,46 @@ public class PlayerStatsRepresenter : MonoBehaviour
 
     private void OnEnable()
     {
-        GlobalEventBus.Sync.Subscribe<OnBoostApplied>();
-        GlobalEventBus.Sync.Subscribe<OnBoostRemoved>();
+        GlobalEventBus.Sync.Subscribe<OnBoostApplied>(OnBoostApplied);
+        GlobalEventBus.Sync.Subscribe<OnBoostRemoved>(OnBoostRemoved);
     }
 
     private void OnDisable()
     {
-        GlobalEventBus.Sync.Unsubscribe<OnBoostApplied>();
-        GlobalEventBus.Sync.Unsubscribe<OnBoostRemoved>();
+        GlobalEventBus.Sync.Unsubscribe<OnBoostApplied>(OnBoostApplied);
+        GlobalEventBus.Sync.Unsubscribe<OnBoostRemoved>(OnBoostRemoved);
     }
 
-    public PlayerStat GetBoostRepresent(BoostType boost) => _playerStats.First(value => value.AppliableBoost == boost);
+    private void OnBoostApplied(object sender, EventArgs e)
+    {
+        OnBoostApplied ctx = (OnBoostApplied)e;
+        GetBoostRepresent(ctx.Boost.BoostData).IncrementBoostingValue(ctx.Boost.BoostValue);
+    }
+
+    private void OnBoostRemoved(object sender, EventArgs e)
+    {
+        OnBoostRemoved ctx = (OnBoostRemoved)e;
+        GetBoostRepresent(ctx.Boost.BoostData).DecrementBoostingValue(ctx.Boost.BoostValue);
+    }
+    public Dictionary<BoostDataContainer, int> GetBoostImpacts()
+    {
+        Dictionary<BoostDataContainer, int> toReturn = new Dictionary<BoostDataContainer, int>();
+        foreach (var playerStat in _playerStats)
+        {
+            toReturn.Add(playerStat.AppliableBoost, playerStat.BoostImpact);
+        }
+        return toReturn;
+    }
+    public Dictionary<BoostDataContainer, int> GetBoostableValues()
+    {
+        Dictionary<BoostDataContainer, int> toReturn = new Dictionary<BoostDataContainer, int>();
+        foreach (var playerStat in _playerStats)
+        {
+            toReturn.Add(playerStat.AppliableBoost, playerStat.BoostableValue);
+        }
+        return toReturn;
+    }
+    public PlayerStat GetBoostRepresent(BoostDataContainer boost) => _playerStats.First(value => value.AppliableBoost == boost);
     public PlayerStat[] PlayerStats => _playerStats;
+    
 }

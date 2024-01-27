@@ -68,7 +68,7 @@ public class UIDescriptionView : MonoBehaviour
         
         foreach (var boost in ctx.AppearanceBoosts)
         {
-            PlayerStat playerStat = _playerStatsRepresenter.GetBoostRepresent(boost.BoostData.Boost);
+            PlayerStat playerStat = _playerStatsRepresenter.GetBoostRepresent(boost.BoostData);
 
             int valueAfterBoosting = playerStat.PreviewValueAfterApplying(boost.BoostValue);
             

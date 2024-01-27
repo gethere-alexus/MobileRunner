@@ -5169,6 +5169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _popUpPrefab: {fileID: 3467605146926109642, guid: 8e3068959d816a44fbf98a16b9fd3424,
     type: 3}
+  _playerStatsRepresenter: {fileID: 1762018171813021275}
 --- !u!1 &386988031
 GameObject:
   m_ObjectHideFlags: 0
@@ -30458,7 +30459,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: 'Assault Rifle '
   _price: 7500
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 7
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 8
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 9
   _weaponHandlingAnimation: IdleHeavyGun
 --- !u!23 &1286933366218053508
 MeshRenderer:
@@ -32537,9 +32544,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea35e0e459bb654bbf2ece3fc658bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _appliableBoost: 0
-  _maxHealth: 100
-  _health: 0
+  _appliableBoost: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+  _value: 100
+  _maxValue: 100
+  _defaultValue: 0
+  _defaultMaxValue: 0
 --- !u!114 &1762018171813021274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32552,8 +32561,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc67583e2efa8cb49b2c1bbe448351d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _appliableBoost: 1
-  _dealingDamage: 100
+  _appliableBoost: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+  _value: 25
+  _maxValue: 99999
+  _defaultValue: 0
+  _defaultMaxValue: 0
 --- !u!114 &1762018171813021275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32582,8 +32594,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f178de956cc21694288a9cf79aaf9699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _appliableBoost: 2
-  _dealingCriticalDamage: 100
+  _appliableBoost: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+  _value: 75
+  _maxValue: 99999
+  _defaultValue: 0
+  _defaultMaxValue: 0
 --- !u!1 &1762018171815771596
 GameObject:
   m_ObjectHideFlags: 0
@@ -33325,7 +33340,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Alice Suit
   _price: 1000
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 12
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 13
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 14
 --- !u!1 &1762018171915888554
 GameObject:
   m_ObjectHideFlags: 0
@@ -37786,11 +37807,11 @@ MonoBehaviour:
   _price: 500
   _appearanceBoosts:
   - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
-    _boostValue: 10
+    _boostValue: 1
   - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
-    _boostValue: 15
+    _boostValue: 2
   - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
-    _boostValue: 25
+    _boostValue: 3
 --- !u!1 &1762018173311802898
 GameObject:
   m_ObjectHideFlags: 0
@@ -38705,7 +38726,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Jack Head
   _price: 500
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 4
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 5
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 6
 --- !u!1 &1762018173589534402
 GameObject:
   m_ObjectHideFlags: 0
@@ -50503,7 +50530,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Pistol
   _price: 1500
-  _appearanceBoosts: []
+  _appearanceBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 19
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 20
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 21
   _weaponHandlingAnimation: IdleSmallGun
 --- !u!64 &6053081727997402011
 MeshCollider:
