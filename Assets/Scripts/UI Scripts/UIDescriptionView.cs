@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class UIDescriptionView : MonoBehaviour
 {
-    [SerializeField] private PlayerAppearance _playerAppearance;
+    //[SerializeField] private PlayerAppearance _playerAppearance;
     [SerializeField] private PlayerStatsRepresenter _playerStatsRepresenter;
     
     [SerializeField] private BoostDescription _boostDescriptionTemplate;
@@ -20,15 +20,15 @@ public class UIDescriptionView : MonoBehaviour
 
     private void OnEnable()
     {
-        _playerAppearance.OnNewSkinShowed += ConfigureUIAppearanceView;
+        //_playerAppearance.OnNewSkinShowed += ConfigureUIAppearanceView;
     }
 
     private void OnDisable()
     {
-        _playerAppearance.OnNewSkinShowed -= ConfigureUIAppearanceView;
+        //_playerAppearance.OnNewSkinShowed -= ConfigureUIAppearanceView;
     }
 
-    private void ConfigureUIAppearanceView(object sender, Appearance information)
+    private void ConfigureUIAppearanceView(object sender, Skin information)
     {
         _itemName.text = information.Name;
         _itemPrice.text = TextFormatter.DivideIntWithChar(information.Price, ',');
@@ -36,17 +36,8 @@ public class UIDescriptionView : MonoBehaviour
         ConfigureBoostsView(information, _boostStorage);
         ConfigureButtonView(information);
     }
-    private void ConfigureButtonView(Appearance ctx)
+    private void ConfigureButtonView(Skin ctx)
     {
-        if (ctx.IsPurchased)
-        { 
-            Button assignButton = ctx.IsSelected ? _activeButton : _selectButton;
-            SetButton(assignButton);
-        }
-        else
-        {
-            SetButton(_purchaseButton);
-        }
     }
     private void SetButton(Button button)
     {
@@ -55,7 +46,7 @@ public class UIDescriptionView : MonoBehaviour
         _buttonInstance = button;
         _buttonInstance.gameObject.SetActive(true);
     }
-    private void ConfigureBoostsView(Appearance ctx, Transform boostStorage)
+    private void ConfigureBoostsView(Skin ctx, Transform boostStorage)
     {
         if (_boostStorage.childCount != 0)
         {
@@ -65,7 +56,7 @@ public class UIDescriptionView : MonoBehaviour
             }
         }
         
-        foreach (var boost in ctx.AppearanceBoosts)
+        foreach (var boost in ctx.AppliedBoosts)
         {
             PlayerStat playerStat = _playerStatsRepresenter.GetBoostRepresent(boost.BoostData);
 

@@ -1,10 +1,10 @@
 public class Sorter
 {
-    public static Appearance[] SortPartByPrice(Appearance[] partArrayToSort)
+    public static Skin[] SortPartByPrice(Skin[] partArrayToSort)
     {
-        Appearance[] toReturn = partArrayToSort;
+        Skin[] toReturn = partArrayToSort;
 
-        Appearance temp;
+        Skin temp;
         
         // used bubble sort algorithm - https://www.geeksforgeeks.org/bubble-sort/
         for (int i = 0; i < toReturn.Length - 1; i++) 
