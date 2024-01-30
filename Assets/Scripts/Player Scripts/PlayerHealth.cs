@@ -34,4 +34,5 @@ public class PlayerHealth : PlayerStat, IHealth
 
     public override int BoostImpact => _maxValue - _defaultMaxValue;
     public override int BoostableValue => _maxValue;
+    public override int DefaultBoostableValue => _defaultMaxValue;
 }

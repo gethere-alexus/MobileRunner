@@ -1,4 +1,3 @@
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -70,7 +69,7 @@ public class UIDescriptionView : MonoBehaviour
         {
             PlayerStat playerStat = _playerStatsRepresenter.GetBoostRepresent(boost.BoostData);
 
-            int valueAfterBoosting = playerStat.PreviewValueAfterApplying(boost.BoostValue);
+            int valueAfterBoosting = playerStat.DefaultBoostableValue + boost.BoostValue;
             
             BoostDescription instance = Instantiate(_boostDescriptionTemplate, boostStorage);
         
