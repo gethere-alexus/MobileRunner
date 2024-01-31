@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a560f7eadbd1d0b498fad8e392c2d8f0, type: 3}
+  m_Name: Contraband
+  m_EditorClassIdentifier: 
+  _rarityType: Contraband
+  _itemFrame: {fileID: 21300000, guid: 84063999b9e1741d099c1d8f7bbc0f7a, type: 3}
+  _rarityParticle: {fileID: 7304377948569961185, guid: c66d2bcae1c29eb449b2b7906a925d95,
+    type: 3}

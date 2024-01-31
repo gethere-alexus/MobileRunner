@@ -738,6 +738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359554459282209789}
   - component: {fileID: 359554459282209762}
+  - component: {fileID: 8625718481374933596}
   m_Layer: 0
   m_Name: CowboyDefault
   m_TagString: Untagged
@@ -784,6 +785,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8625718481374933596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359554459282209763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33721c32f99d9584ea0e91e2b68c371a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: Texas Body
+  _price: 65000
+  _appliedBoosts: []
 --- !u!1 &359554459344824022
 GameObject:
   m_ObjectHideFlags: 0

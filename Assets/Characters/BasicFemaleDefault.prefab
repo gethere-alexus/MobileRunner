@@ -517,6 +517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5824428352053320409}
   - component: {fileID: 5824428352053320390}
+  - component: {fileID: -8410231387422786403}
   m_Layer: 0
   m_Name: BasicFemaleDefault
   m_TagString: Untagged
@@ -563,6 +564,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-8410231387422786403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5824428352053320391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33721c32f99d9584ea0e91e2b68c371a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: Tracy
+  _description: ' In an alien-invaded Earth, Tracy, lacking advanced armor, embodies
+    natural resilience. Her determined gaze mirrors the struggles, symbolizing the
+    indomitable spirit of everyday people in the fight for survival.'
+  _price: 1500
+  _itemRarity: {fileID: 11400000, guid: 42969f91a918ae340abd817a7a8f998b, type: 2}
+  _appliedBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 4363
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 23
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 10
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 432
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 52345
 --- !u!1 &5824428352130491590
 GameObject:
   m_ObjectHideFlags: 0

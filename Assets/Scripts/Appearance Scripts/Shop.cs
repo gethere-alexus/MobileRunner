@@ -1,17 +1,20 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    [SerializeField] private AppearanceSwitcher _appearanceSwitcher;
+    [SerializeField] private Skin[] _availableToPurchaseSkins, _purchasedSkins;
 
-    [SerializeField] private Skin[] _purchasedSkins;
+    public event EventHandler<Skin> OnSkinPurchased;
 
-    public event EventHandler<Skin> OnSkinPurchased; 
+    private void Awake()
+    {
+        _availableToPurchaseSkins = Sorter.SortPartByPrice(_availableToPurchaseSkins);
+    }
 
     public void PurchaseSelectedAppearance()
     {
-        //OnSkinPurchased?.Invoke(this);
     }
+
+    public Skin[] AvailableToPurchaseSkins => _availableToPurchaseSkins;
 }
