@@ -1,4 +1,6 @@
-# Mobile Runner
+# Mobile Runner (Alien Defenders)
+## Description
+Endless mobile runner with the abilities of customising your appearance and upgrading abilities ! The project is going to be available mainly on Google Play.
 ## Note :
 This repository doesn't contain resource files, you can only get familiar with scripts !
 ## Other :
