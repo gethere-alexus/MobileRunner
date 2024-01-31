@@ -1,35 +1,36 @@
+using System;
 using UnityEngine;
 public class PlayerSkin : MonoBehaviour
 {
-    [SerializeField] private AppearanceShop _appearanceShop;
-    [SerializeField] private Skin _selectedSkin;
+    [SerializeField] private Shop _shop;
     
-    //public event EventHandler<Appearance> OnNewSkinShowed;
-    //public event EventHandler<PlayerAppearance> OnDataUpdated;
-    private void OnEnable()
+    private Skin[] _skins;
+    private Skin _showedSkin, _selectedSkin;
+    private int _observingSkinIndex = 0;
+
+    public event EventHandler<Skin> OnNewSkinShowed; 
+    private void Awake()
     {
-        _appearanceShop.OnSkinPurchased += OnSkinPurchased;
+        _skins = _shop.AvailableToPurchaseSkins;
+        ShowSkinByIndex(_observingSkinIndex);
     }
 
-    private void Start()
+    public void ShowSkinByIndex(int index)
     {
-        SelectSkin(_appearanceShop.PurchasedHeads[0]);
-        SelectSkin(_appearanceShop.PurchasedBodies[0]);
-        SelectSkin(_appearanceShop.PurchasedWeapons[0]);
+        _observingSkinIndex = index > _skins.Length || index < 0 ? 0 : index;
+        
+        _showedSkin = _skins[_observingSkinIndex];
+        
+        OnNewSkinShowed?.Invoke(this, _showedSkin);
     }
-
-    private void OnDisable()
+    public void ShowNextSkin()
     {
-        _appearanceShop.OnSkinPurchased -= OnSkinPurchased;
+        _observingSkinIndex = _observingSkinIndex + 1 >= _skins.Length ? 0 : _observingSkinIndex + 1;
+        ShowSkinByIndex(_observingSkinIndex);
     }
-    public void SelectSkin(Skin skinToSelect)
+    public void ShowPreviousSkin()
     {
+        _observingSkinIndex = _observingSkinIndex - 1 < 0 ? _skins.Length - 1 : _observingSkinIndex - 1;
+        ShowSkinByIndex(_observingSkinIndex);
     }
-    public void ShowSelectedSkin(BodyParts bodyPart)
-    {
-    }
-    public void ShowSkin()
-    {
-    }
-    
 }

@@ -6,19 +6,37 @@
   <component name="ChangeListManager">
     <list default="true" id="881845d1-3624-4936-8fbb-d54603640d72" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/AlienDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/AlienDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/BasicFemaleDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/BasicFemaleDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/BasicMaleDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/BasicMaleDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/BearDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/BearDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/ChemicalmanDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/ChemicalmanDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/ChickenDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/ChickenDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/CowboyDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/CowboyDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/HeroDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/HeroDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/HoodieDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/HoodieDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/JesterDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/JesterDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/KnightDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/KnightDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/NinjaDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/NinjaDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/RobotDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/RobotDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/SalarymanDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/SalarymanDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/SamuraiDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/SamuraiDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/SniperDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/SniperDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/SoldierDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/SoldierDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/SpacemanDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/SpacemanDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/TerroristDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/TerroristDefault.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Characters/VeteranDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Characters/VeteranDefault.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/AppearanceChangeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AppearanceChangeScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/Appearance.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/Appearance.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/AppearanceShop.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/AppearanceShop.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/Body.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/Body.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/Head.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/Head.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/Weapon.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/Weapon.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerAppearance.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerAppearance.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PlayerSTSData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PlayerSTSData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation Scripts/AnimationSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation Scripts/AnimationSwitcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/AppearanceSwitcher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/AppearanceSwitcher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/Shop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/Skin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/Skin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSkin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSkin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/UIDescriptionView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/UIDescriptionView.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Settings/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +53,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Event List/OnBoostApplied.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Event List/OnBoostRemoved.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ScriptableObjects/BoostDataContainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ScriptableObjects/ItemRarity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Appearance Scripts/Shop.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boost Scripts/Boost.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonScripts/ButtonColorPicker.cs" root0="FORCE_HIGHLIGHTING" />
@@ -54,7 +73,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/PopUpInstantiator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/StatsPopUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/StatsPopUpInstantiator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/UIDescriptionView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/UICharacterPreview.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/UIItemDescriptionView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/Sorter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/TextFormatter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/LayoutRebuilder.cs" root0="SKIP_HIGHLIGHTING" />
@@ -171,7 +191,8 @@
       <workItem from="1706264760175" duration="2624000" />
       <workItem from="1706344712513" duration="6579000" />
       <workItem from="1706520610267" duration="8561000" />
-      <workItem from="1706596446237" duration="342000" />
+      <workItem from="1706596446237" duration="5714000" />
+      <workItem from="1706684955857" duration="13043000" />
     </task>
     <servers />
   </component>

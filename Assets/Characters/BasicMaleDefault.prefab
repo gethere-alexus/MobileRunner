@@ -1281,6 +1281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1762018173025169342}
   - component: {fileID: 1762018173025169313}
+  - component: {fileID: -3684093224876849539}
   m_Layer: 0
   m_Name: BasicMaleDefault
   m_TagString: Untagged
@@ -1327,6 +1328,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-3684093224876849539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762018173025169312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33721c32f99d9584ea0e91e2b68c371a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: Jackob
+  _description: ' Amidst an alien onslaught, a man grapples with survival sans heroics
+    or armor. A common face in the crowd, he faces extraterrestrial odds armed only
+    with resilience. Navigate the chaos; can you steer him through the invasion unscathed?'
+  _price: 3000
+  _itemRarity: {fileID: 11400000, guid: 42969f91a918ae340abd817a7a8f998b, type: 2}
+  _appliedBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 213123
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 123
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 13423
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 2131
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 124
 --- !u!1 &1762018173090337492
 GameObject:
   m_ObjectHideFlags: 0
