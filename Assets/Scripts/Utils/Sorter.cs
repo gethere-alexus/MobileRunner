@@ -1,3 +1,5 @@
+using Appearance_Scripts;
+
 public class Sorter
 {
     public static Skin[] SortPartByPrice(Skin[] partArrayToSort)

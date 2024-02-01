@@ -1,3 +1,4 @@
+using Appearance_Scripts;
 using UnityEngine;
 public class UIItemBoostsView : MonoBehaviour
 {

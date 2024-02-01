@@ -1,17 +1,21 @@
 using UnityEngine;
-public class Skin : MonoBehaviour
+
+namespace Appearance_Scripts
 {
-    [SerializeField] protected string _name;
-    [SerializeField] protected string _description;
-    [SerializeField] protected int _price;
-    [SerializeField] private ItemRarity _itemRarity;
+    public class Skin : MonoBehaviour
+    {
+        [SerializeField] private string _name;
+        [SerializeField] private string _description;
+        [SerializeField] private int _price;
+        [SerializeField] private ItemRarity _itemRarity;
     
-    [SerializeField] protected Boost[] _appliedBoosts;
+        [SerializeField] private Boost[] _appliedBoosts;
 
-    public Boost[] AppliedBoosts => _appliedBoosts;
-    public string Name => _name;
-    public int Price => _price;
-    public string Description => _description;
+        public Boost[] AppliedBoosts => _appliedBoosts;
+        public string Name => _name;
+        public int Price => _price;
+        public string Description => _description;
 
-    public ItemRarity ItemRarity => _itemRarity;
+        public ItemRarity ItemRarity => _itemRarity;
+    }
 }
