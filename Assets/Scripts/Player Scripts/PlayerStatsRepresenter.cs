@@ -36,7 +36,7 @@ public class PlayerStatsRepresenter : MonoBehaviour
         Dictionary<BoostDataContainer, int> toReturn = new Dictionary<BoostDataContainer, int>();
         foreach (var playerStat in _playerStats)
         {
-            toReturn.Add(playerStat.AppliableBoost, playerStat.BoostImpact);
+            toReturn.Add(playerStat.ApplicableBoost, playerStat.BoostImpact);
         }
         return toReturn;
     }
@@ -45,11 +45,11 @@ public class PlayerStatsRepresenter : MonoBehaviour
         Dictionary<BoostDataContainer, int> toReturn = new Dictionary<BoostDataContainer, int>();
         foreach (var playerStat in _playerStats)
         {
-            toReturn.Add(playerStat.AppliableBoost, playerStat.BoostableValue);
+            toReturn.Add(playerStat.ApplicableBoost, playerStat.BoostableValue);
         }
         return toReturn;
     }
-    public PlayerStat GetBoostRepresent(BoostDataContainer boost) => _playerStats.First(value => value.AppliableBoost == boost);
+    public PlayerStat GetBoostRepresent(BoostDataContainer boost) => _playerStats.First(value => value.ApplicableBoost == boost);
     public PlayerStat[] PlayerStats => _playerStats;
     
 }

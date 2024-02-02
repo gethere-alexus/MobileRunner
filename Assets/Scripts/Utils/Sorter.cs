@@ -1,32 +1,35 @@
-using Appearance_Scripts;
+using ScriptableObjects;
 
-public class Sorter
+namespace Utils
 {
-    public static Skin[] SortPartByPrice(Skin[] partArrayToSort)
+    public class Sorter
     {
-        Skin[] toReturn = partArrayToSort;
-
-        Skin temp;
-        
-        // used bubble sort algorithm - https://www.geeksforgeeks.org/bubble-sort/
-        for (int i = 0; i < toReturn.Length - 1; i++) 
+        public static ItemDataContainer[] SortSkinsByPrice(ItemDataContainer[] partArrayToSort)
         {
-            bool isSwapped = false;
-            for (int j = 0; j < toReturn.Length - i - 1; j++) 
+            ItemDataContainer[] toReturn = partArrayToSort;
+
+            ItemDataContainer temp;
+        
+            // used bubble sort algorithm - https://www.geeksforgeeks.org/bubble-sort/
+            for (int i = 0; i < toReturn.Length - 1; i++) 
             {
-                if (toReturn[j].Price > toReturn[j + 1].Price) 
+                bool isSwapped = false;
+                for (int j = 0; j < toReturn.Length - i - 1; j++) 
                 {
-                    temp = toReturn[j];
-                    toReturn[j] = toReturn[j + 1];
-                    toReturn[j + 1] = temp;
+                    if (toReturn[j].Price > toReturn[j + 1].Price) 
+                    {
+                        temp = toReturn[j];
+                        toReturn[j] = toReturn[j + 1];
+                        toReturn[j + 1] = temp;
 
-                    isSwapped = true;
+                        isSwapped = true;
+                    }
                 }
+                if (isSwapped == false)
+                    break;
             }
-            if (isSwapped == false)
-                break;
-        }
 
-        return toReturn;
+            return toReturn;
+        }
     }
 }

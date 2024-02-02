@@ -1,4 +1,4 @@
-using Appearance_Scripts;
+using ScriptableObjects;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,19 +7,19 @@ namespace UI_Scripts
 {
     public class UIItemDescriptionView : MonoBehaviour
     {
-        [SerializeField] private PlayerSkin _playerSkin;
+        [SerializeField] private CharactersShopDisplay _charactersShopDisplay;
     
         [SerializeField] private TMP_Text _itemName, _itemPrice, _itemDescription;
         [SerializeField] private Image _itemFrame;
         private void OnEnable()
         { 
-            _playerSkin.OnNewSkinShowed += ConfigureDescriptionUI;
+            _charactersShopDisplay.SkinShopInstance.OnNewItemPreviewed += ConfigureDescriptionUI;
         }
         private void OnDisable()
         {
-            _playerSkin.OnNewSkinShowed -= ConfigureDescriptionUI;
+            _charactersShopDisplay.SkinShopInstance.OnNewItemPreviewed += ConfigureDescriptionUI;
         }
-        private void ConfigureDescriptionUI(object sender, Skin skin)
+        private void ConfigureDescriptionUI(object sender, ItemDataContainer skin)
         {
             _itemFrame.sprite = skin.ItemRarity.ItemFrame;
             _itemName.text = skin.Name;

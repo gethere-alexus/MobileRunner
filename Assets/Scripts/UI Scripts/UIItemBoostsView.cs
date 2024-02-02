@@ -1,23 +1,23 @@
-using Appearance_Scripts;
+using ScriptableObjects;
 using UnityEngine;
 public class UIItemBoostsView : MonoBehaviour
 {
-    [SerializeField] private PlayerSkin _playerSkin;
+    [SerializeField] private CharactersShopDisplay _shopDisplay;
     [SerializeField] private PlayerStatsRepresenter _playerStatsRepresenter;
     [SerializeField] private Transform _boostStorage;
     [SerializeField] private BoostDescription _boostDescriptionTemplate;
     
     private void OnEnable()
     { 
-        _playerSkin.OnNewSkinShowed += OnNewSkinShowed;
+        _shopDisplay.SkinShopInstance.OnNewItemPreviewed += OnNewItemShowed;
     }
 
     private void OnDisable()
     {
-        _playerSkin.OnNewSkinShowed -= OnNewSkinShowed;
+        _shopDisplay.SkinShopInstance.OnNewItemPreviewed -= OnNewItemShowed;
     }
-    private void OnNewSkinShowed(object sender, Skin skin) => ConfigureBoostsView(skin);
-    private void ConfigureBoostsView(Skin skin)
+    private void OnNewItemShowed(object sender, ItemDataContainer skin) => ConfigureBoostsView(skin);
+    private void ConfigureBoostsView(ItemDataContainer item)
     {
         if (_boostStorage.childCount != 0)
         {
@@ -27,7 +27,7 @@ public class UIItemBoostsView : MonoBehaviour
             }
         }
         
-        foreach (var boost in skin.AppliedBoosts)
+        foreach (var boost in item.AppliedBoosts)
         {
             PlayerStat playerStat = _playerStatsRepresenter.GetBoostRepresent(boost.BoostData);
 
