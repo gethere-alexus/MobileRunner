@@ -1,4 +1,6 @@
+using Data_Scripts;
 using ScriptableObjects;
+using Shop_Scripts;
 using UnityEngine;
 
 namespace UI_Scripts
@@ -20,13 +22,13 @@ namespace UI_Scripts
          _charactersShopDisplay.OnNewItemPreviewed -= ConfigureCharacterPreview;
       }
 
-      private void ConfigureCharacterPreview(object sender, ItemDataContainer e)
+      private void ConfigureCharacterPreview(object sender, ItemData e)
       {
          if(_particlesInstance != null) Destroy(_playerInstance);
          if(_playerInstance != null) Destroy(_particlesInstance);
       
-         _playerInstance = Instantiate(e.ItemPrefab, _charPreviewStorage);
-         _particlesInstance = Instantiate(e.ItemRarity.RarityParticle.gameObject, _charPreviewStorage);
+         _playerInstance = Instantiate(e.ItemInformation.ItemPrefab, _charPreviewStorage);
+         _particlesInstance = Instantiate(e.ItemInformation.ItemRarity.RarityParticle.gameObject, _charPreviewStorage);
       }
    }
 }

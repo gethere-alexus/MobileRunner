@@ -1,4 +1,6 @@
+using Data_Scripts;
 using ScriptableObjects;
+using Shop_Scripts;
 using UnityEngine;
 public class UIItemBoostsView : MonoBehaviour
 {
@@ -16,7 +18,7 @@ public class UIItemBoostsView : MonoBehaviour
     {
         _shopDisplay.OnNewItemPreviewed -= OnNewItemShowed;
     }
-    private void OnNewItemShowed(object sender, ItemDataContainer skin) => ConfigureBoostsView(skin);
+    private void OnNewItemShowed(object sender, ItemData skin) => ConfigureBoostsView(skin.ItemInformation);
     private void ConfigureBoostsView(ItemDataContainer item)
     {
         if (_boostStorage.childCount != 0)
