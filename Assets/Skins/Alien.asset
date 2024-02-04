@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc0ace4956797e4195243ebf1b8d0c8, type: 3}
+  m_Name: Alien
+  m_EditorClassIdentifier: 
+  _itemPrefab: {fileID: 7369448170708576210, guid: a2836f0676e46dc4685632e429aadbc8,
+    type: 3}
+  _name: Invader
+  _description: Once an invader during the 2087 Third Galactic Army onslaught, now
+    under Markus's capture, this erstwhile adversary has metamorphosed into an Earth
+    defender, tirelessly ensuring humanity's well-being and fostering intergalactic
+    harmony.
+  _price: 900000
+  _itemRarity: {fileID: 11400000, guid: 069a407403f75d149bde4fdc3765f349, type: 2}
+  _appliedBoosts:
+  - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    _boostValue: 124
+  - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+    _boostValue: 1245
+  - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+    _boostValue: 12467
+  - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    _boostValue: 2143
+  - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    _boostValue: 656
