@@ -6850,9 +6850,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Appearance_Scripts.Shop, Assembly-CSharp
-        m_MethodName: PreviewNextSkin
+      - m_Target: {fileID: 1769792876}
+        m_TargetAssemblyTypeName: ItemShopDisplay, Assembly-CSharp
+        m_MethodName: DisplayNextSkin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12462,9 +12462,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Appearance_Scripts.Shop, Assembly-CSharp
-        m_MethodName: PreviewPreviousSkin
+      - m_Target: {fileID: 1769792876}
+        m_TargetAssemblyTypeName: ItemShopDisplay, Assembly-CSharp
+        m_MethodName: DisplayPreviousSkin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

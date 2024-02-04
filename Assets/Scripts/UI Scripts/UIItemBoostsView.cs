@@ -2,19 +2,19 @@ using ScriptableObjects;
 using UnityEngine;
 public class UIItemBoostsView : MonoBehaviour
 {
-    [SerializeField] private CharactersShopDisplay _shopDisplay;
+    [SerializeField] private ItemShopDisplay _shopDisplay;
     [SerializeField] private PlayerStatsRepresenter _playerStatsRepresenter;
     [SerializeField] private Transform _boostStorage;
     [SerializeField] private BoostDescription _boostDescriptionTemplate;
     
     private void OnEnable()
     { 
-        _shopDisplay.SkinShopInstance.OnNewItemPreviewed += OnNewItemShowed;
+        _shopDisplay.OnNewItemPreviewed += OnNewItemShowed;
     }
 
     private void OnDisable()
     {
-        _shopDisplay.SkinShopInstance.OnNewItemPreviewed -= OnNewItemShowed;
+        _shopDisplay.OnNewItemPreviewed -= OnNewItemShowed;
     }
     private void OnNewItemShowed(object sender, ItemDataContainer skin) => ConfigureBoostsView(skin);
     private void ConfigureBoostsView(ItemDataContainer item)

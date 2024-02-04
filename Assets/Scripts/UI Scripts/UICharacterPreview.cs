@@ -6,18 +6,18 @@ namespace UI_Scripts
    public class UICharacterPreview : MonoBehaviour
    {
       [SerializeField] private Transform _charPreviewStorage;
-      [SerializeField] private CharactersShopDisplay _charactersShopDisplay;
+      [SerializeField] private ItemShopDisplay _charactersShopDisplay;
    
       private GameObject _playerInstance, _particlesInstance;
 
       private void OnEnable()
       { 
-         _charactersShopDisplay.SkinShopInstance.OnNewItemPreviewed += ConfigureCharacterPreview;
+         _charactersShopDisplay.OnNewItemPreviewed += ConfigureCharacterPreview;
       }
 
       private void OnDisable()
       {
-         _charactersShopDisplay.SkinShopInstance.OnNewItemPreviewed -= ConfigureCharacterPreview;
+         _charactersShopDisplay.OnNewItemPreviewed -= ConfigureCharacterPreview;
       }
 
       private void ConfigureCharacterPreview(object sender, ItemDataContainer e)

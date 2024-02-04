@@ -7,17 +7,17 @@ namespace UI_Scripts
 {
     public class UIItemDescriptionView : MonoBehaviour
     {
-        [SerializeField] private CharactersShopDisplay _charactersShopDisplay;
+        [SerializeField] private ItemShopDisplay _charactersShopDisplay;
     
         [SerializeField] private TMP_Text _itemName, _itemPrice, _itemDescription;
         [SerializeField] private Image _itemFrame;
         private void OnEnable()
         { 
-            _charactersShopDisplay.SkinShopInstance.OnNewItemPreviewed += ConfigureDescriptionUI;
+            _charactersShopDisplay.OnNewItemPreviewed += ConfigureDescriptionUI;
         }
         private void OnDisable()
         {
-            _charactersShopDisplay.SkinShopInstance.OnNewItemPreviewed += ConfigureDescriptionUI;
+            _charactersShopDisplay.OnNewItemPreviewed += ConfigureDescriptionUI;
         }
         private void ConfigureDescriptionUI(object sender, ItemDataContainer skin)
         {
