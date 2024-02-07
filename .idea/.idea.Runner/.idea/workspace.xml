@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="881845d1-3624-4936-8fbb-d54603640d72" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="881845d1-3624-4936-8fbb-d54603640d72" name="Changes" comment="fmod integrated">
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/AppearanceChangeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AppearanceChangeScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +39,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Amazing Assets/Curved World/Editor/Base/EditorUtilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Infrastructure/PlayerConfigInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Infrastructure/SoundInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Runner/Assets/Scenes/AppearanceChangeScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Runner/Assets/Scenes/AppearanceChangeScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boost Scripts/Boost.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonScripts/ButtonColorPicker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chunk Scripts/ChunkGenerator.cs" root0="FORCE_HIGHLIGHTING" />
@@ -71,6 +72,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/Sorter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/TextFormatter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/LayoutRebuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Runner/ProjectSettings/AudioManager.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Unity Projects/Runner/ProjectSettings/AudioManager.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -198,7 +201,7 @@
       <workItem from="1706966538943" duration="1732000" />
       <workItem from="1707023583933" duration="24161000" />
       <workItem from="1707120336909" duration="4452000" />
-      <workItem from="1707297540531" duration="802000" />
+      <workItem from="1707297540531" duration="1474000" />
     </task>
     <task id="LOCAL-00001" summary="working on shop system, shop code refactored, project files sorted">
       <option name="closed" value="true" />
@@ -232,7 +235,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707054903611</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1707298374723</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707298374723</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fmod integrated">
+      <option name="closed" value="true" />
+      <created>1707300650510</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707300650510</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +289,9 @@
     <MESSAGE value="ShopDisplay added, bug fixed, code is now working as has to be." />
     <MESSAGE value="Working on Shop system - Purchase button now works, implementing Zenject, using Scriptable object as player config." />
     <MESSAGE value="Shop section switching" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shop section switching" />
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="fmod integrated" />
+    <option name="LAST_COMMIT_MESSAGE" value="fmod integrated" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

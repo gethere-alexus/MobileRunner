@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8337652489020293719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/ShowNext
+  m_EditorClassIdentifier: 
+  Path: event:/UI/ShowNext
+  Guid:
+    Data1: 1535536802
+    Data2: 1129292945
+    Data3: 591093946
+    Data4: 1086395279
+  Banks:
+  - {fileID: -2125404468488918423}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4281408824721539327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/AudioProject/Build/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Settings/FMOD/AudioProject/Build/Desktop/Master.bank
+  Name: AudioProject/Build/Desktop/Master
+  StudioPath: bank:/Master
+  lastModified: 638428962672204201
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-3831402263568543009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/AudioProject/Build/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Settings/FMOD/AudioProject/Build/Desktop/Master.strings.bank
+  Name: AudioProject/Build/Desktop/Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638428962672224191
+  FileSizes:
+  - Name: 
+    Value: 872
+  Exists: 1
+--- !u!114 &-2125404468488918423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/AudioProject/Build/Desktop/UI Interactions.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Settings/FMOD/AudioProject/Build/Desktop/UI Interactions.bank
+  Name: AudioProject/Build/Desktop/UI Interactions
+  StudioPath: bank:/UI/UI Interactions
+  lastModified: 638428962673077823
+  FileSizes: []
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -3831402263568543009}
+  - {fileID: -4281408824721539327}
+  - {fileID: -2125404468488918423}
+  EditorEvents:
+  - {fileID: 2443247164290874938}
+  - {fileID: -8337652489020293719}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -4281408824721539327}
+  StringsBanks:
+  - {fileID: -3831402263568543009}
+  cacheTime: 638428962673077823
+  cacheVersion: 131616
+--- !u!114 &2443247164290874938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/ShowSection
+  m_EditorClassIdentifier: 
+  Path: event:/UI/ShowSection
+  Guid:
+    Data1: -339666816
+    Data2: 1084593606
+    Data3: -2061821557
+    Data4: -1160281047
+  Banks:
+  - {fileID: -2125404468488918423}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{c96f5092-b7d7-4d24-be16-839924326e9e}">
+		<property name="assetPath">
+			<value>Music/Cute UI _ Interact Sound Effects Pack/Sound Pack Guide.pdf</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{53a54653-aaae-4aa3-b222-14ad26770a97}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -5172,7 +5172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 431309199}
   - component: {fileID: 431309198}
-  - component: {fileID: 431309197}
+  - component: {fileID: 431309200}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5180,14 +5180,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &431309197
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431309196}
-  m_Enabled: 1
 --- !u!20 &431309198
 Camera:
   m_ObjectHideFlags: 0
@@ -5254,6 +5246,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 14.22, y: -90, z: 0}
+--- !u!114 &431309200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431309196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &432246046
 GameObject:
   m_ObjectHideFlags: 0
@@ -22348,6 +22353,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1094328984417224424, guid: 6aa0c97d825a36f4796eea2be3c2ad13,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4129403762972783463, guid: 6aa0c97d825a36f4796eea2be3c2ad13,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -22378,6 +22388,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4242513224284529453, guid: 6aa0c97d825a36f4796eea2be3c2ad13,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4948588445199341555, guid: 6aa0c97d825a36f4796eea2be3c2ad13,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -22407,6 +22422,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261651841604397265, guid: 6aa0c97d825a36f4796eea2be3c2ad13,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859417798679358894, guid: 6aa0c97d825a36f4796eea2be3c2ad13,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446442128626134801, guid: 6aa0c97d825a36f4796eea2be3c2ad13,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7089327793014240626, guid: 6aa0c97d825a36f4796eea2be3c2ad13,
         type: 3}
@@ -22583,7 +22613,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -29638,7 +29673,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
