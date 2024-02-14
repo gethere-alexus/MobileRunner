@@ -27,6 +27,98 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7515360657231795254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/ShowSection
+  m_EditorClassIdentifier: 
+  Path: event:/UI/ShowSection
+  Guid:
+    Data1: -339666816
+    Data2: 1084593606
+    Data3: -2061821557
+    Data4: -1160281047
+  Banks:
+  - {fileID: 7801760550738596585}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7473929421671705940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/AudioProject/Build/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Settings/FMOD/AudioProject/Build/Desktop/Master.strings.bank
+  Name: AudioProject/Build/Desktop/Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638435148815559857
+  FileSizes:
+  - Name: 
+    Value: 872
+  Exists: 1
+--- !u!114 &-7168635034306452004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/AudioProject/Build/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Settings/FMOD/AudioProject/Build/Desktop/Master.bank
+  Name: AudioProject/Build/Desktop/Master
+  StudioPath: bank:/Master
+  lastModified: 638435148815549853
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-5388105343763081835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/ShowNext
+  m_EditorClassIdentifier: 
+  Path: event:/UI/ShowNext
+  Guid:
+    Data1: 1535536802
+    Data2: 1129292945
+    Data3: 591093946
+    Data4: 1086395279
+  Banks:
+  - {fileID: 7801760550738596585}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4281408824721539327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,18 +188,18 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -3831402263568543009}
-  - {fileID: -4281408824721539327}
-  - {fileID: -2125404468488918423}
+  - {fileID: -7473929421671705940}
+  - {fileID: -7168635034306452004}
+  - {fileID: 7801760550738596585}
   EditorEvents:
-  - {fileID: 2443247164290874938}
-  - {fileID: -8337652489020293719}
+  - {fileID: -7515360657231795254}
+  - {fileID: -5388105343763081835}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4281408824721539327}
+  - {fileID: -7168635034306452004}
   StringsBanks:
-  - {fileID: -3831402263568543009}
-  cacheTime: 638428962673077823
+  - {fileID: -7473929421671705940}
+  cacheTime: 638435148815569859
   cacheVersion: 131616
 --- !u!114 &2443247164290874938
 MonoBehaviour:
@@ -136,3 +228,21 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &7801760550738596585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/AudioProject/Build/Desktop/UI Interactions.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Settings/FMOD/AudioProject/Build/Desktop/UI Interactions.bank
+  Name: AudioProject/Build/Desktop/UI Interactions
+  StudioPath: bank:/UI/UI Interactions
+  lastModified: 638435148815569859
+  FileSizes: []
+  Exists: 1
