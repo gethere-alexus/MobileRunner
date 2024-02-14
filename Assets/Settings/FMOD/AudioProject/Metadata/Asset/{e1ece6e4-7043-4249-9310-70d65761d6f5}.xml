@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{e1ece6e4-7043-4249-9310-70d65761d6f5}">
+		<property name="assetPath">
+			<value>Music/Cute UI _ Interact Sound Effects Pack/AUDIO/Rattle/Glass/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{53a54653-aaae-4aa3-b222-14ad26770a97}</destination>
+		</relationship>
+	</object>
+</objects>

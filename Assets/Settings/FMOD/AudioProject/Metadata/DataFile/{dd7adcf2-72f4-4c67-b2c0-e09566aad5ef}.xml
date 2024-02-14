@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{dd7adcf2-72f4-4c67-b2c0-e09566aad5ef}">
+		<property name="assetPath">
+			<value>Music/Cute UI _ Interact Sound Effects Pack/AUDIO/Footstep/desktop.ini</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{53a54653-aaae-4aa3-b222-14ad26770a97}</destination>
+		</relationship>
+	</object>
+</objects>

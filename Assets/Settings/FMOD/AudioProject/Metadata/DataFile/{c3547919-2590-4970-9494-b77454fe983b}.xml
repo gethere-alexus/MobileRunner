@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{c3547919-2590-4970-9494-b77454fe983b}">
+		<property name="assetPath">
+			<value>Music/Cute UI _ Interact Sound Effects Pack/AUDIO/UI/Countdown/desktop.ini</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{53a54653-aaae-4aa3-b222-14ad26770a97}</destination>
+		</relationship>
+	</object>
+</objects>

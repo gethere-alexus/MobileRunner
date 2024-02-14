@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ca49f6d2-cc03-4563-a54e-165d1db387d7}">
+		<property name="assetPath">
+			<value>Music/Cute UI _ Interact Sound Effects Pack/AUDIO/Footstep/Water/SFX_Movement_Footstep_Water_3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.13913832199546486</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{53a54653-aaae-4aa3-b222-14ad26770a97}</destination>
+		</relationship>
+	</object>
+</objects>
