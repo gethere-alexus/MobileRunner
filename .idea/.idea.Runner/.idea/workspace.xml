@@ -5,8 +5,150 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="881845d1-3624-4936-8fbb-d54603640d72" name="Changes" comment="Working on Shop system - Purchase button now works, implementing Zenject, using Scriptable object as player config.">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/shelf/Uncommitted_changes_before_Checkout_at_2_1_2024_11_06_AM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/shelf/Uncommitted_changes_before_Checkout_at_2_1_2024_11_06_AM__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boosts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boosts/CriticalDamageBoost.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boosts/CriticalDamageBoost.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boosts/DamageBoost.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boosts/DamageBoost.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boosts/FireRateBoost.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boosts/FireRateBoost.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boosts/HealthBoost.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boosts/HealthBoost.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boosts/LuckBoost.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Boosts/LuckBoost.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterConfig.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterConfig.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Guns.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/GlobalEventBus.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/GlobalEventBus/EventBus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/GlobalEventBus/EventBus.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/GlobalEventBus/GlobalEventBus.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/GlobalEventBus/GlobalEventBus.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/PlayerConfigInstaller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/PlayerConfigInstaller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemRarities.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemRarities/Common.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemRarities/Common.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemRarities/Contraband.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemRarities/Contraband.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemRarities/Epic.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemRarities/Epic.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemRarities/Mythic.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemRarities/Mythic.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemRarities/Rare.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ItemRarities/Rare.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/AppearanceChangeScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/AppearanceChangeScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation Scripts/AnimationSwitcher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation Scripts/AnimationSwitcher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boost Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boost Scripts/Boost.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Boost Scripts/Boost.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonScripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonScripts/ButtonColorPicker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ButtonScripts/ButtonColorPicker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chunk Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chunk Scripts/ChunkCleaner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chunk Scripts/ChunkCleaner.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chunk Scripts/ChunkGenerator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chunk Scripts/ChunkGenerator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chunk Scripts/ChunkMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chunk Scripts/ChunkMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data Scripts/ItemData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data Scripts/ItemData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input Scripts/InputProcessor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input Scripts/InputProcessor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input Scripts/PlayerOverviewRotation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Input Scripts/PlayerOverviewRotation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IBoostable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IBoostable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IHealth.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IHealth.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerCriticalDamage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerCriticalDamage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerDealingDamage.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerDealingDamage.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerFireRate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerFireRate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerHealth.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerHealth.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerLuck.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerLuck.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSkin.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSkin.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerStat.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerStat.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerStatsRepresenter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerStatsRepresenter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/AppearanceData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/AppearanceData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BoostDataContainer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/BoostDataContainer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/CharacterConfig.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/CharacterConfig.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/GunDataContainer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/GunDataContainer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ItemDataContainer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ItemDataContainer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ItemRarity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ItemRarity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/SkinDataContainer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/SkinDataContainer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop Scripts/ItemShopDisplay.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop Scripts/ItemShopDisplay.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop Scripts/Shop.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop Scripts/Shop.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/BoostDescription.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/BoostDescription.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopButtonView.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopButtonView/UIPurchaseButtonView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopButtonView/UIPurchaseButtonView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopButtonView/UISelectButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopButtonView/UISelectButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopButtonView/UIShopButtonView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopButtonView/UIShopButtonView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopSection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopSection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopSectionSwitcher.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopSectionSwitcher.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/UIButtonDisplay.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/UIButtonDisplay.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/UICharacterPreview.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/UICharacterPreview.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/UIItemBoostsView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/UIItemBoostsView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/UIItemDescriptionView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI Scripts/UIItemDescriptionView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/FPSCounter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/FPSCounter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/Singleton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/Singleton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/Sorter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/Sorter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/TextFormatter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/TextFormatter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skins.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skins/Alien.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skins/Alien.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skins/Female.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skins/Female.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skins/Male.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Skins/Male.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,39 +180,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3a7a35f684a4e72b8a6533d8c702ad752200/09/b8343a98/Command.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UniProjects/C#CodeWars/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Amazing Assets/Curved World/Editor/Base/EditorUtilities.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Infrastructure/PlayerConfigInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Runner/Assets/Scenes/AppearanceChangeScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Runner/Assets/Scenes/AppearanceChangeScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Runner/Assets/Scenes/AppearanceChangeScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boost Scripts/Boost.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonScripts/ButtonColorPicker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chunk Scripts/ChunkGenerator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data Scripts/ItemData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Input Scripts/InputProcessor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Input Scripts/PlayerOverviewRotation.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IBoostable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IHealth.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerCriticalDamage.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerDealingDamage.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerFireRate.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerLuck.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSkin.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerStat.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerStatsRepresenter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/CharacterConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/GunDataContainer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ItemDataContainer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/SkinDataContainer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopButtonView/UIPurchaseButtonView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopButtonView/UISelectButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopSection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopSectionSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/UIButtonDisplay.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Runner/Assets/Scripts/UI Scripts/UIButtonDisplay.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/UICharacterPreview.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/UIItemDescriptionView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/Sorter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/TextFormatter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/UI/Section.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/UI/SectionSwitch.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/LayoutRebuilder.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -82,28 +193,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "RiderCSharpLiveTemplatesSettingsId",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;RiderCSharpLiveTemplatesSettingsId&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\owalo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\owalo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\owalo\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\owalo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\owalo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\owalo\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RiderTodoViewSettings" groupByProject="false" />
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
@@ -198,6 +309,7 @@
       <workItem from="1706861207157" duration="12692000" />
       <workItem from="1706966538943" duration="1732000" />
       <workItem from="1707023583933" duration="23864000" />
+      <workItem from="1707912945250" duration="3646000" />
     </task>
     <task id="LOCAL-00001" summary="working on shop system, shop code refactored, project files sorted">
       <option name="closed" value="true" />
