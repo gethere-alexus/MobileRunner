@@ -1,12 +1,13 @@
-using Shop_Scripts;
+using Sources.ScriptableObjects;
 using UnityEngine;
 using Zenject;
 
-namespace Settings.Infrastructure
+namespace Sources.Infrastructure
 {
     public class PlayerConfigInstaller : MonoInstaller
     {
         [SerializeField] private CharacterConfig _playerConfig;
+
         public override void InstallBindings()
         {
             Container

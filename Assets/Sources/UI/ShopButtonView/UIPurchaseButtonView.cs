@@ -1,8 +1,9 @@
-using Data_Scripts;
-using Shop_Scripts;
+using Sources.Data;
+using Sources.Shop;
+using Sources.Utils;
 using UnityEngine.UI;
 
-namespace UI_Scripts.ShopButtonView
+namespace Sources.UI.ShopButtonView
 {
     public class UIPurchaseButtonView : UIShopButtonView
     {

@@ -1,4 +1,7 @@
-public class PlayerFireRate : PlayerStat
+namespace Sources.Player
 {
+    public class PlayerFireRate : PlayerStat
+    {
     
+    }
 }

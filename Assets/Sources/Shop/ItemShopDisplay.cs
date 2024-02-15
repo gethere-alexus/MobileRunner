@@ -1,16 +1,17 @@
 using System;
-using Data_Scripts;
 using ScriptableObjects;
+using Sources.Data;
+using Sources.ScriptableObjects;
 using UnityEngine;
 using Zenject;
 
-namespace Shop_Scripts
+namespace Sources.Shop
 {
     public class ItemShopDisplay : MonoBehaviour
     {
         [SerializeField] private SkinDataContainer[] _skins, _purchasedSkins;
         public event EventHandler<ItemData> OnItemPurchased, OnNewItemPreviewed;
-    
+
         private Shop _skinShopInstance;
 
         [Inject]
@@ -18,6 +19,7 @@ namespace Shop_Scripts
         {
             _skinShopInstance = new Shop(playerConfig, _skins, _purchasedSkins);
         }
+
         private void Start()
         {
             DisplaySkinByIndex(0);
@@ -40,6 +42,7 @@ namespace Shop_Scripts
             _skinShopInstance.PreviewItemByIndex(index);
             UpdateUIView();
         }
+
         public void PurchasePreviewedSkin()
         {
             _skinShopInstance.PurchaseShowedSkin();

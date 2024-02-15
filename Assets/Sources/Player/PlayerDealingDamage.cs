@@ -1,3 +1,6 @@
-public class PlayerDealingDamage : PlayerStat
+namespace Sources.Player
 {
+    public class PlayerDealingDamage : PlayerStat
+    {
+    }
 }

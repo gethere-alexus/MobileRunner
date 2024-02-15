@@ -1,6 +1,7 @@
+using ScriptableObjects;
 using UnityEngine;
 
-namespace ScriptableObjects
+namespace Sources.ScriptableObjects
 {
     [CreateAssetMenu(menuName = ("DataContainers/GunDataContainer"))]
     public class GunDataContainer : ItemDataContainer

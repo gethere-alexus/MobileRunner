@@ -5,7 +5,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="881845d1-3624-4936-8fbb-d54603640d72" name="Changes" comment="fmod integrated">
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Player/PlayerStatsRepresent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Utils/MonoBehaviourSingletonPersistent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Utils/MonoBehaviourSingletonPersistent.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Infrastructure.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Infrastructure.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Infrastructure/GlobalEventBus.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Infrastructure/GlobalEventBus.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Infrastructure/GlobalEventBus/EventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Infrastructure/GlobalEventBus/EventBus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Infrastructure/GlobalEventBus/EventBus.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Infrastructure/GlobalEventBus/EventBus.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Infrastructure/GlobalEventBus/GlobalEventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Infrastructure/GlobalEventBus/GlobalEventBus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Infrastructure/GlobalEventBus/GlobalEventBus.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Infrastructure/GlobalEventBus/GlobalEventBus.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Infrastructure/PlayerConfigInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Infrastructure/PlayerConfigInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Infrastructure/PlayerConfigInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Infrastructure/PlayerConfigInstaller.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Boost/Boost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Boost/Boost.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Chunk/ChunkCleaner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Chunk/ChunkCleaner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Chunk/ChunkGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Chunk/ChunkGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Chunk/ChunkMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Chunk/ChunkMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Data/ItemData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Data/ItemData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Input/InputProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Input/InputProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Input/PlayerOverviewRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Input/PlayerOverviewRotation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Interfaces.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Services.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Interfaces/IBoostable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Services/IBoostable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Interfaces/IBoostable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Services/IBoostable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Interfaces/IHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Services/IHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Interfaces/IHealth.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Services/IHealth.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerCriticalDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/PlayerCriticalDamage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerDealingDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/PlayerDealingDamage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerFireRate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/PlayerFireRate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/PlayerHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerLuck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/PlayerLuck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerSkin.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerSkin.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerStat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/PlayerStat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerStatsRepresenter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerStatsRepresenter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/PlayerStatsRepresent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/AppearanceData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/AppearanceData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/BoostDataContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/BoostDataContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CharacterConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/CharacterConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/GunDataContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/GunDataContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/ItemDataContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/ItemDataContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/ItemRarity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/ItemRarity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/SkinDataContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/ScriptableObjects/SkinDataContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop Scripts/ItemShopDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ItemShopDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop Scripts/ItemShopDisplay.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ItemShopDisplay.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop Scripts/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop Scripts/Shop.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/BoostDescription.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/UI/BoostDescription.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/SectionSwitch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/UI/SectionSwitch.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/ShopButtonView/UIPurchaseButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/UI/ShopButtonView/UIPurchaseButtonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/ShopButtonView/UISelectButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/UI/ShopButtonView/UISelectButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/ShopButtonView/UIShopButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/UI/ShopButtonView/UIShopButtonView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/UIButtonDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/UI/UIButtonDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/UICharacterPreview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/UI/UICharacterPreview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/UIItemBoostsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/UI/UIItemBoostsView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/UIItemDescriptionView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/UI/UIItemDescriptionView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Utils/FPSCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Utils/FPSCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Utils/Singleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Utils/Singleton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Utils/Sorter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Utils/Sorter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Utils/TextFormatter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Utils/TextFormatter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityDefaultRuntimeTheme.tss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityDefaultRuntimeTheme.tss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +166,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "RiderCSharpLiveTemplatesSettingsId",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -116,7 +180,7 @@
   <component name="RiderTodoViewSettings" groupByProject="false" />
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.16f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\UVersion\2022.3.19f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;D:\Unity Projects\Runner&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Unity Projects\Runner" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -124,7 +188,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.16f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\UVersion\2022.3.19f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;D:\Unity Projects\Runner&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\Unity Projects\Runner" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -209,6 +273,7 @@
       <workItem from="1707023583933" duration="24161000" />
       <workItem from="1707120336909" duration="4452000" />
       <workItem from="1707297540531" duration="1474000" />
+      <workItem from="1708000370668" duration="1350000" />
     </task>
     <task id="LOCAL-00001" summary="working on shop system, shop code refactored, project files sorted">
       <option name="closed" value="true" />

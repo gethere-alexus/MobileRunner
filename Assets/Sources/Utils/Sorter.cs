@@ -1,6 +1,7 @@
 using ScriptableObjects;
+using Sources.ScriptableObjects;
 
-namespace Utils
+namespace Sources.Utils
 {
     public class Sorter
     {
@@ -9,14 +10,14 @@ namespace Utils
             ItemDataContainer[] toReturn = partArrayToSort;
 
             ItemDataContainer temp;
-        
+
             // used bubble sort algorithm - https://www.geeksforgeeks.org/bubble-sort/
-            for (int i = 0; i < toReturn.Length - 1; i++) 
+            for (int i = 0; i < toReturn.Length - 1; i++)
             {
                 bool isSwapped = false;
-                for (int j = 0; j < toReturn.Length - i - 1; j++) 
+                for (int j = 0; j < toReturn.Length - i - 1; j++)
                 {
-                    if (toReturn[j].Price > toReturn[j + 1].Price) 
+                    if (toReturn[j].Price > toReturn[j + 1].Price)
                     {
                         temp = toReturn[j];
                         toReturn[j] = toReturn[j + 1];
@@ -25,6 +26,7 @@ namespace Utils
                         isSwapped = true;
                     }
                 }
+
                 if (isSwapped == false)
                     break;
             }

@@ -1,18 +1,24 @@
+using Sources.Infrastructure.GlobalEventBus;
 using UnityEngine;
 
-
-public class ChunkCleaner : MonoBehaviour
+namespace Sources.Chunk
 {
-    private float _destroyAtXPosition = -1.5f;
-
-    private void FixedUpdate()
+    public class ChunkCleaner : MonoBehaviour
     {
-        if (this.gameObject.transform.position.x <= _destroyAtXPosition)
+        private float _destroyAtXPosition = -1.5f;
+
+        private void FixedUpdate()
         {
-            GlobalEventBus.Sync.Publish(this, new OnChunkDeleted());
-            Destroy(this.gameObject);
+            if (this.gameObject.transform.position.x <= _destroyAtXPosition)
+            {
+                GlobalEventBus.Sync.Publish(this, new OnChunkDeleted());
+                Destroy(this.gameObject);
+            }
+        }
+
+        public float DestroyAtXPosition
+        {
+            set => _destroyAtXPosition = value;
         }
     }
-
-    public float DestroyAtXPosition { set => _destroyAtXPosition = value; }
 }

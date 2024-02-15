@@ -1,20 +1,22 @@
-using System;
 using TMPro;
 using UnityEngine;
 
-public class FPSCounter : MonoBehaviour
+namespace Sources.Utils
 {
-    [SerializeField] private float FPS;
-    [SerializeField] private TMP_Text _text;
-
-    private void Awake()
+    public class FPSCounter : MonoBehaviour
     {
-        Application.targetFrameRate = 30;
-    }
+        [SerializeField] private float FPS;
+        [SerializeField] private TMP_Text _text;
 
-    private void Update()
-    {
-        FPS = 1 / Time.unscaledDeltaTime;
-        _text.text = $"FPS : {FPS}";
+        private void Awake()
+        {
+            Application.targetFrameRate = 30;
+        }
+
+        private void Update()
+        {
+            FPS = 1 / Time.unscaledDeltaTime;
+            _text.text = $"FPS : {FPS}";
+        }
     }
 }

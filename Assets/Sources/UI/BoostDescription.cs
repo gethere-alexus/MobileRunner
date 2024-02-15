@@ -2,25 +2,28 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BoostDescription : MonoBehaviour
+namespace Sources.UI
 {
-    public enum BoostTextFormat {boostFirst,FinalValueFirst}
-    [SerializeField] private Image _boostImage;
-
-    [SerializeField] private TMP_Text _boostDescription;
-
-    public void ConfigureDescription(Sprite image, int boostValue, int valueAfterBoost, BoostTextFormat textFormat = BoostTextFormat.boostFirst)
+    public class BoostDescription : MonoBehaviour
     {
-        string description = textFormat switch
-        {
-            BoostTextFormat.boostFirst =>
-                $"+{boostValue} ({valueAfterBoost})",
-            BoostTextFormat.FinalValueFirst =>
-                $"{valueAfterBoost} (+{boostValue})",
-            _ => $"{boostValue} ({valueAfterBoost})"
-        };
+        public enum BoostTextFormat {boostFirst,FinalValueFirst}
+        [SerializeField] private Image _boostImage;
 
-        _boostDescription.text = description;
-        _boostImage.sprite = image;
+        [SerializeField] private TMP_Text _boostDescription;
+
+        public void ConfigureDescription(Sprite image, int boostValue, int valueAfterBoost, BoostTextFormat textFormat = BoostTextFormat.boostFirst)
+        {
+            string description = textFormat switch
+            {
+                BoostTextFormat.boostFirst =>
+                    $"+{boostValue} ({valueAfterBoost})",
+                BoostTextFormat.FinalValueFirst =>
+                    $"{valueAfterBoost} (+{boostValue})",
+                _ => $"{boostValue} ({valueAfterBoost})"
+            };
+
+            _boostDescription.text = description;
+            _boostImage.sprite = image;
+        }
     }
 }

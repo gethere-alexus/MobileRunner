@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ScriptableObjects
+namespace Sources.ScriptableObjects
 {
     public abstract class ItemDataContainer : ScriptableObject
     {
@@ -9,13 +9,13 @@ namespace ScriptableObjects
         [SerializeField] private string _description;
         [SerializeField] private int _price;
         [SerializeField] private ItemRarity _itemRarity;
-        [SerializeField] private Boost[] _appliedBoosts;
+        [SerializeField] private Boost.Boost[] _appliedBoosts;
 
         public GameObject ItemPrefab => _itemPrefab;
         public string Name => _name;
         public string Description => _description;
         public int Price => _price;
-        public Boost[] AppliedBoosts => _appliedBoosts;
+        public Boost.Boost[] AppliedBoosts => _appliedBoosts;
         public ItemRarity ItemRarity => _itemRarity;
     }
 }

@@ -1,11 +1,11 @@
 using System.Collections.Generic;
-using Data_Scripts;
-using Shop_Scripts;
-using UI_Scripts.ShopButtonView;
+using Sources.Data;
+using Sources.Shop;
+using Sources.UI.ShopButtonView;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI_Scripts
+namespace Sources.UI
 {
     public class UIButtonDisplay : MonoBehaviour
     {
@@ -27,22 +27,25 @@ namespace UI_Scripts
         }
 
         private void OnEnable()
-        { 
+        {
             _charactersShopDisplay.OnNewItemPreviewed += DisplayButtonUI;
         }
+
         private void OnDisable()
         {
             _charactersShopDisplay.OnNewItemPreviewed -= DisplayButtonUI;
         }
+
         private void DisplayButtonUI(object sender, ItemData data) // TODO: Update UI on purchase
         {
-            if(buttonInstance != null) Destroy(buttonInstance.gameObject);
-            
+            if (buttonInstance != null) Destroy(buttonInstance.gameObject);
+
             buttonInstance = Instantiate(_statusButtons[data.ItemStatus], _buttonStorage);
             if (buttonInstance.gameObject.TryGetComponent(out UIShopButtonView shopButtonView))
             {
                 shopButtonView.Construct(data, _charactersShopDisplay);
             }
+
             buttonInstance.transform.SetSiblingIndex(_buttonStorage.childCount / 2);
         }
     }

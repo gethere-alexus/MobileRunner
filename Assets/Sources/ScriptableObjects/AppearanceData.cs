@@ -1,7 +1,10 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "STSDataTransfer")]
-public class AppearanceData : ScriptableObject
+namespace Sources.ScriptableObjects
 {
+    [CreateAssetMenu(fileName = "STSDataTransfer")]
+    public class AppearanceData : ScriptableObject
+    {
  
+    }
 }

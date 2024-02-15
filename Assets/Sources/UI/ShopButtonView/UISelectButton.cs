@@ -1,14 +1,16 @@
-using Data_Scripts;
-using Shop_Scripts;
-using UI_Scripts.ShopButtonView;
+using Sources.Data;
+using Sources.Shop;
 using UnityEngine.UI;
 
-public class UISelectButton : UIShopButtonView
+namespace Sources.UI.ShopButtonView
 {
-    public override void Construct(ItemData itemData, ItemShopDisplay itemShopDisplay)
+    public class UISelectButton : UIShopButtonView
     {
-        Button btn = this.gameObject.GetComponent<Button>();
-        btn.onClick.AddListener(itemShopDisplay.SelectPreviewedSkin);
-        SetButtonText("Select");
+        public override void Construct(ItemData itemData, ItemShopDisplay itemShopDisplay)
+        {
+            Button btn = this.gameObject.GetComponent<Button>();
+            btn.onClick.AddListener(itemShopDisplay.SelectPreviewedSkin);
+            SetButtonText("Select");
+        }
     }
 }

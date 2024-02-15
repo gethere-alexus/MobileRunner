@@ -1,13 +1,13 @@
-using Shop_Scripts;
-using ScriptableObjects;
+using Sources.ScriptableObjects;
+using Sources.Shop;
 
-namespace Data_Scripts
+namespace Sources.Data
 {
     public class ItemData
     {
         private readonly ItemDataContainer _itemInformation;
         private readonly ItemStatus _itemStatus;
-        
+
         public ItemData(ItemDataContainer itemData, ItemStatus itemStatus)
         {
             _itemInformation = itemData;
