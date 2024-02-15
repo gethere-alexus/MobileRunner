@@ -1,6 +1,6 @@
 // Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
 
-Shader "Amazing Assets/Curved World/Particles/~Additive-Multiply" 
+Shader "Amazing Assets/Plugins/Curved World/Particles/~Additive-Multiply" 
 {
     Properties 
     {
@@ -33,7 +33,7 @@ Category {
 #define CURVEDWORLD_BEND_ID_1
 #pragma shader_feature_local CURVEDWORLD_DISABLED_ON
 #pragma shader_feature_local CURVEDWORLD_NORMAL_TRANSFORMATION_ON
-#include "Assets/Amazing Assets/Curved World/Shaders/Core/CurvedWorldTransform.cginc"
+#include "Assets/Plugins/Amazing Assets/Curved World/Shaders/Core/CurvedWorldTransform.cginc"
 
             sampler2D _MainTex;
             fixed4 _TintColor;
