@@ -5,36 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="881845d1-3624-4936-8fbb-d54603640d72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/StatisticDescription.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Player/Statistic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/BoostDataContainer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/BoostDataContainer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/StatisticDescription.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/PlayerConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/PlayerConfig.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Skins/Alien.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Skins/Alien.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Skins/Female.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Skins/Female.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Skins/Male.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Skins/Male.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CharacterConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/CharacterConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Boost/Boost.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Boost/Boost.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Configuration/CharacterConfig.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Configuration/CharacterConfig.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerCriticalDamage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerCriticalDamage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerDealingDamage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerDealingDamage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerFireRate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerFireRate.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerHealth.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerHealth.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerLuck.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerLuck.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerStat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerStat.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/Statistic.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerStatsRepresent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerStatsRepresent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ItemShopDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ItemShopDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/Statistic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/Statistic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/BoostDescription.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/UI/BoostDescription.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/UIItemBoostsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/UI/UIItemBoostsView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,44 +50,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2a397996daff412691ae4781443e8e8810fc00/1a/1010b494/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3a7a35f684a4e72b8a6533d8c702ad752200/09/b8343a98/Command.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UniProjects/C#CodeWars/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Amazing Assets/Curved World/Editor/Base/EditorUtilities.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Infrastructure/PlayerConfigInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Infrastructure/SoundInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Runner/Assets/Scenes/AppearanceChangeScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Runner/Assets/Scenes/AppearanceChangeScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Boost Scripts/Boost.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonScripts/ButtonColorPicker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Chunk Scripts/ChunkGenerator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Data Scripts/ItemData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Input Scripts/InputProcessor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Input Scripts/PlayerOverviewRotation.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IBoostable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IHealth.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Music Scripts/SoundPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerCriticalDamage.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerDealingDamage.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerFireRate.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerLuck.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerSkin.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerStat.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player Scripts/PlayerStatsRepresenter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/CharacterConfig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/GunDataContainer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ItemDataContainer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/SkinDataContainer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopButtonView/ButtonSound.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopButtonView/UIPurchaseButtonView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopButtonView/UISelectButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopSection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/ShopSectionSwitcher.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/UIButtonDisplay.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/UICharacterPreview.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI Scripts/UIItemDescriptionView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/Sorter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utils/TextFormatter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/LayoutRebuilder.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Runner/ProjectSettings/AudioManager.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Unity Projects/Runner/ProjectSettings/AudioManager.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -239,7 +181,7 @@
       <workItem from="1707120336909" duration="4452000" />
       <workItem from="1707297540531" duration="1474000" />
       <workItem from="1708000370668" duration="8036000" />
-      <workItem from="1708073678223" duration="2938000" />
+      <workItem from="1708073678223" duration="5282000" />
     </task>
     <task id="LOCAL-00001" summary="working on shop system, shop code refactored, project files sorted">
       <option name="closed" value="true" />

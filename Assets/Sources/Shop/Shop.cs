@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Sources.Data;
 using Sources.ScriptableObjects;
 using Sources.Utils;
-using UnityEngine;
 
 namespace Sources.Shop
 {

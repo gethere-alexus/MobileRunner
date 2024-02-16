@@ -36,8 +36,23 @@ namespace Sources.ScriptableObjects
             }
         }
 
-        public void SelectSkin(ItemDataContainer skinDataContainer) =>
+        public void SelectSkin(ItemDataContainer skinDataContainer)
+        {
+            if (_skin != null)
+            {
+                foreach (var statBoost in _skin.AppliedBoosts)
+                {   
+                    GetStatInformation(statBoost.BoostData).DecrementBoostingValue(statBoost.BoostValue);
+                }
+            }
+            
             _skin = skinDataContainer;
+
+            foreach (var statBoost in _skin.AppliedBoosts)
+            {
+                GetStatInformation(statBoost.BoostData).IncrementBoostingValue(statBoost.BoostValue);
+            }
+        }
 
         public Statistic GetStatInformation(StatisticDescription searchingStat) =>
             _characterStats.First(statistic => statistic.AplicableBoost == searchingStat);

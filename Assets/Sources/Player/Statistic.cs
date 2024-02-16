@@ -8,15 +8,20 @@ namespace Sources.Player
     {
         public StatisticDescription AplicableBoost;
         public int DefaultValue;
-        
-        
-        public virtual void IncrementBoostingValue(int amountToAdd) => DefaultValue += amountToAdd;
+        private int _currentValue;
+
+        public Statistic()
+        {
+            _currentValue = DefaultValue;
+        }
+
+        public virtual void IncrementBoostingValue(int amountToAdd) => _currentValue += amountToAdd;
 
         public virtual void DecrementBoostingValue(int amountToTake)
         {
-            if (DefaultValue - amountToTake > 0)
+            if (_currentValue - amountToTake > 0)
             {
-                DefaultValue -= amountToTake;
+                _currentValue -= amountToTake;
             }
         }
 
@@ -25,8 +30,5 @@ namespace Sources.Player
 
         public virtual int PreviewValueAfterRemoving(int amountToApply) =>
             DefaultValue - amountToApply;
-
-        public virtual int BoostableValue =>
-            DefaultValue;
     }
 }

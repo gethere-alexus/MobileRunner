@@ -23,12 +23,12 @@ MonoBehaviour:
   _itemRarity: {fileID: 11400000, guid: 080c12dd26d4ff44ebec84d27e42a17b, type: 2}
   _appliedBoosts:
   - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
-    _boostValue: 425
+    _boostValue: 1100
   - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
-    _boostValue: 867
+    _boostValue: 1200
   - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
-    _boostValue: 456
+    _boostValue: 1300
   - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
-    _boostValue: 634
+    _boostValue: 1400
   - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
-    _boostValue: 3456
+    _boostValue: 1500

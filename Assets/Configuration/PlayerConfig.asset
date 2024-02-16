@@ -12,15 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f257aea83f39f954abaaee40874978db, type: 3}
   m_Name: PlayerConfig
   m_EditorClassIdentifier: 
-  _skin: {fileID: 11400000, guid: b664126a9e345744d8807a12342784a1, type: 2}
+  _skin: {fileID: 11400000, guid: 243ea606f7160d041872bd75c4be2acf, type: 2}
   _characterStats:
   - AplicableBoost: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
     DefaultValue: 100
+    CurrentValue: 100
   - AplicableBoost: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
     DefaultValue: 25
+    CurrentValue: 100
   - AplicableBoost: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
     DefaultValue: 5
+    CurrentValue: 5
   - AplicableBoost: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
     DefaultValue: 12
+    CurrentValue: 12
   - AplicableBoost: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
     DefaultValue: 12
+    CurrentValue: 12
