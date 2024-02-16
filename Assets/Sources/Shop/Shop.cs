@@ -1,5 +1,5 @@
-using System.Collections.Generic;
-using ScriptableObjects;
+using System;
+using System.Collections.Generic;   
 using Sources.Data;
 using Sources.ScriptableObjects;
 using Sources.Utils;
@@ -39,13 +39,13 @@ namespace Sources.Shop
             _items = Sorter.SortSkinsByPrice(_items);
         }
 
-        private ItemData ConfigureItemData(ItemDataContainer itemDataContainer)
+        private ItemData ConstructItemData(ItemDataContainer itemDataContainer)
         {
             ItemStatus itemStatus = ItemStatus.Purchasable;
             if (_purchasedItems.Contains(itemDataContainer))
             {
                 itemStatus = ItemStatus.Selectable;
-                if (_playerConfig.SkinDataContainer == itemDataContainer)
+                if (_playerConfig.UsingSkin == itemDataContainer)
                 {
                     itemStatus = ItemStatus.Selected;
                 }
@@ -57,12 +57,18 @@ namespace Sources.Shop
         public void PreviewItemByIndex(int index)
         {
             _observingItemIndex = index > _items.Length || index < 0 ? 0 : index;
-            _previewedItem = ConfigureItemData(_items[_observingItemIndex]);
+            _previewedItem = ConstructItemData(_items[_observingItemIndex]);
         }
 
-        public void PreviewItemSkin()
+        public void PreviewNextItem()
         {
             _observingItemIndex = _observingItemIndex + 1 >= _items.Length ? 0 : _observingItemIndex + 1;
+            PreviewItemByIndex(_observingItemIndex);
+        }
+
+        public void PreviewSelectedSkin()
+        {
+            _observingItemIndex = Array.FindIndex(_items, item => item == _playerConfig.UsingSkin);
             PreviewItemByIndex(_observingItemIndex);
         }
 
@@ -74,8 +80,8 @@ namespace Sources.Shop
 
         public void SelectShowedItem()
         {
-            Debug.Log("Selected");
             ItemData overridingData = new ItemData(_previewedItem.ItemInformation, ItemStatus.Selected);
+            
             _previewedItem = overridingData;
             _playerConfig.SelectSkin(_previewedItem.ItemInformation);
         }

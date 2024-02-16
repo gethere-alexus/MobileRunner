@@ -11,7 +11,7 @@ namespace Sources.UI
 
         [SerializeField] private TMP_Text _boostDescription;
 
-        public void ConfigureDescription(Sprite image, int boostValue, int valueAfterBoost, BoostTextFormat textFormat = BoostTextFormat.boostFirst)
+        public void Construct(Sprite image, int boostValue, int valueAfterBoost, BoostTextFormat textFormat = BoostTextFormat.boostFirst)
         {
             string description = textFormat switch
             {
