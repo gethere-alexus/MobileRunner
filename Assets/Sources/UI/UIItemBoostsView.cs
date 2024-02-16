@@ -1,17 +1,15 @@
-using ScriptableObjects;
 using Sources.Data;
 using Sources.Player;
 using Sources.ScriptableObjects;
 using Sources.Shop;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Sources.UI
 {
     public class UIItemBoostsView : MonoBehaviour
     {
         [SerializeField] private ItemShopDisplay _shopDisplay;
-        [FormerlySerializedAs("_playerStatsRepresenter")] [SerializeField] private PlayerStatsRepresent _playerStatsRepresent;
+        [SerializeField] private CharacterConfig _playerConfig;
         [SerializeField] private Transform _boostStorage;
         [SerializeField] private BoostDescription _boostDescriptionTemplate;
 
@@ -25,9 +23,10 @@ namespace Sources.UI
             _shopDisplay.OnNewItemPreviewed -= OnNewItemShowed;
         }
 
-        private void OnNewItemShowed(object sender, ItemData skin) => ConfigureBoostsView(skin.ItemInformation);
+        private void OnNewItemShowed(object sender, ItemData skin) =>
+            ConstructBoostsView(skin.ItemInformation);
 
-        private void ConfigureBoostsView(ItemDataContainer item)
+        private void ConstructBoostsView(ItemDataContainer item)
         {
             if (_boostStorage.childCount != 0)
             {
@@ -39,13 +38,11 @@ namespace Sources.UI
 
             foreach (var boost in item.AppliedBoosts)
             {
-                PlayerStat playerStat = _playerStatsRepresent.GetBoostRepresent(boost.BoostData);
+                Statistic stat = _playerConfig.GetStatInformation(boost.BoostData);
+                int valueAfterBoosting = stat.PreviewValueAfterApplying(boost.BoostValue);
 
-                int valueAfterBoosting = playerStat.DefaultBoostableValue + boost.BoostValue;
-
-                BoostDescription instance = Instantiate(_boostDescriptionTemplate, _boostStorage);
-
-                instance.ConfigureDescription(boost.BoostData.BoostSprite, boost.BoostValue, valueAfterBoosting);
+                Instantiate(_boostDescriptionTemplate, _boostStorage)
+                    .Construct(boost.BoostData.BoostSprite, boost.BoostValue, valueAfterBoosting);
             }
         }
     }

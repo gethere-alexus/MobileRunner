@@ -20,6 +20,11 @@ namespace Sources.Shop
             _skinShopInstance = new Shop(playerConfig, _skins, _purchasedSkins);
         }
 
+        private void OnEnable()
+        {
+            DisplaySelectedSkin();
+        }
+
         private void Start()
         {
             DisplaySkinByIndex(0);
@@ -27,7 +32,13 @@ namespace Sources.Shop
 
         public void DisplayNextSkin()
         {
-            _skinShopInstance.PreviewItemSkin();
+            _skinShopInstance.PreviewNextItem();
+            UpdateUIView();
+        }
+
+        public void DisplaySelectedSkin()
+        {
+            _skinShopInstance.PreviewSelectedSkin();
             UpdateUIView();
         }
 
@@ -55,11 +66,10 @@ namespace Sources.Shop
             UpdateUIView();
         }
 
-        private void UpdateUIView()
-        {
+        private void UpdateUIView() =>
             OnNewItemPreviewed?.Invoke(this, _skinShopInstance.PreviewedItem);
-        }
 
-        public Shop SkinShopInstance => _skinShopInstance;
+        public Shop SkinShopInstance =>
+            _skinShopInstance;
     }
 }

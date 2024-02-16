@@ -10,24 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fc0ace4956797e4195243ebf1b8d0c8, type: 3}
-  m_Name: Female
+  m_Name: Male
   m_EditorClassIdentifier: 
-  _itemPrefab: {fileID: 5824428352053320391, guid: 9c86e41b5e19b7447aa5c4f94049889d,
+  _itemPrefab: {fileID: 1762018173025169312, guid: 5811f4236f7f88b41b2a1da538566706,
     type: 3}
-  _name: Tracy
-  _description: ' In an alien-invaded Earth, Tracy, lacking advanced armor, embodies
-    natural resilience. Her determined gaze mirrors the struggles, symbolizing the
-    indomitable spirit of everyday people in the fight for survival.'
-  _price: 123123
-  _itemRarity: {fileID: 11400000, guid: 42969f91a918ae340abd817a7a8f998b, type: 2}
+  _name: Alex
+  _description: ' In the alien invasion aftermath, an average man, lacking special
+    gear, faces uncertainty with quiet determination. Navigating the chaos, he relies
+    on instinct. In Earth''s battle for survival, he becomes a symbol of resilience,
+    proving ordinary individuals can rise in extraordinary times.'
+  _price: 12492
+  _itemRarity: {fileID: 11400000, guid: 080c12dd26d4ff44ebec84d27e42a17b, type: 2}
   _appliedBoosts:
   - _boostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
-    _boostValue: 51
+    _boostValue: 1100
   - _boostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
-    _boostValue: 52
+    _boostValue: 1200
   - _boostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
-    _boostValue: 24
+    _boostValue: 1300
   - _boostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
-    _boostValue: 543
+    _boostValue: 1400
   - _boostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
-    _boostValue: 142
+    _boostValue: 1500

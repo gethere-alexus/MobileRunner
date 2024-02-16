@@ -25119,7 +25119,6 @@ GameObject:
   - component: {fileID: 2713621048302924792}
   - component: {fileID: 6039085796604934322}
   - component: {fileID: 1073352195032858880}
-  - component: {fileID: 3547842685390245864}
   m_Layer: 5
   m_Name: PreviousButton
   m_TagString: Untagged
@@ -25391,18 +25390,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2751841302444728432}
         m_TargetAssemblyTypeName: ItemShopDisplay, Assembly-CSharp
         m_MethodName: DisplayPreviousSkin
@@ -26749,12 +26736,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1762018171813021268}
   - component: {fileID: 1762018171813021259}
-  - component: {fileID: 1762018171813021275}
-  - component: {fileID: 1762018171813021273}
-  - component: {fileID: 1762018171813021274}
-  - component: {fileID: 1762018171813021276}
-  - component: {fileID: 1762018171813021277}
-  - component: {fileID: 1762018171813021278}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -26798,109 +26779,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &1762018171813021273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762018171813021258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ea35e0e459bb654bbf2ece3fc658bda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _applicableBoost: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
-  _value: 100
-  _maxValue: 100
-  _defaultValue: 0
-  _defaultMaxValue: 0
---- !u!114 &1762018171813021274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762018171813021258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc67583e2efa8cb49b2c1bbe448351d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _applicableBoost: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
-  _value: 25
-  _maxValue: 99999
-  _defaultValue: 0
-  _defaultMaxValue: 0
---- !u!114 &1762018171813021275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762018171813021258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 984337b176c599f4488ab93d66c7536c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerStats:
-  - {fileID: 1762018171813021273}
-  - {fileID: 1762018171813021276}
-  - {fileID: 1762018171813021274}
-  - {fileID: 1762018171813021277}
-  - {fileID: 1762018171813021278}
---- !u!114 &1762018171813021276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762018171813021258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f178de956cc21694288a9cf79aaf9699, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _applicableBoost: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
-  _value: 75
-  _maxValue: 99999
-  _defaultValue: 0
-  _defaultMaxValue: 0
---- !u!114 &1762018171813021277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762018171813021258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa1ffe9a73b3ab648866aa2e80bddc2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _applicableBoost: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
-  _value: 10
-  _maxValue: 99999
-  _defaultValue: 0
-  _defaultMaxValue: 0
---- !u!114 &1762018171813021278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762018171813021258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ddbbc061d91fd04ab90561c3212b1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _applicableBoost: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
-  _value: 30
-  _maxValue: 99999
-  _defaultValue: 0
-  _defaultMaxValue: 0
 --- !u!64 &1778824305059280601
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -28004,18 +27882,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.2800293, y: 0.100097656}
   m_SizeDelta: {x: -0.559906, y: 0.41455078}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2180921620120962387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5883880657305442012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2187971190358372356
 GameObject:
   m_ObjectHideFlags: 0
@@ -31317,18 +31183,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: d75e8b3cb76afbc43b49d58e0b17f846, type: 3}
---- !u!114 &3547842685390245864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024037193126990581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &3581840125040428541
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -35666,18 +35520,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2751841302444728432}
         m_TargetAssemblyTypeName: ItemShopDisplay, Assembly-CSharp
         m_MethodName: DisplayNextSkin
@@ -38210,7 +38052,6 @@ GameObject:
   - component: {fileID: 8823645148911297746}
   - component: {fileID: 6155626645003769689}
   - component: {fileID: 5246590432293924665}
-  - component: {fileID: 2180921620120962387}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -38612,7 +38453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shopDisplay: {fileID: 2751841302444728432}
-  _playerStatsRepresenter: {fileID: 1762018171813021275}
+  _playerConfig: {fileID: 11400000, guid: 384bd6ff1608f29439def99d9d28e33f, type: 2}
   _boostStorage: {fileID: 7315439021940309360}
   _boostDescriptionTemplate: {fileID: 2120890967040099389, guid: a67d0ae030d6f2846a0d4dcd1cd3856e,
     type: 3}
