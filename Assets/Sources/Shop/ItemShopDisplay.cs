@@ -3,21 +3,20 @@ using ScriptableObjects;
 using Sources.Data;
 using Sources.ScriptableObjects;
 using UnityEngine;
-using Zenject;
 
 namespace Sources.Shop
 {
     public class ItemShopDisplay : MonoBehaviour
     {
         [SerializeField] private SkinDataContainer[] _skins, _purchasedSkins;
+        [SerializeField] private CharacterConfig _playerConfig;
         public event EventHandler<ItemData> OnItemPurchased, OnNewItemPreviewed;
 
         private Shop _skinShopInstance;
 
-        [Inject]
-        public void Construct(CharacterConfig playerConfig)
+        private void Awake()
         {
-            _skinShopInstance = new Shop(playerConfig, _skins, _purchasedSkins);
+            _skinShopInstance = new Shop(_playerConfig, _skins, _purchasedSkins);
         }
 
         private void OnEnable()

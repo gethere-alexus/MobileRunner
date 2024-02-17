@@ -64,7 +64,7 @@ namespace Sources.Shop
             _observingItemIndex = _observingItemIndex + 1 >= _items.Length ? 0 : _observingItemIndex + 1;
             PreviewItemByIndex(_observingItemIndex);
         }
-
+        
         public void PreviewSelectedSkin()
         {
             _observingItemIndex = Array.FindIndex(_items, item => item == _playerConfig.UsingSkin);

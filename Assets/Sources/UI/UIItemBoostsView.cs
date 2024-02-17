@@ -12,7 +12,7 @@ namespace Sources.UI
         [SerializeField] private CharacterConfig _playerConfig;
         [SerializeField] private Transform _boostStorage;
         [SerializeField] private BoostDescription _boostDescriptionTemplate;
-
+        
         private void OnEnable()
         {
             _shopDisplay.OnNewItemPreviewed += OnNewItemShowed;
