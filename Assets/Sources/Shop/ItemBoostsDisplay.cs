@@ -1,12 +1,12 @@
 using Sources.Data;
 using Sources.Player;
 using Sources.ScriptableObjects;
-using Sources.Shop;
+using Sources.UI;
 using UnityEngine;
 
-namespace Sources.UI
+namespace Sources.Shop
 {
-    public class UIItemBoostsView : MonoBehaviour
+    public class ItemBoostsDisplay : MonoBehaviour
     {
         [SerializeField] private ItemShopDisplay _shopDisplay;
         [SerializeField] private CharacterConfig _playerConfig;

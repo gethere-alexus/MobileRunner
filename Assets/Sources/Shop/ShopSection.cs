@@ -2,10 +2,10 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Sources.UI
+namespace Sources.Shop
 {
    [Serializable]
-   public class Section
+   public class ShopSection
    {
       public GameObject SectionObject;
       public Button SelectionButton;

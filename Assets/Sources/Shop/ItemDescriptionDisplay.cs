@@ -1,12 +1,11 @@
 using Sources.Data;
-using Sources.Shop;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Sources.UI
+namespace Sources.Shop
 {
-    public class UIItemDescriptionView : MonoBehaviour
+    public class ItemDescriptionDisplay : MonoBehaviour
     {
         [SerializeField] private ItemShopDisplay _charactersShopDisplay;
         [SerializeField] private TMP_Text _itemName, _itemDescription;

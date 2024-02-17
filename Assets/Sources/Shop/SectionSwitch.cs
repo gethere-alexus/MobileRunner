@@ -1,12 +1,12 @@
 using UnityEngine;
 
-namespace Sources.UI
+namespace Sources.Shop
 {
     public class SectionSwitch : MonoBehaviour
     {
-        [SerializeField] private Section[] _sections;
+        [SerializeField] private ShopSection[] _sections;
         [SerializeField] private int _startSectionIndex;
-        private Section _activeSection;
+        private ShopSection _activeShopSection;
 
         private void Awake()
         {
@@ -18,11 +18,11 @@ namespace Sources.UI
             OpenSection(_sections[_startSectionIndex]);
         }
 
-        private void OpenSection(Section section)
+        private void OpenSection(ShopSection shopSection)
         {
-            _activeSection?.SetActive(false);
-            _activeSection = section;
-            section.SetActive(true);
+            _activeShopSection?.SetActive(false);
+            _activeShopSection = shopSection;
+            shopSection.SetActive(true);
         }
     }
 }

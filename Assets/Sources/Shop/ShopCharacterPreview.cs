@@ -1,10 +1,9 @@
 using Sources.Data;
-using Sources.Shop;
 using UnityEngine;
 
-namespace Sources.UI
+namespace Sources.Shop
 {
-    public class UICharacterPreview : MonoBehaviour
+    public class ShopCharacterPreview : MonoBehaviour
     {
         [SerializeField] private Transform _charPreviewStorage;
         [SerializeField] private ItemShopDisplay _charactersShopDisplay;

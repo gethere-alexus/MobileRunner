@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Sources.Data;
 using Sources.ScriptableObjects;
 using Sources.Utils;
+using UnityEngine;
 
 namespace Sources.Shop
 {
@@ -79,6 +80,12 @@ namespace Sources.Shop
 
         public void SelectShowedItem()
         {
+            if (!_purchasedItems.Contains(_previewedItem.ItemInformation))
+            {
+                Debug.Log("item is not purchased... returning back");
+                return;
+            }
+            Debug.Log("Selection Process/");
             ItemData overridingData = new ItemData(_previewedItem.ItemInformation, ItemStatus.Selected);
             
             _previewedItem = overridingData;
