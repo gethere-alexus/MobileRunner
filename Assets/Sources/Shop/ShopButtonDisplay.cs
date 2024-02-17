@@ -1,15 +1,17 @@
 using System.Collections.Generic;
 using Sources.Data;
+using Sources.Shop;
+using Sources.Shop.ShopButton;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Sources.Shop
+namespace Sources.UI
 {
     public class ShopButtonDisplay : MonoBehaviour
     {
         [SerializeField] private ItemShopDisplay _charactersShopDisplay;
         [SerializeField] private Button _purchaseButton, _selectButton, _selectedButton;
-        [SerializeField] private Button _displayNextItemButton, _displayPreviousItemButton;
+        [SerializeField] private Button _previousItemButton, _nextItemButton;
 
         private Dictionary<ItemStatus, Button> _statusButtons;
         private Button buttonInstance;
@@ -28,10 +30,10 @@ namespace Sources.Shop
         {
             _purchaseButton.onClick.AddListener(_charactersShopDisplay.PurchasePreviewedSkin);
             _selectButton.onClick.AddListener(_charactersShopDisplay.SelectPreviewedSkin);
-
-            _displayNextItemButton.onClick.AddListener(_charactersShopDisplay.DisplayNextSkin);
-            _displayPreviousItemButton.onClick.AddListener(_charactersShopDisplay.DisplayPreviousSkin);
-
+            
+            _previousItemButton.onClick.AddListener(_charactersShopDisplay.DisplayPreviousSkin);
+            _nextItemButton.onClick.AddListener(_charactersShopDisplay.DisplayNextSkin);
+            
             _charactersShopDisplay.OnNewItemPreviewed += DisplayButtonUI;
         }
 
@@ -42,11 +44,16 @@ namespace Sources.Shop
 
         private void DisplayButtonUI(object sender, ItemData data) // TODO: Update UI on purchase
         {
-            if (buttonInstance != null)
+            if (buttonInstance != null) 
                 buttonInstance.gameObject.SetActive(false);
 
             buttonInstance = _statusButtons[data.ItemStatus];
-
+            
+            if(buttonInstance.TryGetComponent<PurchaseButton>(out PurchaseButton buttonDisplay))
+            {
+                buttonDisplay.Construct(data);
+            }
+            
             buttonInstance.gameObject.SetActive(true);
         }
     }

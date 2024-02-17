@@ -80,12 +80,9 @@ namespace Sources.Shop
 
         public void SelectShowedItem()
         {
-            if (!_purchasedItems.Contains(_previewedItem.ItemInformation))
-            {
-                Debug.Log("item is not purchased... returning back");
+            if (!_purchasedItems.Contains(_previewedItem.ItemInformation)) 
                 return;
-            }
-            Debug.Log("Selection Process/");
+            
             ItemData overridingData = new ItemData(_previewedItem.ItemInformation, ItemStatus.Selected);
             
             _previewedItem = overridingData;

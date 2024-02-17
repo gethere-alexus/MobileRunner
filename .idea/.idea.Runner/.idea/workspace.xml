@@ -7,25 +7,8 @@
     <list default="true" id="881845d1-3624-4936-8fbb-d54603640d72" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/Section.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ShopSection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/Section.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ShopSection.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/SectionSwitch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/SectionSwitch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/SectionSwitch.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/SectionSwitch.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/ShopButtonView.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/ShopButtonView/UIPurchaseButtonView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/ShopButtonView/UIPurchaseButtonView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/ShopButtonView/UISelectButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/ShopButtonView/UISelectButton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/ShopButtonView/UIShopButtonView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/ShopButtonView/UIShopButtonView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/UIButtonDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ShopButtonDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/UIButtonDisplay.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ShopButtonDisplay.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/UICharacterPreview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ShopCharacterPreview.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/UICharacterPreview.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ShopCharacterPreview.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/UIItemBoostsView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ItemBoostsDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/UIItemBoostsView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ItemBoostsDisplay.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/UIItemDescriptionView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ItemDescriptionDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/UI/UIItemDescriptionView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ItemDescriptionDisplay.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ShopButtonDisplay.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ShopButtonDisplay.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +47,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3a7a35f684a4e72b8a6533d8c702ad752200/09/b8343a98/Command.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UniProjects/C#CodeWars/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Infrastructure/PlayerConfigInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sources/UI/ShopInteractionButtonDisplay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Shop/ShopButton/PurchaseButtonDisplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/LayoutRebuilder.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
