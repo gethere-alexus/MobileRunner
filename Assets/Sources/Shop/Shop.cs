@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Sources.Data;
 using Sources.ScriptableObjects;
 using Sources.Utils;
+using UnityEngine;
 
 namespace Sources.Shop
 {
@@ -64,7 +65,7 @@ namespace Sources.Shop
             _observingItemIndex = _observingItemIndex + 1 >= _items.Length ? 0 : _observingItemIndex + 1;
             PreviewItemByIndex(_observingItemIndex);
         }
-
+        
         public void PreviewSelectedSkin()
         {
             _observingItemIndex = Array.FindIndex(_items, item => item == _playerConfig.UsingSkin);
@@ -79,6 +80,9 @@ namespace Sources.Shop
 
         public void SelectShowedItem()
         {
+            if (!_purchasedItems.Contains(_previewedItem.ItemInformation)) 
+                return;
+            
             ItemData overridingData = new ItemData(_previewedItem.ItemInformation, ItemStatus.Selected);
             
             _previewedItem = overridingData;

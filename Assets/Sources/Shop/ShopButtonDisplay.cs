@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 using Sources.Data;
 using Sources.Shop;
-using Sources.UI.ShopButtonView;
+using Sources.Shop.ShopButton;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Sources.UI
 {
-    public class UIButtonDisplay : MonoBehaviour
+    public class ShopButtonDisplay : MonoBehaviour
     {
         [SerializeField] private ItemShopDisplay _charactersShopDisplay;
-        [SerializeField] private Transform _buttonStorage;
         [SerializeField] private Button _purchaseButton, _selectButton, _selectedButton;
+        [SerializeField] private Button _previousItemButton, _nextItemButton;
 
         private Dictionary<ItemStatus, Button> _statusButtons;
         private Button buttonInstance;
@@ -28,6 +28,12 @@ namespace Sources.UI
 
         private void OnEnable()
         {
+            _purchaseButton.onClick.AddListener(_charactersShopDisplay.PurchasePreviewedSkin);
+            _selectButton.onClick.AddListener(_charactersShopDisplay.SelectPreviewedSkin);
+            
+            _previousItemButton.onClick.AddListener(_charactersShopDisplay.DisplayPreviousSkin);
+            _nextItemButton.onClick.AddListener(_charactersShopDisplay.DisplayNextSkin);
+            
             _charactersShopDisplay.OnNewItemPreviewed += DisplayButtonUI;
         }
 
@@ -38,15 +44,17 @@ namespace Sources.UI
 
         private void DisplayButtonUI(object sender, ItemData data) // TODO: Update UI on purchase
         {
-            if (buttonInstance != null) Destroy(buttonInstance.gameObject);
+            if (buttonInstance != null) 
+                buttonInstance.gameObject.SetActive(false);
 
-            buttonInstance = Instantiate(_statusButtons[data.ItemStatus], _buttonStorage);
-            if (buttonInstance.gameObject.TryGetComponent(out UIShopButtonView shopButtonView))
+            buttonInstance = _statusButtons[data.ItemStatus];
+            
+            if(buttonInstance.TryGetComponent<PurchaseButton>(out PurchaseButton buttonDisplay))
             {
-                shopButtonView.Construct(data, _charactersShopDisplay);
+                buttonDisplay.Construct(data);
             }
-
-            buttonInstance.transform.SetSiblingIndex(_buttonStorage.childCount / 2);
+            
+            buttonInstance.gameObject.SetActive(true);
         }
     }
 }
