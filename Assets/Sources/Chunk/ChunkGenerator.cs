@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Sources.Infrastructure.GlobalEventBus;
+using Infrastructure.GlobalEventBus;
 using UnityEngine;
 using Random = UnityEngine.Random;
 

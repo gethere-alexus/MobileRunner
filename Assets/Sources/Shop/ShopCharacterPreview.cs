@@ -20,7 +20,7 @@ namespace Sources.Shop
             _charactersShopDisplay.OnNewItemPreviewed -= ConfigureCharacterPreview;
         }
 
-        private void ConfigureCharacterPreview(object sender, ItemData e)
+        private void ConfigureCharacterPreview(ItemData e)
         {
             if (_particlesInstance != null) Destroy(_playerInstance);
             if (_playerInstance != null) Destroy(_particlesInstance);

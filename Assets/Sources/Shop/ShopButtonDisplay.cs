@@ -42,7 +42,7 @@ namespace Sources.UI
             _charactersShopDisplay.OnNewItemPreviewed -= DisplayButtonUI;
         }
 
-        private void DisplayButtonUI(object sender, ItemData data) // TODO: Update UI on purchase
+        private void DisplayButtonUI(ItemData data) // TODO: Update UI on purchase
         {
             if (buttonInstance != null) 
                 buttonInstance.gameObject.SetActive(false);

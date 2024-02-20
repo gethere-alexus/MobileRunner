@@ -1,4 +1,4 @@
-using Sources.Infrastructure.GlobalEventBus;
+using Infrastructure.GlobalEventBus;
 using UnityEngine;
 
 namespace Sources.Chunk

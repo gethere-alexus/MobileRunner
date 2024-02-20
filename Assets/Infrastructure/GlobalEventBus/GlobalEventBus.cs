@@ -1,4 +1,4 @@
-namespace Sources.Infrastructure.GlobalEventBus
+namespace Infrastructure.GlobalEventBus
 {
     public static class GlobalEventBus
     {

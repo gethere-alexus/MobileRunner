@@ -10,7 +10,7 @@ namespace Sources.Shop
     {
         [SerializeField] private SkinDataContainer[] _skins, _purchasedSkins;
         [SerializeField] private CharacterConfig _playerConfig;
-        public event EventHandler<ItemData> OnItemPurchased, OnNewItemPreviewed;
+        public event Action<ItemData> OnItemPurchased, OnNewItemPreviewed;
 
         private Shop _skinShopInstance;
 
@@ -66,7 +66,7 @@ namespace Sources.Shop
         }
 
         private void UpdateUIView() =>
-            OnNewItemPreviewed?.Invoke(this, _skinShopInstance.PreviewedItem);
+            OnNewItemPreviewed?.Invoke(_skinShopInstance.PreviewedItem);
 
         public Shop SkinShopInstance =>
             _skinShopInstance;

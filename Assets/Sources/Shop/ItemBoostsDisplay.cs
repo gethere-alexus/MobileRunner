@@ -23,7 +23,7 @@ namespace Sources.Shop
             _shopDisplay.OnNewItemPreviewed -= OnNewItemShowed;
         }
 
-        private void OnNewItemShowed(object sender, ItemData skin) =>
+        private void OnNewItemShowed(ItemData skin) =>
             ConstructBoostsView(skin.ItemInformation);
 
         private void ConstructBoostsView(ItemDataContainer item)

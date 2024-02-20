@@ -21,7 +21,7 @@ namespace Sources.Shop
             _charactersShopDisplay.OnNewItemPreviewed += ConfigureDescriptionUI;
         }
 
-        private void ConfigureDescriptionUI(object sender, ItemData skin)
+        private void ConfigureDescriptionUI(ItemData skin)
         {
             _itemFrame.sprite = skin.ItemInformation.ItemRarity.ItemFrame;
             _itemName.text = skin.ItemInformation.Name;

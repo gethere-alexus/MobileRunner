@@ -5,10 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="881845d1-3624-4936-8fbb-d54603640d72" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Bootstrap/Game.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Bootstrap/Game.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Bootstrap/ICoroutineRunner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Bootstrap/ICoroutineRunner.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/SceneLoad/SceneLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/SceneLoad/SceneLoader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/GameStateMachine.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/GameStateMachine.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/IState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/IState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadLevelState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadLevelState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Shop/Money/MoneyDisplay.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Shop/Money/MoneyDisplay.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/shelf/Uncommitted_changes_before_Update_at_2_17_2024_11_54_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/shelf/Uncommitted_changes_before_Update_at_2_17_2024_11_54_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/shelf/Uncommitted_changes_before_Update_at_2_17_2024_11_54_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/shelf/Uncommitted_changes_before_Update_at_2_17_2024_11_54_AM__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ShopButtonDisplay.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ShopButtonDisplay.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/GlobalEventBus/EventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/GlobalEventBus/EventBus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/GlobalEventBus/GlobalEventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/GlobalEventBus/GlobalEventBus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/PlayerConfigInstaller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/PlayerConfigInstaller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Chunk/ChunkCleaner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Chunk/ChunkCleaner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Chunk/ChunkGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Chunk/ChunkGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ItemBoostsDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ItemBoostsDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ItemDescriptionDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ItemDescriptionDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ItemShopDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ItemShopDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ShopButtonDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ShopButtonDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ShopCharacterPreview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ShopCharacterPreview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +84,9 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2ZxlyZmu323Qw5IEwgEGiDKRkSq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,13 +96,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "refactoring/shop-buttons-refactoring",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "ReSpellerSettingsId",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -179,6 +211,10 @@
       <workItem from="1707297540531" duration="1474000" />
       <workItem from="1708000370668" duration="8036000" />
       <workItem from="1708073678223" duration="5282000" />
+      <workItem from="1708342030441" duration="3873000" />
+      <workItem from="1708346680509" duration="2007000" />
+      <workItem from="1708361284383" duration="2594000" />
+      <workItem from="1708420059028" duration="14905000" />
     </task>
     <task id="LOCAL-00001" summary="working on shop system, shop code refactored, project files sorted">
       <option name="closed" value="true" />

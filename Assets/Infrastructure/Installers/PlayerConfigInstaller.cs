@@ -2,7 +2,7 @@ using Sources.ScriptableObjects;
 using UnityEngine;
 using Zenject;
 
-namespace Sources.Infrastructure
+namespace Infrastructure.Installers
 {
     public class PlayerConfigInstaller : MonoInstaller
     {
