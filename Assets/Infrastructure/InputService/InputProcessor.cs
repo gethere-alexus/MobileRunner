@@ -1,21 +1,22 @@
 using System;
-using Sources.Utils;
+using Infrastructure.ServiceLocating;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Sources.Input
+namespace Infrastructure.InputService
 {
-    [DefaultExecutionOrder(-1)]
-    public class InputProcessor : MonoBehaviourSingleton<InputProcessor>
+    public class InputProcessor : MonoBehaviour, IInputProcessingService
     {
         private InputController _inputController;
 
         private bool _isTouching;
-        public event EventHandler<Vector2> OnTouchStarted, OnTouchPerformed, OnTouchEnded;
+        public event Action<Vector2> OnTouchStarted, OnTouchPerformed, OnTouchEnded;
 
         private void Awake()
         {
             _inputController = new InputController();
+            
+            DontDestroyOnLoad(this);
         }
 
         private void OnEnable()
@@ -29,7 +30,7 @@ namespace Sources.Input
         private void FixedUpdate()
         {
             if (_isTouching)
-                OnTouchPerformed?.Invoke(this, _inputController.PlayerMovement.PrimaryPosition.ReadValue<Vector2>());
+                OnTouchPerformed?.Invoke(_inputController.PlayerMovement.PrimaryPosition.ReadValue<Vector2>());
         }
 
         private void OnDisable()
@@ -40,13 +41,13 @@ namespace Sources.Input
         private void StartTouchPrimary(InputAction.CallbackContext ctx)
         {
             _isTouching = true;
-            OnTouchStarted?.Invoke(this, _inputController.PlayerMovement.PrimaryPosition.ReadValue<Vector2>());
+            OnTouchStarted?.Invoke(_inputController.PlayerMovement.PrimaryPosition.ReadValue<Vector2>());
         }
 
         private void EndTouchPrimary(InputAction.CallbackContext ctx)
         {
             _isTouching = false;
-            OnTouchEnded?.Invoke(this, _inputController.PlayerMovement.PrimaryPosition.ReadValue<Vector2>());
+            OnTouchEnded?.Invoke(_inputController.PlayerMovement.PrimaryPosition.ReadValue<Vector2>());
         }
     }
 }

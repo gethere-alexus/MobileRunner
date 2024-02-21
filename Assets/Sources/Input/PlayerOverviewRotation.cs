@@ -1,3 +1,4 @@
+using Infrastructure.InputService;
 using UnityEngine;
 
 namespace Sources.Input
@@ -23,9 +24,9 @@ namespace Sources.Input
             _inputProcessor.OnTouchPerformed -= OnTouchPerformed;
         }
 
-        private void OnTouchStarted(object sender, Vector2 position) => _startTouchPositionX = position.x;
+        private void OnTouchStarted(Vector2 position) => _startTouchPositionX = position.x;
 
-        private void OnTouchPerformed(object sender, Vector2 position)
+        private void OnTouchPerformed(Vector2 position)
         {
             _currentTouchPositionX = position.x;
 

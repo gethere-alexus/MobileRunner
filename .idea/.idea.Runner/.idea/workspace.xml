@@ -5,39 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="881845d1-3624-4936-8fbb-d54603640d72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Bootstrap/Game.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Bootstrap/Game.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Bootstrap/ICoroutineRunner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Bootstrap/ICoroutineRunner.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/SceneLoad/SceneLoader.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/SceneLoad/SceneLoader.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/GameStateMachine.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/GameStateMachine.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/IState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/IState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadLevelState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadLevelState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Shop/Money/MoneyDisplay.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Shop/Money/MoneyDisplay.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/shelf/Uncommitted_changes_before_Update_at_2_17_2024_11_54_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/shelf/Uncommitted_changes_before_Update_at_2_17_2024_11_54_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/shelf/Uncommitted_changes_before_Update_at_2_17_2024_11_54_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/shelf/Uncommitted_changes_before_Update_at_2_17_2024_11_54_AM__Changes_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/AssetManagement.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/AssetManagement/AssetProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/AssetManagement/AssetProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/AssetManagement/AssetsPaths.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/AssetManagement/AssetsPaths.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/AssetManagement/IAssetProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/AssetManagement/IAssetProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Factory.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Factory/GameFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Factory/GameFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Factory/IFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Factory/IFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/InputService/IInputProcessingService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/InputService/IInputProcessingService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/InputService/IInputService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/InputService/IInputService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/ServiceLocating.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/ServiceLocating/IService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/ServiceLocating/IService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/ServiceLocating/ServiceLocator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/ServiceLocating/ServiceLocator.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/GlobalEventBus/EventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/GlobalEventBus/EventBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/GlobalEventBus/GlobalEventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/GlobalEventBus/GlobalEventBus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/PlayerConfigInstaller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/PlayerConfigInstaller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Bootstrap/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Bootstrap/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/GameStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadLevelState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadLevelState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Chunk/ChunkCleaner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Chunk/ChunkCleaner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Chunk/ChunkGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Chunk/ChunkGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ItemBoostsDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ItemBoostsDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ItemDescriptionDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ItemDescriptionDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ItemShopDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ItemShopDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ShopButtonDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ShopButtonDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ShopCharacterPreview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ShopCharacterPreview.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/InputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Input/InputProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/InputService/InputProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Input/InputProcessor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/InputService/InputProcessor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Input/PlayerOverviewRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Input/PlayerOverviewRotation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/Statistic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/Statistic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Services.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Services/IBoostable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/IBoostable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Services/IBoostable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/IBoostable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Services/IHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/IHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Services/IHealth.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/IHealth.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,9 +79,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2a397996daff412691ae4781443e8e8810fc00/1a/1010b494/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3a7a35f684a4e72b8a6533d8c702ad752200/09/b8343a98/Command.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c91765c32a844aad92ce9b6c6b9d05f753000/ac/b23343db/Command.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/53/e9f51b89/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/80/ffc8455d/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/af/6e7386fc/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/fc/805567d0/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UniProjects/C#CodeWars/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Infrastructure/PlayerConfigInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sources/Shop/ShopButton/PurchaseButtonDisplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/LayoutRebuilder.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -91,28 +99,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ReSpellerSettingsId",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\owalo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\owalo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\owalo\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\owalo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\owalo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\owalo\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RiderTodoViewSettings" groupByProject="false" />
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
@@ -141,10 +149,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19912">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="19912" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -215,6 +223,10 @@
       <workItem from="1708346680509" duration="2007000" />
       <workItem from="1708361284383" duration="2594000" />
       <workItem from="1708420059028" duration="14905000" />
+      <workItem from="1708513045837" duration="989000" />
+      <workItem from="1708514419339" duration="5300000" />
+      <workItem from="1708520893746" duration="2704000" />
+      <workItem from="1708526417621" duration="3490000" />
     </task>
     <task id="LOCAL-00001" summary="working on shop system, shop code refactored, project files sorted">
       <option name="closed" value="true" />

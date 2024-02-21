@@ -1,4 +1,5 @@
 ﻿using Infrastructure.SceneLoad;
+using Infrastructure.ServiceLocating;
 using Infrastructure.StateMachine;
 
 namespace Infrastructure.Bootstrap
@@ -9,7 +10,7 @@ namespace Infrastructure.Bootstrap
 
         public Game(ICoroutineRunner coroutineRunner)
         {
-            StateMachine = new GameStateMachine(new SceneLoader(coroutineRunner));
+            StateMachine = new GameStateMachine(new SceneLoader(coroutineRunner), new ServiceLocator());
         }
     }
 }

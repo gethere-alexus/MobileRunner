@@ -1,6 +1,6 @@
-﻿using Infrastructure.SceneLoad;
+﻿using Infrastructure.Factory;
+using Infrastructure.SceneLoad;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace Infrastructure.StateMachine.States
 {
@@ -8,21 +8,21 @@ namespace Infrastructure.StateMachine.States
     {
         private readonly GameStateMachine _stateMachine;
         private readonly SceneLoader _sceneLoader;
+        private readonly IFactory _gameFactory;
 
-        public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader)
+        public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, IFactory gameFactory)
         {
             _stateMachine = gameStateMachine;
             _sceneLoader = sceneLoader;
+            _gameFactory = gameFactory;
         }
 
-        public void Enter(string sceneName)
-        {
+        public void Enter(string sceneName) => 
             _sceneLoader.Load(sceneName, OnLoaded);
-        }
-
+        
         private void OnLoaded()
         {
-            Object.Instantiate(Resources.Load<GameObject>("Prefabs/UI/Canvas - Main Menu"));
+            _gameFactory.CreateMainMenu();
         }
 
         public void Exit()

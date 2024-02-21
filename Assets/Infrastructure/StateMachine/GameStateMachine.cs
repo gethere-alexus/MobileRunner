@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using Infrastructure.Factory;
 using Infrastructure.SceneLoad;
+using Infrastructure.ServiceLocating;
 using Infrastructure.StateMachine.States;
 
 namespace Infrastructure.StateMachine
@@ -10,12 +12,12 @@ namespace Infrastructure.StateMachine
         private readonly Dictionary<Type, IExitableState> _states;
         private IExitableState _activeState;
 
-        public GameStateMachine(SceneLoader sceneLoader)
+        public GameStateMachine(SceneLoader sceneLoader, ServiceLocator serviceLocator)
         {
             _states = new Dictionary<Type, IExitableState>()
             {
-                [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader),
-                [typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader)
+                [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader, serviceLocator),
+                [typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader, serviceLocator.Single<IFactory>())
             };
         }
         

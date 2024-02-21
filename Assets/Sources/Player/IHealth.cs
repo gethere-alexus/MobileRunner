@@ -1,4 +1,4 @@
-namespace Sources.Services
+namespace Sources.Player
 {
     public interface IHealth
     {

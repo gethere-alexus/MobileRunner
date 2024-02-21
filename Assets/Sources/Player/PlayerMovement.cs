@@ -1,3 +1,5 @@
+using Infrastructure.InputService;
+using Infrastructure.ServiceLocating;
 using Sources.Input;
 using UnityEngine;
 
@@ -17,11 +19,11 @@ namespace Sources.Player
         private Vector2 _startPosition, _endPosition;
         private Vector3 _destination;
 
-        private InputProcessor _inputProcessor;
+        private IInputProcessingService _inputProcessor;
 
         private void Awake()
         {
-            _inputProcessor = InputProcessor.Instance;
+            _inputProcessor = ServiceLocator.Container.Single<IInputProcessingService>();
         }
 
         private void OnEnable()
@@ -46,9 +48,9 @@ namespace Sources.Player
             _inputProcessor.OnTouchEnded -= OnTouchEnded;
         }
 
-        private void OnTouchStarted(object sender, Vector2 position) => _startPosition = position;
+        private void OnTouchStarted(Vector2 position) => _startPosition = position;
 
-        private void OnTouchEnded(object sender, Vector2 position)
+        private void OnTouchEnded(Vector2 position)
         {
             _endPosition = position;
             DetectSwipe(Mathf.Abs(_startPosition.x - _endPosition.x));
