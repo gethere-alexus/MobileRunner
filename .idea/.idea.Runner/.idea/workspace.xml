@@ -5,44 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="881845d1-3624-4936-8fbb-d54603640d72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/AssetManagement.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/AssetManagement/AssetProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/AssetManagement/AssetProvider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/AssetManagement/AssetsPaths.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/AssetManagement/AssetsPaths.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/AssetManagement/IAssetProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/AssetManagement/IAssetProvider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Factory.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Factory/GameFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Factory/GameFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Factory/IFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Factory/IFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/InputService/IInputProcessingService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/InputService/IInputProcessingService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/InputService/IInputService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/InputService/IInputService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/ServiceLocating.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/ServiceLocating/IService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/ServiceLocating/IService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/ServiceLocating/ServiceLocator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/ServiceLocating/ServiceLocator.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Bootstrap/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Bootstrap/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/GameStateMachine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadLevelState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadLevelState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Input/InputProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/InputService/InputProcessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Input/InputProcessor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/InputService/InputProcessor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Input/PlayerOverviewRotation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Input/PlayerOverviewRotation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Player/Statistic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/Statistic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Services.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Services/IBoostable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/IBoostable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Services/IBoostable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/IBoostable.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Services/IHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/IHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Services/IHealth.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Player/IHealth.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts/CriticalDamageBoost.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts/CriticalDamageBoost.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts/DamageBoost.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts/DamageBoost.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts/FireRateBoost.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts/FireRateBoost.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts/HealthBoost.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts/HealthBoost.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts/LuckBoost.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts/LuckBoost.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Guns.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Guns.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Common.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Common.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Contraband.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Contraband.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Epic.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Epic.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Mythic.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Mythic.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Rare.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Rare.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/PlayerConfig.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/PlayerConfig.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Skins.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Skins.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Skins/Alien.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Skins/Alien.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Skins/Female.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Skins/Female.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Skins/Male.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Skins/Male.asset.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Infrastructure.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Infrastructure/ShopMenuInstaller.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Infrastructure/ShopMenuInstaller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Utils/Sorter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Utils/Sorter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,10 +136,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="19912">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="19912" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />

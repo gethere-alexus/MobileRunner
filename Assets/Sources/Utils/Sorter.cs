@@ -1,15 +1,14 @@
-using ScriptableObjects;
 using Sources.ScriptableObjects;
 
 namespace Sources.Utils
 {
-    public class Sorter
+    public static class Sorter
     {
-        public static ItemDataContainer[] SortSkinsByPrice(ItemDataContainer[] partArrayToSort)
+        public static TItems[] SortItemsByPrice<TItems>(TItems[] partArrayToSort) where TItems : ItemDataContainer
         {
-            ItemDataContainer[] toReturn = partArrayToSort;
+            TItems[] toReturn = partArrayToSort;
 
-            ItemDataContainer temp;
+            TItems temp;
 
             // used bubble sort algorithm - https://www.geeksforgeeks.org/bubble-sort/
             for (int i = 0; i < toReturn.Length - 1; i++)

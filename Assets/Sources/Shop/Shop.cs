@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Sources.Data;
 using Sources.ScriptableObjects;
 using Sources.Utils;
-using UnityEngine;
 
 namespace Sources.Shop
 {
@@ -36,7 +35,7 @@ namespace Sources.Shop
                 }
             }
 
-            _items = Sorter.SortSkinsByPrice(_items);
+            _items = Sorter.SortItemsByPrice<ItemDataContainer>(_items);
         }
 
         private ItemData ConstructItemData(ItemDataContainer itemDataContainer)
