@@ -1,6 +1,6 @@
-﻿using Infrastructure.AssetManagement;
+﻿using Infrastructure.Services.AssetManagement;
 
-namespace Infrastructure.Factory
+namespace Infrastructure.Services.Factory
 {
     public class GameFactory : IFactory
     {

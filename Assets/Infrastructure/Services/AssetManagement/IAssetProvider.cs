@@ -1,7 +1,7 @@
-﻿using Infrastructure.ServiceLocating;
+﻿using Infrastructure.Services.ServiceLocating;
 using UnityEngine;
 
-namespace Infrastructure.AssetManagement
+namespace Infrastructure.Services.AssetManagement
 {
     public interface IAssetProvider : IService
     {

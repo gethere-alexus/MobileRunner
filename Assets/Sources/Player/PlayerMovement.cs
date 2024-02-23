@@ -1,5 +1,5 @@
-using Infrastructure.InputService;
-using Infrastructure.ServiceLocating;
+using Infrastructure.Services.InputService;
+using Infrastructure.Services.ServiceLocating;
 using Sources.Input;
 using UnityEngine;
 

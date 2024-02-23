@@ -1,8 +1,8 @@
-﻿using Infrastructure.AssetManagement;
-using Infrastructure.Factory;
-using Infrastructure.InputService;
-using Infrastructure.SceneLoad;
-using Infrastructure.ServiceLocating;
+﻿using Infrastructure.SceneLoad;
+using Infrastructure.Services.AssetManagement;
+using Infrastructure.Services.Factory;
+using Infrastructure.Services.InputService;
+using Infrastructure.Services.ServiceLocating;
 using UnityEngine;
 
 namespace Infrastructure.StateMachine.States

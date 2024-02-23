@@ -1,6 +1,5 @@
-﻿using Infrastructure.Factory;
-using Infrastructure.SceneLoad;
-using UnityEngine;
+﻿using Infrastructure.SceneLoad;
+using Infrastructure.Services.Factory;
 
 namespace Infrastructure.StateMachine.States
 {

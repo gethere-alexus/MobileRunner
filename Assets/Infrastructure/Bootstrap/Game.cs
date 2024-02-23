@@ -1,5 +1,5 @@
 ﻿using Infrastructure.SceneLoad;
-using Infrastructure.ServiceLocating;
+using Infrastructure.Services.ServiceLocating;
 using Infrastructure.StateMachine;
 
 namespace Infrastructure.Bootstrap

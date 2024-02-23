@@ -1,4 +1,4 @@
-using Infrastructure.InputService;
+using Infrastructure.Services.InputService;
 using UnityEngine;
 
 namespace Sources.Input

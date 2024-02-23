@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Infrastructure.Factory;
 using Infrastructure.SceneLoad;
-using Infrastructure.ServiceLocating;
+using Infrastructure.Services.Factory;
+using Infrastructure.Services.ServiceLocating;
 using Infrastructure.StateMachine.States;
 
 namespace Infrastructure.StateMachine

@@ -1,9 +1,8 @@
 using System;
-using Infrastructure.ServiceLocating;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Infrastructure.InputService
+namespace Infrastructure.Services.InputService
 {
     public class InputProcessor : MonoBehaviour, IInputProcessingService
     {

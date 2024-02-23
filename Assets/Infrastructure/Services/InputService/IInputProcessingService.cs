@@ -1,8 +1,8 @@
 ﻿using System;
-using Infrastructure.ServiceLocating;
+using Infrastructure.Services.ServiceLocating;
 using UnityEngine;
 
-namespace Infrastructure.InputService
+namespace Infrastructure.Services.InputService
 {
     internal interface IInputProcessingService : IService
     {

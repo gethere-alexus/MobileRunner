@@ -1,4 +1,4 @@
-﻿namespace Infrastructure.ServiceLocating
+﻿namespace Infrastructure.Services.ServiceLocating
 {
     // Self-made Dependency Injection realization.
     // Created in educational purpose, to understand how DI frameworks (Zenject, etc.) basically works.

@@ -1,6 +1,6 @@
-﻿using Infrastructure.ServiceLocating;
+﻿using Infrastructure.Services.ServiceLocating;
 
-namespace Infrastructure.Factory
+namespace Infrastructure.Services.Factory
 {
     public interface IFactory : IService
     {
