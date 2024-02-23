@@ -1,8 +1,10 @@
-﻿using Infrastructure.PlayerData;
+﻿using Infrastructure.Data;
 using Infrastructure.SceneLoad;
 using Infrastructure.Services.AssetManagement;
+using Infrastructure.Services.DataProvider;
 using Infrastructure.Services.Factory;
 using Infrastructure.Services.InputService;
+using Infrastructure.Services.SaveLoad;
 using Infrastructure.Services.ServiceLocating;
 using UnityEngine;
 
@@ -30,12 +32,13 @@ namespace Infrastructure.StateMachine.States
             _sceneLoader.Load(Initial, OnLoaded);
         }
 
-        private void RegisterServices()
+        private void RegisterServices() 
         {
             RegisterInputService();
             
+            _services.RegisterSingle<ISaveLoadService>(new SaveLoadService());
             _services.RegisterSingle<IAssetProvider>(new AssetProvider());
-            _services.RegisterSingle<IProgressProvider>(new PlayerProgress());
+            _services.RegisterSingle<IProgressProvider>(new PersistentDataService());
             _services.RegisterSingle<IFactory>(new GameFactory(_services.Single<IAssetProvider>())); 
         }
 

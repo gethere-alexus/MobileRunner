@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Infrastructure.SceneLoad;
 using Infrastructure.Services.Factory;
+using Infrastructure.Services.SaveLoad;
 using Infrastructure.Services.ServiceLocating;
 using Infrastructure.StateMachine.States;
 
@@ -18,7 +19,7 @@ namespace Infrastructure.StateMachine
             {
                 [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader, serviceLocator),
                 [typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader, serviceLocator.Single<IFactory>()),
-                [typeof(LoadProgressState)] = new LoadProgressState(this)
+                [typeof(LoadProgressState)] = new LoadProgressState(this, ServiceLocator.Container.Single<ISaveLoadService>())
             };
         }
 

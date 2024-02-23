@@ -5,14 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="881845d1-3624-4936-8fbb-d54603640d72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/IExitableState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/IExitableState.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/IPayloadedState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/IPayloadedState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Data/PlayerProgress.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/DataProvider/DataExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/DataProvider/DataExtensions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/DataProvider/PersistentDataService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/DataProvider/PersistentDataService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/SaveLoad.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/SaveLoad/ISaveLoadService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/SaveLoad/ISaveLoadService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/SaveLoad/SaveLoadService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/SaveLoad/SaveLoadService.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/IState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/IState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/LoadProgressState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/LoadProgressState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/DataProvider.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/IDataReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/DataProvider/IDataReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/IDataReader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/DataProvider/IDataReader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/IDataWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/DataProvider/IDataWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/IDataWriter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/DataProvider/IDataWriter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/IProgressProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/DataProvider/IProgressProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/IProgressProvider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/DataProvider/IProgressProvider.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/PlayerProgress.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/PlayerProgress.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Data/PlayerProgress.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/GameStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/LoadProgressState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadProgressState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/LoadProgressState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadProgressState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/Money/Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/Money/Wallet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ShopButtonDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ShopButtonDisplay.cs" afterDir="false" />
     </list>
@@ -84,7 +102,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -201,7 +219,7 @@
       <workItem from="1708514419339" duration="5300000" />
       <workItem from="1708520893746" duration="2704000" />
       <workItem from="1708526417621" duration="3490000" />
-      <workItem from="1708681196107" duration="4835000" />
+      <workItem from="1708681196107" duration="9572000" />
     </task>
     <task id="LOCAL-00001" summary="working on shop system, shop code refactored, project files sorted">
       <option name="closed" value="true" />

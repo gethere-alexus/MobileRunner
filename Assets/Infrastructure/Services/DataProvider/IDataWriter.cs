@@ -1,4 +1,6 @@
-﻿namespace Infrastructure.PlayerData
+﻿using Infrastructure.Data;
+
+namespace Infrastructure.Services.DataProvider
 {
     public interface IDataWriter : IDataReader
     {

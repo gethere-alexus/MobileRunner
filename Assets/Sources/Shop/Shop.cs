@@ -59,7 +59,6 @@ namespace Sources.Shop
         {
             _observingItemIndex = index > _items.Length || index < 0 ? 0 : index;
             _previewedItem = ConstructItemData(_items[_observingItemIndex]);
-            Debug.Log($"{_previewedItem.ItemInformation.Name} selected");
         }
 
         public void PreviewNextItem()
