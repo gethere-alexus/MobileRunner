@@ -20,14 +20,15 @@ namespace Infrastructure.StateMachine
             _gameStateMachine.Enter<LoadLevelState,string>(MainMenu);
         }
 
+        public void Exit()
+        {
+            
+        }
+
         private void CreateNewProgress()
         {
             IProgressProvider newProgress = ServiceLocator.Container.Single<IProgressProvider>();
             newProgress.Money = 500600700;
-        }
-
-        public void Exit()
-        {
         }
     }
 }

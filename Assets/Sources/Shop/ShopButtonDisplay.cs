@@ -39,6 +39,12 @@ namespace Sources.UI
 
         private void OnDisable()
         {
+            _purchaseButton.onClick.RemoveListener(_charactersShopDisplay.PurchasePreviewedSkin);
+            _selectButton.onClick.RemoveListener(_charactersShopDisplay.SelectPreviewedSkin);
+            
+            _previousItemButton.onClick.RemoveListener(_charactersShopDisplay.DisplayPreviousSkin);
+            _nextItemButton.onClick.RemoveListener(_charactersShopDisplay.DisplayNextSkin);
+            
             _charactersShopDisplay.OnNewItemPreviewed -= DisplayButtonUI;
         }
 
