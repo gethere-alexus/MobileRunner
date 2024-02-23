@@ -26,7 +26,7 @@ namespace Sources.Shop
         private void OnNewItemShowed(ItemData skin) =>
             ConstructBoostsView(skin.ItemInformation);
 
-        private void ConstructBoostsView(ItemDataContainer item)
+        private void ConstructBoostsView(Item item)
         {
             if (_boostStorage.childCount != 0)
             {

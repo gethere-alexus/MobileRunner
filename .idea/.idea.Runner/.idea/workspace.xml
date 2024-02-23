@@ -5,29 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="881845d1-3624-4936-8fbb-d54603640d72" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/IDataReader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/IDataReader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/IDataWriter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/IDataWriter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/IProgressProvider.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/IProgressProvider.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/PlayerProgress.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/PlayerData/PlayerProgress.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/LoadProgressState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/LoadProgressState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts/CriticalDamageBoost.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts/CriticalDamageBoost.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts/DamageBoost.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts/DamageBoost.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts/FireRateBoost.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts/FireRateBoost.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts/HealthBoost.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts/HealthBoost.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts/LuckBoost.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts/LuckBoost.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Guns.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Guns.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Common.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Common.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Contraband.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Contraband.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Epic.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Epic.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Mythic.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Mythic.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Rare.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Rare.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/PlayerConfig.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/PlayerConfig.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Skins.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Skins.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Skins/Alien.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Skins/Alien.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Skins/Female.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Skins/Female.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Skins/Male.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Skins/Male.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Infrastructure.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Infrastructure/ShopMenuInstaller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Infrastructure/ShopMenuInstaller.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/GameStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/CharacterConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/CharacterConfig.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/GunDataContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Gun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/GunDataContainer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Gun.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/ItemDataContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/ItemDataContainer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Item.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/SkinDataContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Skin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/SkinDataContainer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Skin.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Data/ItemData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Data/ItemData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ItemBoostsDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ItemBoostsDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/ItemShopDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/ItemShopDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/Money/Wallet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/Money/Wallet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sources/Utils/Sorter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Utils/Sorter.cs" afterDir="false" />
     </list>
@@ -86,28 +88,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "oleksii/saveload",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\owalo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\owalo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\owalo\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\owalo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\owalo\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\owalo\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RiderTodoViewSettings" groupByProject="false" />
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
@@ -214,6 +216,7 @@
       <workItem from="1708514419339" duration="5300000" />
       <workItem from="1708520893746" duration="2704000" />
       <workItem from="1708526417621" duration="3490000" />
+      <workItem from="1708681196107" duration="2970000" />
     </task>
     <task id="LOCAL-00001" summary="working on shop system, shop code refactored, project files sorted">
       <option name="closed" value="true" />

@@ -1,4 +1,6 @@
 using System;
+using Infrastructure.PlayerData;
+using Infrastructure.Services.ServiceLocating;
 
 namespace Sources.Shop.Money
 {
@@ -10,7 +12,7 @@ namespace Sources.Shop.Money
 
         public Wallet(int initialBalance = 0)
         {
-            _balance = initialBalance;
+            _balance = ServiceLocator.Container.Single<IProgressProvider>().Money;
         }
         
         public void TrySpend(int amountToSpend)

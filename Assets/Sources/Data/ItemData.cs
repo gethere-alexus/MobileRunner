@@ -5,16 +5,16 @@ namespace Sources.Data
 {
     public class ItemData
     {
-        private readonly ItemDataContainer _itemInformation;
+        private readonly Item _itemInformation;
         private readonly ItemStatus _itemStatus;
 
-        public ItemData(ItemDataContainer itemData, ItemStatus itemStatus)
+        public ItemData(Item itemData, ItemStatus itemStatus)
         {
             _itemInformation = itemData;
             _itemStatus = itemStatus;
         }
 
-        public ItemDataContainer ItemInformation => _itemInformation;
+        public Item ItemInformation => _itemInformation;
 
         public ItemStatus ItemStatus => _itemStatus;
     }

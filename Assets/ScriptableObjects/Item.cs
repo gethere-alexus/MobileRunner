@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Sources.ScriptableObjects
 {
-    public abstract class ItemDataContainer : ScriptableObject
+    public abstract class Item : ScriptableObject
     {
         [SerializeField] private GameObject _itemPrefab;
         [SerializeField] private string _name;
