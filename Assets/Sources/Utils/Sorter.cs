@@ -4,7 +4,7 @@ namespace Sources.Utils
 {
     public static class Sorter
     {
-        public static TItems[] SortItemsByPrice<TItems>(TItems[] partArrayToSort) where TItems : ItemDataContainer
+        public static TItems[] SortItemsByPrice<TItems>(TItems[] partArrayToSort) where TItems : Item
         {
             TItems[] toReturn = partArrayToSort;
 

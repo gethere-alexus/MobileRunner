@@ -16,8 +16,11 @@ namespace Infrastructure.StateMachine.States
             _gameFactory = gameFactory;
         }
 
-        public void Enter(string sceneName) => 
+        public void Enter(string sceneName)
+        {
             _sceneLoader.Load(sceneName, OnLoaded);
+            _gameFactory.CleanUp();
+        }
         
         private void OnLoaded()
         {

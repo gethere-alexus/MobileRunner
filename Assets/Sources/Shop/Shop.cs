@@ -1,8 +1,10 @@
 using System;
-using System.Collections.Generic;   
+using System.Collections.Generic;
+using FMOD;
 using Sources.Data;
 using Sources.ScriptableObjects;
 using Sources.Utils;
+using Debug = UnityEngine.Debug;
 
 namespace Sources.Shop
 {
@@ -15,15 +17,15 @@ namespace Sources.Shop
 
     public class Shop
     {
-        private readonly ItemDataContainer[] _items;
-        private List<ItemDataContainer> _purchasedItems = new List<ItemDataContainer>();
+        private readonly Item[] _items;
+        private List<Item> _purchasedItems = new List<Item>();
         private ItemData _previewedItem;
         private int _observingItemIndex = 0;
 
         private readonly CharacterConfig _playerConfig;
 
-        public Shop(CharacterConfig playerConfig, ItemDataContainer[] itemsToPlaceInShop,
-            ItemDataContainer[] purchasedItems = null)
+        public Shop(CharacterConfig playerConfig, Item[] itemsToPlaceInShop,
+            Item[] purchasedItems = null)
         {
             _items = itemsToPlaceInShop;
             _playerConfig = playerConfig;
@@ -35,16 +37,16 @@ namespace Sources.Shop
                 }
             }
 
-            _items = Sorter.SortItemsByPrice<ItemDataContainer>(_items);
+            _items = Sorter.SortItemsByPrice<Item>(_items);
         }
 
-        private ItemData ConstructItemData(ItemDataContainer itemDataContainer)
+        private ItemData ConstructItemData(Item item)
         {
             ItemStatus itemStatus = ItemStatus.Purchasable;
-            if (_purchasedItems.Contains(itemDataContainer))
+            if (_purchasedItems.Contains(item))
             {
                 itemStatus = ItemStatus.Selectable;
-                if (_playerConfig.UsingSkin == itemDataContainer)
+                if (_playerConfig.UsingSkin == item)
                 {
                     itemStatus = ItemStatus.Selected;
                 }

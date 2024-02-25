@@ -1,8 +1,11 @@
 using System;
+using Infrastructure.Data;
+using Infrastructure.Services.DataProvider;
+using Infrastructure.Services.ServiceLocating;
 
 namespace Sources.Shop.Money
 {
-    public class Wallet
+    public class Wallet : IDataWriter
     {
         private int _balance;
 
@@ -10,7 +13,7 @@ namespace Sources.Shop.Money
 
         public Wallet(int initialBalance = 0)
         {
-            _balance = initialBalance;
+            _balance = ServiceLocator.Container.Single<IProgressProvider>().PlayerProgressData.Money;
         }
         
         public void TrySpend(int amountToSpend)
@@ -45,5 +48,13 @@ namespace Sources.Shop.Money
 
 
         public int Balance => _balance;
+        public void Load(PlayerProgress progress)
+        {
+        }
+
+        public void Update(PlayerProgress progress)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

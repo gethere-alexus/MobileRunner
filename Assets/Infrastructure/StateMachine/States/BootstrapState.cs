@@ -1,7 +1,9 @@
 ﻿using Infrastructure.SceneLoad;
 using Infrastructure.Services.AssetManagement;
+using Infrastructure.Services.DataProvider;
 using Infrastructure.Services.Factory;
 using Infrastructure.Services.InputService;
+using Infrastructure.Services.SaveLoad;
 using Infrastructure.Services.ServiceLocating;
 using UnityEngine;
 
@@ -10,7 +12,6 @@ namespace Infrastructure.StateMachine.States
     public class BootstrapState : IState
     {
         private const string Initial = "Bootstrap";
-        private const string StartScene = "MainMenu";
 
         private readonly GameStateMachine _stateMachine;
         private readonly SceneLoader _sceneLoader;
@@ -30,12 +31,14 @@ namespace Infrastructure.StateMachine.States
             _sceneLoader.Load(Initial, OnLoaded);
         }
 
-        private void RegisterServices()
+        private void RegisterServices() 
         {
             RegisterInputService();
-            
+
             _services.RegisterSingle<IAssetProvider>(new AssetProvider());
-            _services.RegisterSingle<IFactory>(new GameFactory(_services.Single<IAssetProvider>())); 
+            _services.RegisterSingle<IProgressProvider>(new PersistentDataService()); 
+            _services.RegisterSingle<IFactory>(new GameFactory(_services.Single<IAssetProvider>()));
+            _services.RegisterSingle<ISaveLoadService>(new SaveLoadService(_services.Single<IProgressProvider>(), _services.Single<IFactory>()));
         }
 
         private void RegisterInputService()
@@ -49,7 +52,7 @@ namespace Infrastructure.StateMachine.States
 
         private void OnLoaded()
         {
-            _stateMachine.Enter<LoadLevelState, string>(StartScene);
+            _stateMachine.Enter<LoadProgressState>();
         }
 
         public void Exit()

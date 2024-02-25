@@ -8,7 +8,7 @@ namespace Sources.Shop
 {
     public class ItemShopDisplay : MonoBehaviour
     {
-        [SerializeField] private SkinDataContainer[] _skins, _purchasedSkins;
+        [SerializeField] private Skin[] _skins, _purchasedSkins;
         [SerializeField] private CharacterConfig _playerConfig;
         public event Action<ItemData> OnItemPurchased, OnNewItemPreviewed;
 

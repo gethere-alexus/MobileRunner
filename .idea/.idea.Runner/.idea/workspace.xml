@@ -5,31 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="881845d1-3624-4936-8fbb-d54603640d72" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Utils/GameRunner.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sources/Utils/GameRunner.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/shelf/Uncommitted_changes_before_Update_at_2_17_2024_11_54_AM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/shelf/Uncommitted_changes_before_Update_at_2_17_2024_11_54_AM__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts/CriticalDamageBoost.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts/CriticalDamageBoost.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts/DamageBoost.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts/DamageBoost.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts/FireRateBoost.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts/FireRateBoost.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts/HealthBoost.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts/HealthBoost.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Boosts/LuckBoost.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Boosts/LuckBoost.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Guns.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Guns.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Common.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Common.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Contraband.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Contraband.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Epic.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Epic.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Mythic.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Mythic.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Rare.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/ItemRarities/Rare.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/PlayerConfig.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/PlayerConfig.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Skins.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Skins.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Skins/Alien.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Skins/Alien.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Skins/Female.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Skins/Female.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Configuration/Skins/Male.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Configuration/Skins/Male.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Infrastructure.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Infrastructure/ShopMenuInstaller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Infrastructure/ShopMenuInstaller.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Shop/Shop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Utils/Sorter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Utils/Sorter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Services/DataProvider/DataExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/DataProvider/DataExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/GameFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/IFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/IFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Services/SaveLoad/SaveLoadService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/SaveLoad/SaveLoadService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadLevelState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadLevelState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Utils/MonoBehaviourSingletonPersistent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Utils/MonoBehaviourSingletonPersistent.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,10 +57,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3a7a35f684a4e72b8a6533d8c702ad752200/09/b8343a98/Command.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c91765c32a844aad92ce9b6c6b9d05f753000/ac/b23343db/Command.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/53/e9f51b89/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/77/64db325a/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/80/ffc8455d/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/af/6e7386fc/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7237cf7abef49bfbb552d7eb076e422174200/fc/805567d0/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UniProjects/C#CodeWars/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Infrastructure/StateMachine/IPayloadedState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Layout/LayoutRebuilder.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -91,13 +82,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;oleksii/saveload&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -214,6 +205,10 @@
       <workItem from="1708514419339" duration="5300000" />
       <workItem from="1708520893746" duration="2704000" />
       <workItem from="1708526417621" duration="3490000" />
+      <workItem from="1708681196107" duration="10547000" />
+      <workItem from="1708694053781" duration="944000" />
+      <workItem from="1708695045003" duration="1140000" />
+      <workItem from="1708855441920" duration="1219000" />
     </task>
     <task id="LOCAL-00001" summary="working on shop system, shop code refactored, project files sorted">
       <option name="closed" value="true" />

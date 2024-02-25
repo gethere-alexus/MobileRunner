@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Infrastructure.SceneLoad;
 using Infrastructure.Services.Factory;
+using Infrastructure.Services.SaveLoad;
 using Infrastructure.Services.ServiceLocating;
 using Infrastructure.StateMachine.States;
 
@@ -17,10 +18,11 @@ namespace Infrastructure.StateMachine
             _states = new Dictionary<Type, IExitableState>()
             {
                 [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader, serviceLocator),
-                [typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader, serviceLocator.Single<IFactory>())
+                [typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader, serviceLocator.Single<IFactory>()),
+                [typeof(LoadProgressState)] = new LoadProgressState(this, ServiceLocator.Container.Single<ISaveLoadService>())
             };
         }
-        
+
         // Enter state without payload
         public void Enter<TState>() where TState : class, IState =>
             ChangeState<TState>().Enter();
@@ -34,10 +36,10 @@ namespace Infrastructure.StateMachine
             _activeState?.Exit();
             TState state = GetState<TState>();
             _activeState = state;
-            
+
             return state;
         }
-        
+
         // Get state with down-casting 
         private TState GetState<TState>() where TState : class, IExitableState =>
             _states[typeof(TState)] as TState;
