@@ -1,5 +1,4 @@
-﻿using Infrastructure.Data;
-using Infrastructure.SceneLoad;
+﻿using Infrastructure.SceneLoad;
 using Infrastructure.Services.AssetManagement;
 using Infrastructure.Services.DataProvider;
 using Infrastructure.Services.Factory;
@@ -35,11 +34,11 @@ namespace Infrastructure.StateMachine.States
         private void RegisterServices() 
         {
             RegisterInputService();
-            
-            _services.RegisterSingle<ISaveLoadService>(new SaveLoadService());
+
             _services.RegisterSingle<IAssetProvider>(new AssetProvider());
-            _services.RegisterSingle<IProgressProvider>(new PersistentDataService());
-            _services.RegisterSingle<IFactory>(new GameFactory(_services.Single<IAssetProvider>())); 
+            _services.RegisterSingle<IProgressProvider>(new PersistentDataService()); 
+            _services.RegisterSingle<IFactory>(new GameFactory(_services.Single<IAssetProvider>()));
+            _services.RegisterSingle<ISaveLoadService>(new SaveLoadService(_services.Single<IProgressProvider>(), _services.Single<IFactory>()));
         }
 
         private void RegisterInputService()
