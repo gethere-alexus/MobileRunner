@@ -5,20 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="881845d1-3624-4936-8fbb-d54603640d72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Utils/GameRunner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sources/Utils/GameRunner.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/shelf/Uncommitted_changes_before_Update_at_2_17_2024_11_54_AM_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/shelf/Uncommitted_changes_before_Update_at_2_17_2024_11_54_AM__Changes_1.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/LoadMenuState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/LoadMenuState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Services/DataProvider/DataExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/DataProvider/DataExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/GameFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/IFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/IFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Services/AssetManagement/AssetProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/AssetManagement/AssetProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Services/AssetManagement/AssetsPaths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/AssetManagement/AssetsPaths.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/GameFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/UIFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/GameFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/UIFactory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/IFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/IUIFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/IFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/Factory/IUIFactory.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/Services/SaveLoad/SaveLoadService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/Services/SaveLoad/SaveLoadService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/GameStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/IState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/IState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/BootstrapState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadLevelState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadLevelState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadProgressState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Infrastructure/StateMachine/States/LoadProgressState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Utils/MonoBehaviourSingletonPersistent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sources/Utils/MonoBehaviourSingletonPersistent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Utils/GameRunner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sources/Utils/GameRunner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Utils/Singleton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sources/Utils/Singleton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +89,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;oleksii/saveload&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -208,7 +215,8 @@
       <workItem from="1708681196107" duration="10547000" />
       <workItem from="1708694053781" duration="944000" />
       <workItem from="1708695045003" duration="1140000" />
-      <workItem from="1708855441920" duration="1219000" />
+      <workItem from="1708855441920" duration="1636000" />
+      <workItem from="1708934883771" duration="4786000" />
     </task>
     <task id="LOCAL-00001" summary="working on shop system, shop code refactored, project files sorted">
       <option name="closed" value="true" />

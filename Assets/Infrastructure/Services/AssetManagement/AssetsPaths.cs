@@ -2,6 +2,7 @@
 {
     public class AssetsPaths
     {
-        public const string MainMenuCanvas = "Prefabs/UI/Canvas - Main Menu";
+        public const string UIMainMenu = "UI/MainMenu_Canvas";
+        public const string UIRoot = "UI/UIRoot";
     }
 }

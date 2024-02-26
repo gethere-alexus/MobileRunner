@@ -37,8 +37,8 @@ namespace Infrastructure.StateMachine.States
 
             _services.RegisterSingle<IAssetProvider>(new AssetProvider());
             _services.RegisterSingle<IProgressProvider>(new PersistentDataService()); 
-            _services.RegisterSingle<IFactory>(new GameFactory(_services.Single<IAssetProvider>()));
-            _services.RegisterSingle<ISaveLoadService>(new SaveLoadService(_services.Single<IProgressProvider>(), _services.Single<IFactory>()));
+            _services.RegisterSingle<IUIFactory>(new UIFactory(_services.Single<IAssetProvider>()));
+            _services.RegisterSingle<ISaveLoadService>(new SaveLoadService(_services.Single<IProgressProvider>(), _services.Single<IUIFactory>()));
         }
 
         private void RegisterInputService()

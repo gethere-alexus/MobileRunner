@@ -7,7 +7,6 @@ namespace Infrastructure.StateMachine.States
 {
     public class LoadProgressState : IState
     {
-        private const string MainMenu = "MainMenu";
         private readonly GameStateMachine _gameStateMachine;
         private readonly ISaveLoadService _saveLoad;
 
@@ -20,14 +19,13 @@ namespace Infrastructure.StateMachine.States
         public void Enter()
         {
             ConstructProgress();
-            _gameStateMachine.Enter<LoadLevelState,string>(MainMenu);
+            _gameStateMachine.Enter<LoadMenuState>();
         }
 
         public void Exit()
         {
             
         }
-
         private void ConstructProgress() =>
             ServiceLocator.Container.Single<IProgressProvider>().PlayerProgressData =
                 _saveLoad.LoadProgress() ?? InitNewProgress();

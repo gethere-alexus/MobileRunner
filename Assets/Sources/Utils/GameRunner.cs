@@ -1,5 +1,7 @@
 ﻿using Infrastructure.Bootstrap;
+using Infrastructure.SceneLoad;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Sources.Utils
 {
@@ -9,12 +11,14 @@ namespace Sources.Utils
     
     public class GameRunner : MonoBehaviour
     {
+        private const string BootstrapScene = "Bootstrap";
+
         private void Awake()
         {
             var instance = FindObjectOfType<GameBootstrapper>();
 
             if (instance == null)
-                this.gameObject.AddComponent<GameBootstrapper>();
+                SceneManager.LoadScene(BootstrapScene);
         }
     }
 }

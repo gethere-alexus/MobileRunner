@@ -7,24 +7,22 @@ namespace Infrastructure.StateMachine.States
     {
         private readonly GameStateMachine _stateMachine;
         private readonly SceneLoader _sceneLoader;
-        private readonly IFactory _gameFactory;
+        private readonly IUIFactory _gameIuiFactory;
 
-        public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, IFactory gameFactory)
+        public LoadLevelState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, IUIFactory gameIuiFactory)
         {
             _stateMachine = gameStateMachine;
             _sceneLoader = sceneLoader;
-            _gameFactory = gameFactory;
+            _gameIuiFactory = gameIuiFactory;
         }
 
         public void Enter(string sceneName)
         {
             _sceneLoader.Load(sceneName, OnLoaded);
-            _gameFactory.CleanUp();
         }
         
         private void OnLoaded()
         {
-            _gameFactory.CreateMainMenu();
         }
 
         public void Exit()
