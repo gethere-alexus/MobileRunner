@@ -1,20 +1,19 @@
-using Sources.ScriptableObjects;
 using Sources.Shop;
 
 namespace Sources.Data
 {
     public class ItemData
     {
-        private readonly Item _itemInformation;
+        private readonly ScriptableObjects.ItemData _itemDataInformation;
         private readonly ItemStatus _itemStatus;
 
-        public ItemData(Item itemData, ItemStatus itemStatus)
+        public ItemData(ScriptableObjects.ItemData itemDataData, ItemStatus itemStatus)
         {
-            _itemInformation = itemData;
+            _itemDataInformation = itemDataData;
             _itemStatus = itemStatus;
         }
 
-        public Item ItemInformation => _itemInformation;
+        public ScriptableObjects.ItemData ItemDataInformation => _itemDataInformation;
 
         public ItemStatus ItemStatus => _itemStatus;
     }

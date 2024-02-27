@@ -1,11 +1,10 @@
 using System.Collections.Generic;
 using Sources.Data;
-using Sources.Shop;
 using Sources.Shop.ShopButton;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Sources.UI
+namespace Sources.Shop
 {
     public class ShopButtonDisplay : MonoBehaviour
     {

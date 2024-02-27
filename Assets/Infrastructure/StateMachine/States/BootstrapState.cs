@@ -5,6 +5,7 @@ using Infrastructure.Services.Factory;
 using Infrastructure.Services.InputService;
 using Infrastructure.Services.SaveLoad;
 using Infrastructure.Services.ServiceLocating;
+using Infrastructure.Services.WindowInstantiator;
 using UnityEngine;
 
 namespace Infrastructure.StateMachine.States
@@ -34,11 +35,12 @@ namespace Infrastructure.StateMachine.States
         private void RegisterServices() 
         {
             RegisterInputService();
-
+            _services.RegisterSingle<IGameStateMachine>(_stateMachine);
             _services.RegisterSingle<IAssetProvider>(new AssetProvider());
             _services.RegisterSingle<IProgressProvider>(new PersistentDataService()); 
             _services.RegisterSingle<IUIFactory>(new UIFactory(_services.Single<IAssetProvider>()));
             _services.RegisterSingle<ISaveLoadService>(new SaveLoadService(_services.Single<IProgressProvider>(), _services.Single<IUIFactory>()));
+            _services.RegisterSingle<IWindowInstantiator>(new WindowsInstantiator(_services.Single<IUIFactory>()));
         }
 
         private void RegisterInputService()

@@ -6,5 +6,6 @@ namespace Infrastructure.Services.Factory
     {
         void CreateUIRoot();
         void CreateUIMenu();
+        void CreateShopWindow();
     }
 }

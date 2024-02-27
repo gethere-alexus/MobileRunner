@@ -23,10 +23,10 @@ namespace Sources.Shop
             _shopDisplay.OnNewItemPreviewed -= OnNewItemShowed;
         }
 
-        private void OnNewItemShowed(ItemData skin) =>
-            ConstructBoostsView(skin.ItemInformation);
+        private void OnNewItemShowed(Data.ItemData skin) =>
+            ConstructBoostsView(skin.ItemDataInformation);
 
-        private void ConstructBoostsView(Item item)
+        private void ConstructBoostsView(ScriptableObjects.ItemData itemData)
         {
             if (_boostStorage.childCount != 0)
             {
@@ -36,7 +36,7 @@ namespace Sources.Shop
                 }
             }
 
-            foreach (var boost in item.AppliedBoosts)
+            foreach (var boost in itemData.AppliedBoosts)
             {
                 Statistic stat = _playerConfig.GetStatInformation(boost.BoostData);
                 int valueAfterBoosting = stat.PreviewValueAfterApplying(boost.BoostValue);

@@ -10,16 +10,26 @@ namespace Infrastructure.Services.Factory
         public UIFactory(IAssetProvider assetProvider) => 
             _assetProvider = assetProvider;
 
-        public void CreateUIRoot() => 
-            _uiRoot = _assetProvider.Instantiate(AssetsPaths.UIRoot).transform;
+        public void CreateUIRoot()
+        {
+            if (_uiRoot == null)
+            {
+                _uiRoot = _assetProvider.Instantiate(AssetsPaths.UIRoot).transform;
+            }
+        }
 
         public void CreateUIMenu()
         {
-            if(_uiRoot == null)
-                CreateUIRoot();
+            CreateUIRoot();
             
             _assetProvider.Instantiate(AssetsPaths.UIMainMenu)
                 .transform.SetParent(_uiRoot);
+        }
+
+        public void CreateShopWindow()
+        {
+            CreateUIRoot();
+            _assetProvider.Instantiate(AssetsPaths.UIShop);
         }
     }
 }

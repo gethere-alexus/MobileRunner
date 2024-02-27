@@ -1,10 +1,7 @@
 using System;
 using System.Collections.Generic;
-using FMOD;
-using Sources.Data;
 using Sources.ScriptableObjects;
 using Sources.Utils;
-using Debug = UnityEngine.Debug;
 
 namespace Sources.Shop
 {
@@ -17,15 +14,15 @@ namespace Sources.Shop
 
     public class Shop
     {
-        private readonly Item[] _items;
-        private List<Item> _purchasedItems = new List<Item>();
-        private ItemData _previewedItem;
+        private readonly ItemData[] _items;
+        private List<ItemData> _purchasedItems = new List<ItemData>();
+        private Data.ItemData _previewedItem;
         private int _observingItemIndex = 0;
 
         private readonly CharacterConfig _playerConfig;
 
-        public Shop(CharacterConfig playerConfig, Item[] itemsToPlaceInShop,
-            Item[] purchasedItems = null)
+        public Shop(CharacterConfig playerConfig, ItemData[] itemsToPlaceInShop,
+            ItemData[] purchasedItems = null)
         {
             _items = itemsToPlaceInShop;
             _playerConfig = playerConfig;
@@ -37,22 +34,22 @@ namespace Sources.Shop
                 }
             }
 
-            _items = Sorter.SortItemsByPrice<Item>(_items);
+            _items = Sorter.SortItemsByPrice<ItemData>(_items);
         }
 
-        private ItemData ConstructItemData(Item item)
+        private Data.ItemData ConstructItemData(ItemData itemData)
         {
             ItemStatus itemStatus = ItemStatus.Purchasable;
-            if (_purchasedItems.Contains(item))
+            if (_purchasedItems.Contains(itemData))
             {
                 itemStatus = ItemStatus.Selectable;
-                if (_playerConfig.UsingSkin == item)
+                if (_playerConfig.UsingSkin == itemData)
                 {
                     itemStatus = ItemStatus.Selected;
                 }
             }
 
-            return new ItemData(_items[_observingItemIndex], itemStatus);
+            return new Data.ItemData(_items[_observingItemIndex], itemStatus);
         }
 
         public void PreviewItemByIndex(int index)
@@ -81,24 +78,24 @@ namespace Sources.Shop
 
         public void SelectShowedItem()
         {
-            if (!_purchasedItems.Contains(_previewedItem.ItemInformation)) 
+            if (!_purchasedItems.Contains(_previewedItem.ItemDataInformation)) 
                 return;
             
-            ItemData overridingData = new ItemData(_previewedItem.ItemInformation, ItemStatus.Selected);
+            Data.ItemData overridingData = new Data.ItemData(_previewedItem.ItemDataInformation, ItemStatus.Selected);
             
             _previewedItem = overridingData;
-            _playerConfig.SelectSkin(_previewedItem.ItemInformation);
+            _playerConfig.SelectSkin(_previewedItem.ItemDataInformation);
         }
 
         public void PurchaseShowedSkin()
         {
             if (_previewedItem.ItemStatus == ItemStatus.Purchasable)
             {
-                _purchasedItems.Add(_previewedItem.ItemInformation);
+                _purchasedItems.Add(_previewedItem.ItemDataInformation);
                 SelectShowedItem();
             }
         }
 
-        public ItemData PreviewedItem => _previewedItem;
+        public Data.ItemData PreviewedItem => _previewedItem;
     }
 }

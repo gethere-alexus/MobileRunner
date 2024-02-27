@@ -8,7 +8,7 @@ using Infrastructure.StateMachine.States;
 
 namespace Infrastructure.StateMachine
 {
-    public class GameStateMachine
+    public class GameStateMachine : IGameStateMachine
     {
         private readonly Dictionary<Type, IExitableState> _states;
         private IExitableState _activeState;
@@ -20,7 +20,7 @@ namespace Infrastructure.StateMachine
                 [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader, serviceLocator),
                 [typeof(LoadProgressState)] = new LoadProgressState(this, ServiceLocator.Container.Single<ISaveLoadService>()),
                 [typeof(LoadMenuState)] = new LoadMenuState(serviceLocator.Single<IUIFactory>(), sceneLoader),
-                [typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader, serviceLocator.Single<IUIFactory>())
+                [typeof(LoadRunState)] = new LoadRunState(sceneLoader)
             };
         }
 

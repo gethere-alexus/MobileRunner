@@ -5,8 +5,22 @@ namespace Sources.Shop
     public class SectionSwitch : MonoBehaviour
     {
         [SerializeField] private ShopSection[] _sections;
-        [SerializeField] private int _startSectionIndex;
+        [SerializeField, Min(0)] private int _startSectionIndex;
+        
         private ShopSection _activeShopSection;
+
+        public void OpenSection(ShopSection shopSection)
+        {
+            _activeShopSection?.SetActive(false);
+            _activeShopSection = shopSection;
+            shopSection.SetActive(true);
+        }
+
+        private void OnValidate()
+        {
+            if (_startSectionIndex >= _sections.Length)
+                _startSectionIndex = _sections.Length - 1;
+        }
 
         private void Awake()
         {
@@ -16,13 +30,6 @@ namespace Sources.Shop
             }
 
             OpenSection(_sections[_startSectionIndex]);
-        }
-
-        private void OpenSection(ShopSection shopSection)
-        {
-            _activeShopSection?.SetActive(false);
-            _activeShopSection = shopSection;
-            shopSection.SetActive(true);
         }
     }
 }

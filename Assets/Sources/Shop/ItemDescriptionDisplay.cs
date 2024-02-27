@@ -23,10 +23,10 @@ namespace Sources.Shop
 
         private void ConfigureDescriptionUI(ItemData skin)
         {
-            _itemFrame.sprite = skin.ItemInformation.ItemRarity.ItemFrame;
-            _itemName.text = skin.ItemInformation.Name;
+            _itemFrame.sprite = skin.ItemDataInformation.ItemRarity.ItemFrame;
+            _itemName.text = skin.ItemDataInformation.Name;
             //  _itemPrice.text = TextFormatter.DivideIntWithChar(skin.ItemInformation.Price, ',');
-            _itemDescription.text = skin.ItemInformation.Description;
+            _itemDescription.text = skin.ItemDataInformation.Description;
         }
     }
 }

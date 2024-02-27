@@ -1,14 +1,14 @@
 using System;
-using ScriptableObjects;
 using Sources.Data;
 using Sources.ScriptableObjects;
 using UnityEngine;
+using ItemData = Sources.Data.ItemData;
 
 namespace Sources.Shop
 {
     public class ItemShopDisplay : MonoBehaviour
     {
-        [SerializeField] private Skin[] _skins, _purchasedSkins;
+        [SerializeField] private SkinData[] _skins, _purchasedSkins;
         [SerializeField] private CharacterConfig _playerConfig;
         public event Action<ItemData> OnItemPurchased, OnNewItemPreviewed;
 
