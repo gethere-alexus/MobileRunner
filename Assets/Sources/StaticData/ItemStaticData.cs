@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Sources.ScriptableObjects
 {
-    public abstract class ItemData : ScriptableObject
+    public abstract class ItemStaticData : ScriptableObject
     {
         public string Name;
         [Min(0)]public int Price;

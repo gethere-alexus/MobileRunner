@@ -26,15 +26,21 @@ namespace Infrastructure.StateMachine.States
         {
             
         }
+
         private void ConstructProgress() =>
-            ServiceLocator.Container.Single<IProgressProvider>().PlayerProgressData =
-                _saveLoad.LoadProgress() ?? InitNewProgress();
+            ServiceLocator.Container.Single<IProgressProvider>()
+                .UpdateData(_saveLoad.LoadProgress() ?? InitNewProgress());
 
         private PlayerProgress InitNewProgress()
         {
             var toReturn = new PlayerProgress
             {
-                Money = 500600700
+                Money = 500600700,
+                Level = 3,
+                CurrentXp = 150,
+                RequiredXp = 500,
+                SelectedSkin = "Invader",
+                PurchasedSkins = new []{ "Invader"},
             };
 
             return toReturn;

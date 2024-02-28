@@ -1,4 +1,3 @@
-using Sources.Data;
 using Sources.Player;
 using Sources.ScriptableObjects;
 using Sources.UI;
@@ -24,9 +23,9 @@ namespace Sources.Shop
         }
 
         private void OnNewItemShowed(Data.ItemData skin) =>
-            ConstructBoostsView(skin.ItemDataInformation);
+            ConstructBoostsView(skin.ItemStaticDataInformation);
 
-        private void ConstructBoostsView(ScriptableObjects.ItemData itemData)
+        private void ConstructBoostsView(ScriptableObjects.ItemStaticData itemStaticData)
         {
             if (_boostStorage.childCount != 0)
             {
@@ -36,7 +35,7 @@ namespace Sources.Shop
                 }
             }
 
-            foreach (var boost in itemData.AppliedBoosts)
+            foreach (var boost in itemStaticData.AppliedBoosts)
             {
                 Statistic stat = _playerConfig.GetStatInformation(boost.BoostData);
                 int valueAfterBoosting = stat.PreviewValueAfterApplying(boost.BoostValue);

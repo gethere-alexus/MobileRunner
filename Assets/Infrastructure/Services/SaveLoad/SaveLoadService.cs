@@ -9,18 +9,18 @@ namespace Infrastructure.Services.SaveLoad
     {
         private const string ProgressDataKey = "ProgressData";
         
-        private readonly IUIFactory _gameIuiFactory;
+        private readonly IUIFactory _uiFactory;
         private readonly IProgressProvider _progressProvider;
 
-        public SaveLoadService(IProgressProvider progressProvider,IUIFactory gameIuiFactory)
+        public SaveLoadService(IProgressProvider progressProvider,IUIFactory uiFactory)
         {
             _progressProvider = progressProvider;
-            _gameIuiFactory = gameIuiFactory;
+            _uiFactory = uiFactory;
         }
 
         public void SaveProgress()
         {
-            PlayerPrefs.SetString(ProgressDataKey, _progressProvider.PlayerProgressData.ToJson());
+            PlayerPrefs.SetString(ProgressDataKey, _progressProvider.PlayerProgress.ToJson());
         }
 
         public PlayerProgress LoadProgress() =>

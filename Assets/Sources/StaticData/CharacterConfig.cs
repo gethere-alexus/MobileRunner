@@ -7,7 +7,7 @@ namespace Sources.ScriptableObjects
     [CreateAssetMenu(fileName = "CharacterConfig")]
     public class CharacterConfig : ScriptableObject
     {
-        [SerializeField] private ItemData _skin;
+        [SerializeField] private ItemStaticData _skin;
         [SerializeField] private Statistic[] _characterStats;
 
         private void OnValidate()
@@ -35,7 +35,7 @@ namespace Sources.ScriptableObjects
             }
         }
 
-        public void SelectSkin(ItemData skin)
+        public void SelectSkin(ItemStaticData skin)
         {
             if (_skin != null)
             {
@@ -56,7 +56,7 @@ namespace Sources.ScriptableObjects
         public Statistic GetStatInformation(StatisticDescription searchingStat) =>
             _characterStats.First(statistic => statistic.AplicableBoost == searchingStat);
 
-        public ItemData UsingSkin =>
+        public ItemStaticData UsingSkin =>
             _skin;
     }
 }

@@ -1,14 +1,23 @@
-﻿using Infrastructure.Data;
+﻿using System;
+using Infrastructure.Data;
 
 namespace Infrastructure.Services.DataProvider
 {
     public class PersistentDataService : IProgressProvider
     {
-        public PlayerProgress PlayerProgressData { get; set; }
+        private PlayerProgress _playerProgress;
+
+        public event Action OnDataUpdated;
 
         public PersistentDataService()
         {
-            PlayerProgressData = new PlayerProgress();
+            _playerProgress = new PlayerProgress();
+        } 
+
+        public void UpdateData(PlayerProgress newData)
+        {
+            _playerProgress = newData;
         }
+        public PlayerProgress PlayerProgress => _playerProgress;
     }
 }

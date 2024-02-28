@@ -1,32 +1,28 @@
 using System;
-using Sources.Data;
+using System.Linq;
+using Infrastructure.Data;
+using Infrastructure.Services.AssetManagement;
+using Infrastructure.Services.DataProvider;
 using Sources.ScriptableObjects;
 using UnityEngine;
 using ItemData = Sources.Data.ItemData;
 
 namespace Sources.Shop
 {
-    public class ItemShopDisplay : MonoBehaviour
+    public class ItemShopDisplay : MonoBehaviour, IDataReader
     {
-        [SerializeField] private SkinData[] _skins, _purchasedSkins;
         [SerializeField] private CharacterConfig _playerConfig;
+        [SerializeField] private SkinStaticData[] _skins, _purchasedSkins;
         public event Action<ItemData> OnItemPurchased, OnNewItemPreviewed;
 
         private Shop _skinShopInstance;
 
-        private void Awake()
+        public void Load(PlayerProgress progress)
         {
-            _skinShopInstance = new Shop(_playerConfig, _skins, _purchasedSkins);
-        }
-
-        private void OnEnable()
-        {
-            DisplaySelectedSkin();
-        }
-
-        private void Start()
-        {
-            DisplaySkinByIndex(0);
+            _skins = Resources.LoadAll<SkinStaticData>(AssetsPaths.AvailableSkins);
+            string[] purchasedSkinsData = progress.PurchasedSkins;
+            
+            _purchasedSkins = _skins.Where(data => purchasedSkinsData.Contains(data.Name)).ToArray();
         }
 
         public void DisplayNextSkin()
@@ -70,5 +66,20 @@ namespace Sources.Shop
 
         public Shop SkinShopInstance =>
             _skinShopInstance;
+
+        private void Awake()
+        {
+            _skinShopInstance = new Shop(_playerConfig, _skins, _purchasedSkins);
+        }
+
+        private void OnEnable()
+        {
+            DisplaySelectedSkin();
+        }
+
+        private void Start()
+        {
+            DisplaySkinByIndex(0);
+        }
     }
 }

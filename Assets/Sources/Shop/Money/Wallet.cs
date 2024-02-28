@@ -13,7 +13,7 @@ namespace Sources.Shop.Money
 
         public Wallet(int initialBalance = 0)
         {
-            _balance = ServiceLocator.Container.Single<IProgressProvider>().PlayerProgressData.Money;
+            _balance = ServiceLocator.Container.Single<IProgressProvider>().PlayerProgress.Money;
         }
         
         public void TrySpend(int amountToSpend)

@@ -25,9 +25,9 @@ namespace Sources.Shop
             if (_particlesInstance != null) Destroy(_playerInstance);
             if (_playerInstance != null) Destroy(_particlesInstance);
 
-            _playerInstance = Instantiate(e.ItemDataInformation.ItemPrefab, _charPreviewStorage);
+            _playerInstance = Instantiate(e.ItemStaticDataInformation.ItemPrefab, _charPreviewStorage);
             _particlesInstance =
-                Instantiate(e.ItemDataInformation.ItemRarity.RarityParticle.gameObject, _charPreviewStorage);
+                Instantiate(e.ItemStaticDataInformation.ItemRarity.RarityParticle.gameObject, _charPreviewStorage);
         }
     }
 }

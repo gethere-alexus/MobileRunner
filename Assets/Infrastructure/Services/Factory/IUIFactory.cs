@@ -5,7 +5,8 @@ namespace Infrastructure.Services.Factory
     public interface IUIFactory : IService
     {
         void CreateUIRoot();
-        void CreateUIMenu();
+        void CreateMainMenu();
         void CreateShopWindow();
+        void ClearObservers();
     }
 }

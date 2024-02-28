@@ -1,12 +1,12 @@
 ﻿using Infrastructure.SceneLoad;
 using Infrastructure.Services.Factory;
 
-namespace Infrastructure.StateMachine
+namespace Infrastructure.StateMachine.States
 {
     public class LoadMenuState : IState
     {
         private const string MainMenu = "MainMenu";
-        
+
         private readonly SceneLoader _sceneLoader;
         private readonly IUIFactory _uiFactory;
 
@@ -16,11 +16,14 @@ namespace Infrastructure.StateMachine
             _sceneLoader = sceneLoader;
         }
 
-        public void Enter() => 
+        public void Enter() =>
             _sceneLoader.Load(MainMenu, OnLoaded);
 
-        private void OnLoaded() => 
-            _uiFactory.CreateUIMenu();
+        private void OnLoaded()
+        {
+            _uiFactory.ClearObservers();
+            _uiFactory.CreateMainMenu();
+        }
 
         public void Exit()
         {

@@ -14,15 +14,15 @@ namespace Sources.Shop
 
     public class Shop
     {
-        private readonly ItemData[] _items;
-        private List<ItemData> _purchasedItems = new List<ItemData>();
+        private readonly ItemStaticData[] _items;
+        private List<ItemStaticData> _purchasedItems = new List<ItemStaticData>();
         private Data.ItemData _previewedItem;
         private int _observingItemIndex = 0;
 
         private readonly CharacterConfig _playerConfig;
 
-        public Shop(CharacterConfig playerConfig, ItemData[] itemsToPlaceInShop,
-            ItemData[] purchasedItems = null)
+        public Shop(CharacterConfig playerConfig, ItemStaticData[] itemsToPlaceInShop,
+            ItemStaticData[] purchasedItems = null)
         {
             _items = itemsToPlaceInShop;
             _playerConfig = playerConfig;
@@ -34,16 +34,16 @@ namespace Sources.Shop
                 }
             }
 
-            _items = Sorter.SortItemsByPrice<ItemData>(_items);
+            _items = Sorter.SortItemsByPrice<ItemStaticData>(_items);
         }
 
-        private Data.ItemData ConstructItemData(ItemData itemData)
+        private Data.ItemData ConstructItemData(ItemStaticData itemStaticData)
         {
             ItemStatus itemStatus = ItemStatus.Purchasable;
-            if (_purchasedItems.Contains(itemData))
+            if (_purchasedItems.Contains(itemStaticData))
             {
                 itemStatus = ItemStatus.Selectable;
-                if (_playerConfig.UsingSkin == itemData)
+                if (_playerConfig.UsingSkin == itemStaticData)
                 {
                     itemStatus = ItemStatus.Selected;
                 }
@@ -78,20 +78,20 @@ namespace Sources.Shop
 
         public void SelectShowedItem()
         {
-            if (!_purchasedItems.Contains(_previewedItem.ItemDataInformation)) 
+            if (!_purchasedItems.Contains(_previewedItem.ItemStaticDataInformation)) 
                 return;
             
-            Data.ItemData overridingData = new Data.ItemData(_previewedItem.ItemDataInformation, ItemStatus.Selected);
+            Data.ItemData overridingData = new Data.ItemData(_previewedItem.ItemStaticDataInformation, ItemStatus.Selected);
             
             _previewedItem = overridingData;
-            _playerConfig.SelectSkin(_previewedItem.ItemDataInformation);
+            _playerConfig.SelectSkin(_previewedItem.ItemStaticDataInformation);
         }
 
         public void PurchaseShowedSkin()
         {
             if (_previewedItem.ItemStatus == ItemStatus.Purchasable)
             {
-                _purchasedItems.Add(_previewedItem.ItemDataInformation);
+                _purchasedItems.Add(_previewedItem.ItemStaticDataInformation);
                 SelectShowedItem();
             }
         }

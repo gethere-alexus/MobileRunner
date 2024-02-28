@@ -11,7 +11,7 @@ namespace Sources.Shop.ShopButton
         
         public void Construct(ItemData itemData)
         {
-            _price.text = TextFormatter.DivideIntWithChar(itemData.ItemDataInformation.Price, ',');
+            _price.text = TextFormatter.DivideIntWithChar(itemData.ItemStaticDataInformation.Price, ',');
         }
     }
 }
