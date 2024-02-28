@@ -1,16 +1,18 @@
 ﻿using System;
-using Infrastructure.Services.DataProvider;
 
 namespace Infrastructure.Data
 {
     [Serializable]
     public class PlayerProgress
     {
-        public int Money { get; set; } 
+        public int Level { get; set; }
+        public int Money { get; set; }
+        public string[] SelectedSkin { get; set; }
+        public string[] PurchasedSkins { get; set; }
 
-        public PlayerProgress(int money = 0)
+        public PlayerProgress()
         {
-            Money = money;
+            
         }
     }
 }
