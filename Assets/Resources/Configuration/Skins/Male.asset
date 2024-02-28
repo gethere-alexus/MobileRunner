@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc0ace4956797e4195243ebf1b8d0c8, type: 3}
+  m_Name: Male
+  m_EditorClassIdentifier: 
+  Name: Male
+  Price: 9999999
+  Description: I am gayI am gayI am gayI am gayI am gayI am gayI am gayI am gayI
+    am gayI am gayI am gayI am gayI am gayI am gayI am gay
+  ItemRarity: {fileID: 11400000, guid: bbd6d0e99c31ea14ca4c633756932e1a, type: 2}
+  AppliedBoosts:
+  - BoostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+    BoostValue: 0
+  - BoostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+    BoostValue: 0
+  - BoostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+    BoostValue: 0
+  ItemPrefab: {fileID: 1762018173025169312, guid: 5811f4236f7f88b41b2a1da538566706,
+    type: 3}
