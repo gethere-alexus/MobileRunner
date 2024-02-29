@@ -12,7 +12,7 @@ namespace Sources.UI.Elements.Panels
         [SerializeField] private TMP_Text _progressText;
         [SerializeField] private Slider _progressBar;
 
-        public void Load(PlayerProgress progress)
+        public void LoadData(PlayerProgress progress)
         {
             Debug.Log("Loaded");
             _levelText.text = progress.Level.ToString();

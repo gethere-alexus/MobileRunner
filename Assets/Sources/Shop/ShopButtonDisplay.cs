@@ -27,24 +27,24 @@ namespace Sources.Shop
 
         private void OnEnable()
         {
-            _purchaseButton.onClick.AddListener(_charactersShopDisplay.PurchasePreviewedSkin);
-            _selectButton.onClick.AddListener(_charactersShopDisplay.SelectPreviewedSkin);
+            _purchaseButton.onClick.AddListener(_charactersShopDisplay.SkinShopInstance.PurchaseShowedSkin);
+            _selectButton.onClick.AddListener(_charactersShopDisplay.SkinShopInstance.SelectShowedItem);
             
-            _previousItemButton.onClick.AddListener(_charactersShopDisplay.DisplayPreviousSkin);
-            _nextItemButton.onClick.AddListener(_charactersShopDisplay.DisplayNextSkin);
+            _previousItemButton.onClick.AddListener(_charactersShopDisplay.SkinShopInstance.ShowPreviousSkin);
+            _nextItemButton.onClick.AddListener(_charactersShopDisplay.SkinShopInstance.ShowNextItem);
             
-            _charactersShopDisplay.OnNewItemPreviewed += DisplayButtonUI;
+            _charactersShopDisplay.SkinShopInstance.NewItemPreviewed += DisplayButtonUI;
         }
 
         private void OnDisable()
         {
-            _purchaseButton.onClick.RemoveListener(_charactersShopDisplay.PurchasePreviewedSkin);
-            _selectButton.onClick.RemoveListener(_charactersShopDisplay.SelectPreviewedSkin);
+            _purchaseButton.onClick.RemoveListener(_charactersShopDisplay.SkinShopInstance.PurchaseShowedSkin);
+            _selectButton.onClick.RemoveListener(_charactersShopDisplay.SkinShopInstance.SelectShowedItem);
             
-            _previousItemButton.onClick.RemoveListener(_charactersShopDisplay.DisplayPreviousSkin);
-            _nextItemButton.onClick.RemoveListener(_charactersShopDisplay.DisplayNextSkin);
+            _previousItemButton.onClick.RemoveListener(_charactersShopDisplay.SkinShopInstance.ShowPreviousSkin);
+            _nextItemButton.onClick.RemoveListener(_charactersShopDisplay.SkinShopInstance.ShowNextItem);
             
-            _charactersShopDisplay.OnNewItemPreviewed -= DisplayButtonUI;
+            _charactersShopDisplay.SkinShopInstance.NewItemPreviewed -= DisplayButtonUI;
         }
 
         private void DisplayButtonUI(ItemData data) 

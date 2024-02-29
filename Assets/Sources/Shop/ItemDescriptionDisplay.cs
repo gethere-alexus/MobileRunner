@@ -11,17 +11,32 @@ namespace Sources.Shop
         [SerializeField] private TMP_Text _itemName, _itemDescription;
         [SerializeField] private Image _itemFrame;
 
+        private bool _isShopEventsSubscribed;
+
         private void OnEnable()
         {
-            _charactersShopDisplay.OnNewItemPreviewed += ConfigureDescriptionUI;
+            _charactersShopDisplay.ShopInitialized += SubscribeShopEvents;
+        }
+
+        private void SubscribeShopEvents()
+        {
+            if (!_isShopEventsSubscribed)
+            {
+                _charactersShopDisplay.SkinShopInstance.NewItemPreviewed += ConstructDescription;
+                _isShopEventsSubscribed = true;
+            }
         }
 
         private void OnDisable()
         {
-            _charactersShopDisplay.OnNewItemPreviewed += ConfigureDescriptionUI;
+            if (_isShopEventsSubscribed)
+            {
+                _charactersShopDisplay.SkinShopInstance.NewItemPreviewed -= ConstructDescription;
+                _isShopEventsSubscribed = false;
+            }
         }
 
-        private void ConfigureDescriptionUI(ItemData skin)
+        private void ConstructDescription(ItemData skin)
         {
             _itemFrame.sprite = skin.ItemStaticDataInformation.ItemRarity.ItemFrame;
             _itemName.text = skin.ItemStaticDataInformation.Name;

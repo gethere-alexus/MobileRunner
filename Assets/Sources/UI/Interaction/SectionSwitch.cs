@@ -1,6 +1,7 @@
+using Sources.Shop;
 using UnityEngine;
 
-namespace Sources.Shop
+namespace Sources.UI.Interaction
 {
     public class SectionSwitch : MonoBehaviour
     {

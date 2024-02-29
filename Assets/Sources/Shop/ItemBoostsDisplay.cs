@@ -1,3 +1,4 @@
+using Sources.Data;
 using Sources.Player;
 using Sources.ScriptableObjects;
 using Sources.UI;
@@ -11,21 +12,36 @@ namespace Sources.Shop
         [SerializeField] private CharacterConfig _playerConfig;
         [SerializeField] private Transform _boostStorage;
         [SerializeField] private BoostDescription _boostDescriptionTemplate;
-        
+
+        private bool _isShopEventsSubscribed;
+
         private void OnEnable()
         {
-            _shopDisplay.OnNewItemPreviewed += OnNewItemShowed;
+            _shopDisplay.ShopInitialized += SubscribeShopEvents;
+        }
+
+        private void SubscribeShopEvents()
+        {
+            if (!_isShopEventsSubscribed)
+            {
+                _shopDisplay.SkinShopInstance.NewItemPreviewed += OnNewItemShowed;
+                _isShopEventsSubscribed = true;
+            }
         }
 
         private void OnDisable()
         {
-            _shopDisplay.OnNewItemPreviewed -= OnNewItemShowed;
+            if (_isShopEventsSubscribed)
+            {
+                _shopDisplay.SkinShopInstance.NewItemPreviewed -= OnNewItemShowed;
+                _isShopEventsSubscribed = false;
+            }
         }
 
-        private void OnNewItemShowed(Data.ItemData skin) =>
+        private void OnNewItemShowed(ItemData skin) =>
             ConstructBoostsView(skin.ItemStaticDataInformation);
 
-        private void ConstructBoostsView(ScriptableObjects.ItemStaticData itemStaticData)
+        private void ConstructBoostsView(ItemStaticData itemStaticData)
         {
             if (_boostStorage.childCount != 0)
             {

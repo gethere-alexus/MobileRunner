@@ -17,6 +17,7 @@ namespace Infrastructure.Services.AssetManagement
             instance.transform.position = initialPosition;
             return instance;
         }
-        
+        public T[] LoadAll<T>(string path) where T : Object => 
+            Resources.LoadAll<T>(path);
     }
 }

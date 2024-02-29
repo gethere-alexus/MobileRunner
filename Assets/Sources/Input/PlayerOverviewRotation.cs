@@ -5,14 +5,31 @@ namespace Sources.Input
 {
     public class PlayerOverviewRotation : MonoBehaviour
     {
-        [SerializeField] private InputProcessor _inputProcessor;
+        [SerializeField] private IInputProcessingService _inputProcessor;
         [SerializeField] private Rigidbody _playerRigidbody;
 
-        [SerializeField] private float _rotationSensitivity;
+        [SerializeField] private float _rotationSensitivity = 5.0f;
 
         private float _startTouchPositionX, _currentTouchPositionX;
+        private bool _isSubscribed;
+
+        public void Construct(IInputProcessingService inputProcessor, Rigidbody charRb)
+        {
+            _inputProcessor = inputProcessor;
+            _playerRigidbody = charRb;
+            SubscribeInputEvents();
+        }
 
         private void OnEnable()
+        {
+            if (_inputProcessor != null)
+            {
+                _inputProcessor.OnTouchStarted += OnTouchStarted;
+                _inputProcessor.OnTouchPerformed += OnTouchPerformed;
+            }
+        }
+
+        private void SubscribeInputEvents()
         {
             _inputProcessor.OnTouchStarted += OnTouchStarted;
             _inputProcessor.OnTouchPerformed += OnTouchPerformed;
@@ -20,8 +37,11 @@ namespace Sources.Input
 
         private void OnDisable()
         {
-            _inputProcessor.OnTouchStarted -= OnTouchStarted;
-            _inputProcessor.OnTouchPerformed -= OnTouchPerformed;
+            if (_isSubscribed)
+            {
+                _inputProcessor.OnTouchStarted -= OnTouchStarted;
+                _inputProcessor.OnTouchPerformed -= OnTouchPerformed;
+            }
         }
 
         private void OnTouchStarted(Vector2 position) => _startTouchPositionX = position.x;

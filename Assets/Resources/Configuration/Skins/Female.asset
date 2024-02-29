@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Female
   Price: 4124
-  Description: I am gayI am gayI am gayI am gayI am gayI am gayI am gayI am gayI
-    am gayI am gayI am gayI am gayI am gayI am gayI am gay
+  Description: 'Test Test Test Test Test Test Test Test Test Test Test Test Test
+    Test Test Test Test Test Test '
   ItemRarity: {fileID: 11400000, guid: 42969f91a918ae340abd817a7a8f998b, type: 2}
   AppliedBoosts:
   - BoostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
-    BoostValue: 0
+    BoostValue: 142
   - BoostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
-    BoostValue: 0
+    BoostValue: 43
   - BoostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
-    BoostValue: 0
+    BoostValue: 234
   - BoostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
-    BoostValue: 0
+    BoostValue: 123
   - BoostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
-    BoostValue: 0
+    BoostValue: 4124
   ItemPrefab: {fileID: 5824428352053320391, guid: 9c86e41b5e19b7447aa5c4f94049889d,
     type: 3}
