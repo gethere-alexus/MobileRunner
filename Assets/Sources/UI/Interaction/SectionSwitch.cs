@@ -1,20 +1,21 @@
 using Sources.Shop;
+using Sources.UI.Elements;
 using UnityEngine;
 
 namespace Sources.UI.Interaction
 {
     public class SectionSwitch : MonoBehaviour
     {
-        [SerializeField] private ShopSection[] _sections;
+        [SerializeField] private Section[] _sections;
         [SerializeField, Min(0)] private int _startSectionIndex;
         
-        private ShopSection _activeShopSection;
+        private Section _activeSection;
 
-        public void OpenSection(ShopSection shopSection)
+        public void OpenSection(Section section)
         {
-            _activeShopSection?.SetActive(false);
-            _activeShopSection = shopSection;
-            shopSection.SetActive(true);
+            _activeSection?.SetActive(false);
+            _activeSection = section;
+            section.SetActive(true);
         }
 
         private void OnValidate()

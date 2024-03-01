@@ -20,7 +20,7 @@ namespace Infrastructure.Services.SaveLoad
 
         public void SaveProgress()
         {
-            PlayerPrefs.SetString(ProgressDataKey, _progressProvider.PlayerProgress.ToJson());
+            PlayerPrefs.SetString(ProgressDataKey, _progressProvider.GetProgress().ToJson());
         }
 
         public PlayerProgress LoadProgress() =>

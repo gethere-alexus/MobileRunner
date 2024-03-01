@@ -5,17 +5,13 @@ namespace Sources.Data
 {
     public class ItemData
     {
-        private readonly ItemStaticData _itemStaticDataInformation;
-        private readonly ItemStatus _itemStatus;
+        public ItemStaticData ItemInformation { get; }
+        public ItemStatus ItemStatus { get; }
 
-        public ItemData(ScriptableObjects.ItemStaticData itemStaticDataData, ItemStatus itemStatus)
+        public ItemData(ItemStaticData itemData, ItemStatus itemStatus)
         {
-            _itemStaticDataInformation = itemStaticDataData;
-            _itemStatus = itemStatus;
+            ItemInformation = itemData;
+            ItemStatus = itemStatus;
         }
-
-        public ScriptableObjects.ItemStaticData ItemStaticDataInformation => _itemStaticDataInformation;
-
-        public ItemStatus ItemStatus => _itemStatus;
     }
 }

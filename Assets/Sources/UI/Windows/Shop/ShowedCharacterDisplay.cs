@@ -1,13 +1,14 @@
 using Sources.Data;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace Sources.Shop
+namespace Sources.UI.Windows.Shop
 {
     public class ShowedCharacterDisplay : MonoBehaviour
     {
         private const int PreviewLayer = 6;
 
-        [SerializeField] private ItemShopDisplay _shopDisplay;
+        [FormerlySerializedAs("_shopDisplay")] [FormerlySerializedAs("_shopPresenterDisplay")] [SerializeField] private SkinShopDisplay _skinShopDisplay;
 
         private GameObject _playerInstance, _particlesInstance;
 
@@ -15,14 +16,14 @@ namespace Sources.Shop
 
         private void OnEnable()
         {
-            _shopDisplay.ShopInitialized += SubscribeShopEvents;
+            _skinShopDisplay.ShopInitialized += SubscribeSkinShopEvents;
         }
 
-        private void SubscribeShopEvents()
+        private void SubscribeSkinShopEvents()
         {
             if (!_isShopEventsSubscribed)
             {
-                _shopDisplay.SkinShopInstance.NewItemPreviewed += ConstructPreview;
+                _skinShopDisplay.SkinSkinShopInstance.NewItemPreviewed += ConstructPreview;
                 _isShopEventsSubscribed = true;
             }
         }
@@ -31,15 +32,15 @@ namespace Sources.Shop
         {
             if (_isShopEventsSubscribed)
             {
-                _shopDisplay.SkinShopInstance.NewItemPreviewed -= ConstructPreview;
+                _skinShopDisplay.SkinSkinShopInstance.NewItemPreviewed -= ConstructPreview;
                 _isShopEventsSubscribed = false;
             }
         }
 
         private void ConstructPreview(ItemData e)
         {
-            InstantiateParticles(e.ItemStaticDataInformation.ItemRarity.RarityParticle.gameObject);
-            InstantiateCharacter(e.ItemStaticDataInformation.ItemPrefab);
+            InstantiateParticles(e.ItemInformation.ItemRarity.RarityParticle.gameObject);
+            InstantiateCharacter(e.ItemInformation.ItemPrefab);
         }
 
         private void InstantiateCharacter(GameObject character)
@@ -47,7 +48,7 @@ namespace Sources.Shop
             if (_playerInstance != null)
                 Destroy(_playerInstance);
 
-            _playerInstance = Instantiate(character, _shopDisplay.PreviewSpace);
+            _playerInstance = Instantiate(character, _skinShopDisplay.PreviewSpace);
             SetObjLayer(_playerInstance, PreviewLayer);
         }
 
@@ -56,7 +57,7 @@ namespace Sources.Shop
             if (_particlesInstance != null)
                 Destroy(_particlesInstance);
             
-            _particlesInstance = Instantiate(particles, _shopDisplay.PreviewSpace);
+            _particlesInstance = Instantiate(particles, _skinShopDisplay.PreviewSpace);
             SetObjLayer(_particlesInstance, PreviewLayer);
         }
 

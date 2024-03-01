@@ -61,7 +61,7 @@ namespace Infrastructure.Services.Factory
         public void CreateCharacterPreview()
         {
             SkinStaticData selectedChar = _staticDataProvider.Skins
-                    .First(data => data.Name == _dataProvider.PlayerProgress.SelectedSkin);
+                    .First(data => data.Name == _dataProvider.GetProgress().SelectedSkin);
 
             Transform initPoint = GameObject.FindWithTag(SpawnPointTag).transform;
             
@@ -75,7 +75,7 @@ namespace Infrastructure.Services.Factory
             CreateUIRoot();
             var instance = _assetProvider.Instantiate(AssetsPaths.UIShop);
             
-            foreach (IShop shop in instance.GetComponentsInChildren<IShop>(true))
+            foreach (IShopPresenter shop in instance.GetComponentsInChildren<IShopPresenter>(true))
             {
                 shop.PreviewSpace = _assetProvider.Instantiate(AssetsPaths.PreviewSpace).transform;
                 shop.InitShop(_staticDataProvider.Skins);
@@ -96,7 +96,7 @@ namespace Infrastructure.Services.Factory
             foreach (var reader in obj.GetComponentsInChildren<IDataReader>())
             {
                 _dataReaders.Add(reader);
-                reader.LoadData(_dataProvider.PlayerProgress);
+                reader.LoadData(_dataProvider.GetProgress());
 
                 if (reader is IDataWriter writer)
                     _dataWriters.Add(writer);
@@ -107,7 +107,7 @@ namespace Infrastructure.Services.Factory
         {
             foreach (IDataReader reader in _dataReaders)
             {
-                reader.LoadData(_dataProvider.PlayerProgress);
+                reader.LoadData(_dataProvider.GetProgress());
             }
         }
     }

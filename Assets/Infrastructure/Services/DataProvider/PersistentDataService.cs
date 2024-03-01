@@ -5,19 +5,16 @@ namespace Infrastructure.Services.DataProvider
 {
     public class PersistentDataService : IProgressProvider
     {
-        private PlayerProgress _playerProgress;
-
+        private PlayerProgress _progress;
         public event Action OnDataUpdated;
 
-        public PersistentDataService()
-        {
-            _playerProgress = new PlayerProgress();
-        } 
+        public PlayerProgress GetProgress() => 
+            _progress;
 
         public void UpdateData(PlayerProgress newData)
         {
-            _playerProgress = newData;
+            _progress = newData;
+            OnDataUpdated?.Invoke();
         }
-        public PlayerProgress PlayerProgress => _playerProgress;
     }
 }

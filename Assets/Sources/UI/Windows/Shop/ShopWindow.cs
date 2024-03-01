@@ -1,4 +1,4 @@
-﻿namespace Sources.UI.Windows
+﻿namespace Sources.UI.Windows.Shop
 {
     public class ShopWindow : WindowBase
     {

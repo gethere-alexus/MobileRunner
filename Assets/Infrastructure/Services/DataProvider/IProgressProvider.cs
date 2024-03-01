@@ -6,8 +6,8 @@ namespace Infrastructure.Services.DataProvider
 {
     public interface IProgressProvider : IService
     {
-        PlayerProgress PlayerProgress { get; }
         void UpdateData(PlayerProgress newData);
+        PlayerProgress GetProgress();
         event Action OnDataUpdated;
     }  
 }

@@ -1,13 +1,14 @@
 using Sources.Data;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace Sources.Shop
+namespace Sources.UI.Windows.Shop
 {
     public class ItemDescriptionDisplay : MonoBehaviour
     {
-        [SerializeField] private ItemShopDisplay _charactersShopDisplay;
+        [FormerlySerializedAs("_charactersShopDisplay")] [FormerlySerializedAs("_charactersShopPresenterDisplay")] [SerializeField] private SkinShopDisplay _charactersSkinShopDisplay;
         [SerializeField] private TMP_Text _itemName, _itemDescription;
         [SerializeField] private Image _itemFrame;
 
@@ -15,14 +16,14 @@ namespace Sources.Shop
 
         private void OnEnable()
         {
-            _charactersShopDisplay.ShopInitialized += SubscribeShopEvents;
+            _charactersSkinShopDisplay.ShopInitialized += SubscribeSkinShopEvents;
         }
 
-        private void SubscribeShopEvents()
+        private void SubscribeSkinShopEvents()
         {
             if (!_isShopEventsSubscribed)
             {
-                _charactersShopDisplay.SkinShopInstance.NewItemPreviewed += ConstructDescription;
+                _charactersSkinShopDisplay.SkinSkinShopInstance.NewItemPreviewed += ConstructDescription;
                 _isShopEventsSubscribed = true;
             }
         }
@@ -31,17 +32,17 @@ namespace Sources.Shop
         {
             if (_isShopEventsSubscribed)
             {
-                _charactersShopDisplay.SkinShopInstance.NewItemPreviewed -= ConstructDescription;
+                _charactersSkinShopDisplay.SkinSkinShopInstance.NewItemPreviewed -= ConstructDescription;
                 _isShopEventsSubscribed = false;
             }
         }
 
         private void ConstructDescription(ItemData skin)
         {
-            _itemFrame.sprite = skin.ItemStaticDataInformation.ItemRarity.ItemFrame;
-            _itemName.text = skin.ItemStaticDataInformation.Name;
+            _itemFrame.sprite = skin.ItemInformation.ItemRarity.ItemFrame;
+            _itemName.text = skin.ItemInformation.Name;
             //  _itemPrice.text = TextFormatter.DivideIntWithChar(skin.ItemInformation.Price, ',');
-            _itemDescription.text = skin.ItemStaticDataInformation.Description;
+            _itemDescription.text = skin.ItemInformation.Description;
         }
     }
 }

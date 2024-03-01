@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Sources.Shop
+namespace Sources.UI.Windows.Shop
 {
     public class ShopMenuDisplay : MonoBehaviour
     {

@@ -1,14 +1,15 @@
 using Sources.Data;
 using Sources.Player;
 using Sources.ScriptableObjects;
-using Sources.UI;
+using Sources.UI.Elements;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace Sources.Shop
+namespace Sources.UI.Windows.Shop
 {
     public class ItemBoostsDisplay : MonoBehaviour
     {
-        [SerializeField] private ItemShopDisplay _shopDisplay;
+        [FormerlySerializedAs("_shopDisplay")] [FormerlySerializedAs("_shopPresenterDisplay")] [SerializeField] private SkinShopDisplay _skinShopDisplay;
         [SerializeField] private CharacterConfig _playerConfig;
         [SerializeField] private Transform _boostStorage;
         [SerializeField] private BoostDescription _boostDescriptionTemplate;
@@ -17,14 +18,14 @@ namespace Sources.Shop
 
         private void OnEnable()
         {
-            _shopDisplay.ShopInitialized += SubscribeShopEvents;
+            _skinShopDisplay.ShopInitialized += SubscribeSkinShopEvents;
         }
 
-        private void SubscribeShopEvents()
+        private void SubscribeSkinShopEvents()
         {
             if (!_isShopEventsSubscribed)
             {
-                _shopDisplay.SkinShopInstance.NewItemPreviewed += OnNewItemShowed;
+                _skinShopDisplay.SkinSkinShopInstance.NewItemPreviewed += OnNewItemShowed;
                 _isShopEventsSubscribed = true;
             }
         }
@@ -33,13 +34,13 @@ namespace Sources.Shop
         {
             if (_isShopEventsSubscribed)
             {
-                _shopDisplay.SkinShopInstance.NewItemPreviewed -= OnNewItemShowed;
+                _skinShopDisplay.SkinSkinShopInstance.NewItemPreviewed -= OnNewItemShowed;
                 _isShopEventsSubscribed = false;
             }
         }
 
         private void OnNewItemShowed(ItemData skin) =>
-            ConstructBoostsView(skin.ItemStaticDataInformation);
+            ConstructBoostsView(skin.ItemInformation);
 
         private void ConstructBoostsView(ItemStaticData itemStaticData)
         {

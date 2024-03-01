@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Sources.Shop
 {
-    public interface IShop
+    public interface IShopPresenter
     {
         void InitShop(SkinStaticData[] skins);
         Transform PreviewSpace { get; set; }

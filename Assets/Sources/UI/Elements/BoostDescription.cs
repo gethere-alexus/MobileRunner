@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Sources.UI
+namespace Sources.UI.Elements
 {
     public class BoostDescription : MonoBehaviour
     {
