@@ -5,12 +5,13 @@ using Infrastructure.Services.DataProvider;
 using Infrastructure.Services.ServiceLocating;
 using Sources.Data;
 using Sources.ScriptableObjects;
+using UnityEngine;
 
 namespace Sources.Shop
 {
     public sealed class SkinShop : ShopBase
     {
-        public SkinShop(ItemStaticData[] items) : base(items)
+        public SkinShop(ItemStaticData[] items, PlayerProgress initProgress = null) : base(items, initProgress)
         {
         }
 
@@ -47,11 +48,14 @@ namespace Sources.Shop
         {
             // Set purchased skins
             string[] purchasedSkinsData = progress.PurchasedSkins;
+            string formattedList = "{" + string.Join(", ", purchasedSkinsData.Select(e => $"\"{e}\"")) + "}";
+            Debug.Log($"formated list : {formattedList}");
             PurchasedItems = Items.Where(data => purchasedSkinsData.Contains(data.Name)).ToList();
 
             // Set selected skin
             string selectedSkin = progress.SelectedSkin;
             SelectedItem = Items.First(item => item.Name == selectedSkin);
+            Debug.Log("Data Loaded");
         }
 
         public override void UpdateData()

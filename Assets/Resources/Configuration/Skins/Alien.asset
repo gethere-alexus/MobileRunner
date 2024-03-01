@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Alien
   m_EditorClassIdentifier: 
   Name: Invader
-  Price: 4501
+  Price: 500000
   Description: 'Test Test Test Test Test Test Test Test Test Test Test Test Test
     Test Test Test Test Test Test '
   ItemRarity: {fileID: 11400000, guid: 42969f91a918ae340abd817a7a8f998b, type: 2}

@@ -8,33 +8,31 @@ namespace Sources.UI.Windows.Shop
 {
     public class ItemDescriptionDisplay : MonoBehaviour
     {
-        [FormerlySerializedAs("_charactersShopDisplay")] [FormerlySerializedAs("_charactersShopPresenterDisplay")] [SerializeField] private SkinShopDisplay _charactersSkinShopDisplay;
+        [FormerlySerializedAs("_skinShopDisplay")] [SerializeField] private SkinShopRepresenter _skinShopRepresenter;
         [SerializeField] private TMP_Text _itemName, _itemDescription;
         [SerializeField] private Image _itemFrame;
 
-        private bool _isShopEventsSubscribed;
-
         private void OnEnable()
         {
-            _charactersSkinShopDisplay.ShopInitialized += SubscribeSkinShopEvents;
+            _skinShopRepresenter.ShopInitialized += SubscribeSkinShopEvents;
+            SubscribeSkinShopEvents();
         }
 
         private void SubscribeSkinShopEvents()
         {
-            if (!_isShopEventsSubscribed)
+            if (_skinShopRepresenter.SkinSkinShopInstance != null)
             {
-                _charactersSkinShopDisplay.SkinSkinShopInstance.NewItemPreviewed += ConstructDescription;
-                _isShopEventsSubscribed = true;
+                _skinShopRepresenter.SkinSkinShopInstance.NewItemPreviewed += ConstructDescription;
             }
         }
 
         private void OnDisable()
         {
-            if (_isShopEventsSubscribed)
+            if (_skinShopRepresenter.SkinSkinShopInstance != null)
             {
-                _charactersSkinShopDisplay.SkinSkinShopInstance.NewItemPreviewed -= ConstructDescription;
-                _isShopEventsSubscribed = false;
+                _skinShopRepresenter.SkinSkinShopInstance.NewItemPreviewed -= ConstructDescription;
             }
+            _skinShopRepresenter.ShopInitialized -= SubscribeSkinShopEvents;
         }
 
         private void ConstructDescription(ItemData skin)

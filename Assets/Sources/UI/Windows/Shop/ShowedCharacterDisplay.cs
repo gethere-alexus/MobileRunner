@@ -8,33 +8,32 @@ namespace Sources.UI.Windows.Shop
     {
         private const int PreviewLayer = 6;
 
-        [FormerlySerializedAs("_shopDisplay")] [FormerlySerializedAs("_shopPresenterDisplay")] [SerializeField] private SkinShopDisplay _skinShopDisplay;
+        [FormerlySerializedAs("_skinShopDisplay")] [SerializeField] private SkinShopRepresenter _skinShopRepresenter;
 
         private GameObject _playerInstance, _particlesInstance;
-
-        private bool _isShopEventsSubscribed;
+        
 
         private void OnEnable()
         {
-            _skinShopDisplay.ShopInitialized += SubscribeSkinShopEvents;
+            _skinShopRepresenter.ShopInitialized += SubscribeSkinShopEvents;
+            SubscribeSkinShopEvents();
         }
 
         private void SubscribeSkinShopEvents()
         {
-            if (!_isShopEventsSubscribed)
+            if (_skinShopRepresenter.SkinSkinShopInstance != null)
             {
-                _skinShopDisplay.SkinSkinShopInstance.NewItemPreviewed += ConstructPreview;
-                _isShopEventsSubscribed = true;
+                _skinShopRepresenter.SkinSkinShopInstance.NewItemPreviewed += ConstructPreview;
             }
         }
 
         private void OnDisable()
         {
-            if (_isShopEventsSubscribed)
+            if (_skinShopRepresenter.SkinSkinShopInstance != null)
             {
-                _skinShopDisplay.SkinSkinShopInstance.NewItemPreviewed -= ConstructPreview;
-                _isShopEventsSubscribed = false;
+                _skinShopRepresenter.SkinSkinShopInstance.NewItemPreviewed -= ConstructPreview;
             }
+            _skinShopRepresenter.ShopInitialized -= SubscribeSkinShopEvents;
         }
 
         private void ConstructPreview(ItemData e)
@@ -48,7 +47,7 @@ namespace Sources.UI.Windows.Shop
             if (_playerInstance != null)
                 Destroy(_playerInstance);
 
-            _playerInstance = Instantiate(character, _skinShopDisplay.PreviewSpace);
+            _playerInstance = Instantiate(character, _skinShopRepresenter.PreviewSpace);
             SetObjLayer(_playerInstance, PreviewLayer);
         }
 
@@ -57,7 +56,7 @@ namespace Sources.UI.Windows.Shop
             if (_particlesInstance != null)
                 Destroy(_particlesInstance);
             
-            _particlesInstance = Instantiate(particles, _skinShopDisplay.PreviewSpace);
+            _particlesInstance = Instantiate(particles, _skinShopRepresenter.PreviewSpace);
             SetObjLayer(_particlesInstance, PreviewLayer);
         }
 

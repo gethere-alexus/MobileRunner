@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Infrastructure.Data;
 using Infrastructure.Services.DataProvider;
 using Sources.Data;
 using Sources.ScriptableObjects;
+using UnityEngine;
 
 namespace Sources.Shop
 {
@@ -15,12 +17,15 @@ namespace Sources.Shop
         protected ItemData PreviewedItem;
         protected ItemStaticData SelectedItem;
 
-        private int _observingItemIndex;
+        private int _observingItemIndex = 0;
 
         public event Action<ItemData> NewItemPreviewed;
 
-        protected ShopBase(ItemStaticData[] items) =>
+        protected ShopBase(ItemStaticData[] items, PlayerProgress initProgress = null)
+        {
             Items = items;
+            LoadData(initProgress);
+        }
 
         public void ShowItemByIndex(int index)
         {
@@ -31,14 +36,14 @@ namespace Sources.Shop
 
         public void ShowNextItem()
         {
-            int index = _observingItemIndex + 1 >= Items.Length ? 0 : _observingItemIndex + 1;
-            ShowItemByIndex(index);
+            _observingItemIndex = _observingItemIndex + 1 >= Items.Length ? 0 : _observingItemIndex + 1;
+            ShowItemByIndex(_observingItemIndex);
         }
 
         public void ShowPreviousItem()
         {
-            int index = _observingItemIndex - 1 < 0 ? Items.Length - 1 : _observingItemIndex - 1;
-            ShowItemByIndex(index);
+            _observingItemIndex = _observingItemIndex - 1 < 0 ? Items.Length - 1 : _observingItemIndex - 1;
+            ShowItemByIndex(_observingItemIndex);
         }
 
         public abstract void ShowSelectedItem();
@@ -50,6 +55,7 @@ namespace Sources.Shop
         private ItemData ConstructItemData(ItemStaticData itemStaticData)
         {
             ItemStatus itemStatus = ItemStatus.Purchasable;
+            string formattedList = "{" + string.Join(", ", PurchasedItems.Select(e => $"\"{e}\"")) + "}";
             if (PurchasedItems.Contains(itemStaticData))
             {
                 itemStatus = ItemStatus.Selectable;

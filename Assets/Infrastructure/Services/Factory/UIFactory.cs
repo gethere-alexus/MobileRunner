@@ -55,7 +55,7 @@ namespace Infrastructure.Services.Factory
         {
             instanceUI = _assetProvider.Instantiate(AssetsPaths.UIMainMenu);
             instanceUI.transform.SetParent(_uiRoot);
-            RegisterObservers(instanceUI);
+            RegisterObserver(instanceUI.GetComponentsInChildren<IDataReader>());
         }
 
         public void CreateCharacterPreview()
@@ -75,14 +75,17 @@ namespace Infrastructure.Services.Factory
             CreateUIRoot();
             var instance = _assetProvider.Instantiate(AssetsPaths.UIShop);
             
-            foreach (IShopPresenter shop in instance.GetComponentsInChildren<IShopPresenter>(true))
+            Transform previewSpace = _assetProvider.Instantiate(AssetsPaths.PreviewSpace).transform;
+            previewSpace.SetParent(instance.transform);
+            
+            foreach (IShopRepresenter shop in instance.GetComponentsInChildren<IShopRepresenter>(true))
             {
-                shop.PreviewSpace = _assetProvider.Instantiate(AssetsPaths.PreviewSpace).transform;
-                shop.InitShop(_staticDataProvider.Skins);
+                shop.PreviewSpace = previewSpace;
+                shop.InitShop(_staticDataProvider.Skins, _dataProvider.GetProgress());
+                RegisterObserver(shop.SkinSkinShopInstance);
             }
             
             instance.transform.SetParent(_uiRoot);
-            RegisterObservers(instance);
         }
 
         public void ClearObservers()
@@ -91,15 +94,20 @@ namespace Infrastructure.Services.Factory
             _dataWriters.Clear();
         }
 
-        private void RegisterObservers(GameObject obj)
+        private void RegisterObserver(IDataReader reader)
         {
-            foreach (var reader in obj.GetComponentsInChildren<IDataReader>())
-            {
-                _dataReaders.Add(reader);
-                reader.LoadData(_dataProvider.GetProgress());
+            _dataReaders.Add(reader);
+            reader.LoadData(_dataProvider.GetProgress());
 
-                if (reader is IDataWriter writer)
-                    _dataWriters.Add(writer);
+            if (reader is IDataWriter writer)
+                _dataWriters.Add(writer);
+        }
+
+        private void RegisterObserver(IDataReader[] readers)
+        {
+            foreach (var reader in readers)
+            {
+                RegisterObserver(reader);
             }
         }
 

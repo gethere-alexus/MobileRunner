@@ -9,34 +9,32 @@ namespace Sources.UI.Windows.Shop
 {
     public class ItemBoostsDisplay : MonoBehaviour
     {
-        [FormerlySerializedAs("_shopDisplay")] [FormerlySerializedAs("_shopPresenterDisplay")] [SerializeField] private SkinShopDisplay _skinShopDisplay;
+        [FormerlySerializedAs("_skinShopDisplay")] [SerializeField] private SkinShopRepresenter _skinShopRepresenter;
         [SerializeField] private CharacterConfig _playerConfig;
         [SerializeField] private Transform _boostStorage;
         [SerializeField] private BoostDescription _boostDescriptionTemplate;
 
-        private bool _isShopEventsSubscribed;
-
         private void OnEnable()
         {
-            _skinShopDisplay.ShopInitialized += SubscribeSkinShopEvents;
+            _skinShopRepresenter.ShopInitialized += SubscribeSkinShopEvents;
+            SubscribeSkinShopEvents();
         }
 
         private void SubscribeSkinShopEvents()
         {
-            if (!_isShopEventsSubscribed)
+            if ( _skinShopRepresenter.SkinSkinShopInstance != null)
             {
-                _skinShopDisplay.SkinSkinShopInstance.NewItemPreviewed += OnNewItemShowed;
-                _isShopEventsSubscribed = true;
+                _skinShopRepresenter.SkinSkinShopInstance.NewItemPreviewed += OnNewItemShowed;
             }
         }
 
         private void OnDisable()
         {
-            if (_isShopEventsSubscribed)
+            if ( _skinShopRepresenter.SkinSkinShopInstance != null)
             {
-                _skinShopDisplay.SkinSkinShopInstance.NewItemPreviewed -= OnNewItemShowed;
-                _isShopEventsSubscribed = false;
+                _skinShopRepresenter.SkinSkinShopInstance.NewItemPreviewed -= OnNewItemShowed;
             }
+            _skinShopRepresenter.ShopInitialized -= SubscribeSkinShopEvents;
         }
 
         private void OnNewItemShowed(ItemData skin) =>

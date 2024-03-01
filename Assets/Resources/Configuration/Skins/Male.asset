@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Male
   m_EditorClassIdentifier: 
   Name: Male
-  Price: 9999999
+  Price: 50000
   Description: 'Test Test Test Test Test Test Test Test Test Test Test Test Test
     Test Test Test Test Test Test '
   ItemRarity: {fileID: 11400000, guid: bbd6d0e99c31ea14ca4c633756932e1a, type: 2}
