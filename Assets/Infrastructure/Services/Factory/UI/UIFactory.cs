@@ -1,38 +1,33 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Infrastructure.Services.AssetManagement;
 using Infrastructure.Services.DataProvider;
-using Infrastructure.Services.InputService;
+using Infrastructure.Services.Factory.Character;
 using Infrastructure.Services.StaticData;
-using Sources.Input;
-using Sources.ScriptableObjects;
 using Sources.Shop;
 using UnityEngine;
 
-namespace Infrastructure.Services.Factory
+namespace Infrastructure.Services.Factory.UI
 {
     public class UIFactory : IUIFactory
     {
-        private const string SpawnPointTag = "SpawnPoint";
-        
         private readonly IAssetProvider _assetProvider;
-        private readonly IProgressProvider _dataProvider;
+        private readonly IProgressProvider _progressProvider;
         private readonly IStaticDataProvider _staticDataProvider;
+        private readonly ICharacterFactory _characterFactory;
 
         private List<IDataReader> _dataReaders { get; } = new List<IDataReader>();
         private List<IDataWriter> _dataWriters { get; } = new List<IDataWriter>();
 
         private Transform _uiRoot;
-        private IInputProcessingService _inputService;
 
-        public UIFactory(IAssetProvider assetProvider, IProgressProvider dataProvider, IStaticDataProvider staticDataProvider, IInputProcessingService inputService)
+        public UIFactory(IAssetProvider assetProvider, IProgressProvider progressProvider, IStaticDataProvider staticDataProvider, ICharacterFactory charFactory)
         {
             _assetProvider = assetProvider;
-            _dataProvider = dataProvider;
+            _progressProvider = progressProvider;
             _staticDataProvider = staticDataProvider;
-            _inputService = inputService;
+            _characterFactory = charFactory;
 
-            dataProvider.OnDataUpdated += OnDataUpdated;
+            progressProvider.OnDataUpdated += OnDataUpdated;
         }
 
         public void CreateUIRoot()
@@ -48,7 +43,7 @@ namespace Infrastructure.Services.Factory
             CreateUIRoot();
 
             CreateUIMenu(out var instanceUI);
-            CreateCharacterPreview();
+            _characterFactory.CreateCharacterPreview();
         }
 
         private void CreateUIMenu(out GameObject instanceUI)
@@ -56,18 +51,6 @@ namespace Infrastructure.Services.Factory
             instanceUI = _assetProvider.Instantiate(AssetsPaths.UIMainMenu);
             instanceUI.transform.SetParent(_uiRoot);
             RegisterObserver(instanceUI.GetComponentsInChildren<IDataReader>());
-        }
-
-        public void CreateCharacterPreview()
-        {
-            SkinStaticData selectedChar = _staticDataProvider.Skins
-                    .First(data => data.Name == _dataProvider.GetProgress().SelectedSkin);
-
-            Transform initPoint = GameObject.FindWithTag(SpawnPointTag).transform;
-            
-            var instanceChar = Object.Instantiate(selectedChar.ItemPrefab, initPoint);
-            instanceChar.AddComponent<PlayerOverviewRotation>().Construct(_inputService, 
-                instanceChar.GetComponent<Rigidbody>());
         }
 
         public void CreateShopWindow()
@@ -81,7 +64,7 @@ namespace Infrastructure.Services.Factory
             foreach (IShopRepresenter shop in instance.GetComponentsInChildren<IShopRepresenter>(true))
             {
                 shop.PreviewSpace = previewSpace;
-                shop.InitShop(_staticDataProvider.Skins, _dataProvider.GetProgress());
+                shop.InitShop(_staticDataProvider.Skins, _progressProvider.GetProgress());
                 RegisterObserver(shop.SkinSkinShopInstance);
             }
             
@@ -97,7 +80,7 @@ namespace Infrastructure.Services.Factory
         private void RegisterObserver(IDataReader reader)
         {
             _dataReaders.Add(reader);
-            reader.LoadData(_dataProvider.GetProgress());
+            reader.LoadData(_progressProvider.GetProgress());
 
             if (reader is IDataWriter writer)
                 _dataWriters.Add(writer);
@@ -115,7 +98,7 @@ namespace Infrastructure.Services.Factory
         {
             foreach (IDataReader reader in _dataReaders)
             {
-                reader.LoadData(_dataProvider.GetProgress());
+                reader.LoadData(_progressProvider.GetProgress());
             }
         }
     }

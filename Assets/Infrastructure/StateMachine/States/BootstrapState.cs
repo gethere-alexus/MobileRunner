@@ -1,7 +1,8 @@
 ﻿using Infrastructure.SceneLoad;
 using Infrastructure.Services.AssetManagement;
 using Infrastructure.Services.DataProvider;
-using Infrastructure.Services.Factory;
+using Infrastructure.Services.Factory.Character;
+using Infrastructure.Services.Factory.UI;
 using Infrastructure.Services.InputService;
 using Infrastructure.Services.SaveLoad;
 using Infrastructure.Services.ServiceLocating;
@@ -41,11 +42,17 @@ namespace Infrastructure.StateMachine.States
             _services.RegisterSingle<IAssetProvider>(new AssetProvider());
             _services.RegisterSingle<IStaticDataProvider>(new StaticDataProvider(_services.Single<IAssetProvider>()));
             _services.RegisterSingle<IProgressProvider>(new PersistentDataService());
+            
+            _services.RegisterSingle<ICharacterFactory>(new CharacterFactory(_services.Single<IStaticDataProvider>(), 
+                _services.Single<IProgressProvider>(), 
+                _services.Single<IInputProcessingService>()));
+            
             _services.RegisterSingle<IUIFactory>(
                 new UIFactory(_services.Single<IAssetProvider>(),
                     _services.Single<IProgressProvider>(),
                     _services.Single<IStaticDataProvider>(),
-                    _services.Single<IInputProcessingService>()));
+                    _services.Single<ICharacterFactory>()));
+            
             _services.RegisterSingle<ISaveLoadService>(new SaveLoadService(_services.Single<IProgressProvider>(), _services.Single<IUIFactory>()));
             _services.RegisterSingle<IWindowInstantiator>(new WindowsInstantiator(_services.Single<IUIFactory>()));
         }

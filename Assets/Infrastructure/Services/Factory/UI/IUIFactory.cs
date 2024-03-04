@@ -1,6 +1,6 @@
 ﻿using Infrastructure.Services.ServiceLocating;
 
-namespace Infrastructure.Services.Factory
+namespace Infrastructure.Services.Factory.UI
 {
     public interface IUIFactory : IService
     {
