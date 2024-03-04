@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Sources.ScriptableObjects
+namespace Sources.StaticData
 {
     [CreateAssetMenu(menuName = ("DataContainers/StatisticDescription"))]
     public class StatisticDescription : ScriptableObject

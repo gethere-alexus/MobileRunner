@@ -1,7 +1,7 @@
 using Sources.Player;
 using UnityEngine;
 
-namespace Sources.ScriptableObjects
+namespace Sources.StaticData
 {
     public abstract class ItemStaticData : ScriptableObject
     {

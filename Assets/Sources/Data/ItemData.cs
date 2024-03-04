@@ -1,5 +1,5 @@
-using Sources.ScriptableObjects;
 using Sources.Shop;
+using Sources.StaticData;
 
 namespace Sources.Data
 {

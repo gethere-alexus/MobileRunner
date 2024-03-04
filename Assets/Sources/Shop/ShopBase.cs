@@ -4,7 +4,7 @@ using System.Linq;
 using Infrastructure.Data;
 using Infrastructure.Services.DataProvider;
 using Sources.Data;
-using Sources.ScriptableObjects;
+using Sources.StaticData;
 using UnityEngine;
 
 namespace Sources.Shop

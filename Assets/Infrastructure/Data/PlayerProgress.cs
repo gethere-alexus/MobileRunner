@@ -1,4 +1,5 @@
 ﻿using System;
+using Sources.Player;
 
 namespace Infrastructure.Data
 {
@@ -11,9 +12,12 @@ namespace Infrastructure.Data
         public int Money { get; set; }
         public string SelectedSkin { get; set; }
         public string[] PurchasedSkins { get; set; }
+        public Statistic[] PlayerStatistics { get; set; }
 
         public PlayerProgress()
         {
+           
         }
+        
     }
 }

@@ -16,13 +16,16 @@ MonoBehaviour:
   Price: 50000
   Description: 'Test Test Test Test Test Test Test Test Test Test Test Test Test
     Test Test Test Test Test Test '
-  ItemRarity: {fileID: 11400000, guid: bbd6d0e99c31ea14ca4c633756932e1a, type: 2}
+  ItemRarity: {fileID: 11400000, guid: 069a407403f75d149bde4fdc3765f349, type: 2}
   AppliedBoosts:
-  - BoostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+  - AplicableStatistic: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da,
+      type: 2}
     BoostValue: 34523
-  - BoostData: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c, type: 2}
+  - AplicableStatistic: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3,
+      type: 2}
     BoostValue: 45632
-  - BoostData: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3, type: 2}
+  - AplicableStatistic: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3,
+      type: 2}
     BoostValue: 6547
   ItemPrefab: {fileID: 1762018173025169312, guid: 5811f4236f7f88b41b2a1da538566706,
     type: 3}

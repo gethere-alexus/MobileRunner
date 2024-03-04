@@ -1,5 +1,5 @@
 ﻿using Infrastructure.Services.ServiceLocating;
-using Sources.ScriptableObjects;
+using Sources.StaticData;
 
 namespace Infrastructure.Services.StaticData
 {

@@ -1,4 +1,4 @@
-using Sources.ScriptableObjects;
+using Sources.StaticData;
 
 namespace Sources.Utils
 {

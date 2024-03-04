@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Sources.ScriptableObjects
+namespace Sources.StaticData
 {
     [CreateAssetMenu(fileName = "STSDataTransfer")]
     public class AppearanceData : ScriptableObject

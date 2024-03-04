@@ -2026,6 +2026,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1621883617906703776, guid: a04be55bbd418df489db180f97e93bbe,
         type: 3}
+      propertyPath: m_text
+      value: Previous
+      objectReference: {fileID: 0}
+    - target: {fileID: 1621883617906703776, guid: a04be55bbd418df489db180f97e93bbe,
+        type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8ecd17aeceaba4c10b42ac497ccbfcff,
@@ -2101,6 +2106,16 @@ PrefabInstance:
       propertyPath: _skinShopDisplay
       value: 
       objectReference: {fileID: 4104293668468942028}
+    - target: {fileID: 2901255208510599743, guid: a04be55bbd418df489db180f97e93bbe,
+        type: 3}
+      propertyPath: _skinShopRepresenter
+      value: 
+      objectReference: {fileID: 4104293668468942028}
+    - target: {fileID: 3489715622657908833, guid: a04be55bbd418df489db180f97e93bbe,
+        type: 3}
+      propertyPath: m_text
+      value: Next
+      objectReference: {fileID: 0}
     - target: {fileID: 3489715622657908833, guid: a04be55bbd418df489db180f97e93bbe,
         type: 3}
       propertyPath: m_fontAsset
@@ -2148,6 +2163,11 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3918709561813964781, guid: a04be55bbd418df489db180f97e93bbe,
+        type: 3}
+      propertyPath: _itemShopRepresenter
+      value: 
+      objectReference: {fileID: 4104293668468942028}
     - target: {fileID: 5987203913710767790, guid: a04be55bbd418df489db180f97e93bbe,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2411,7 +2431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b0da06790f44adb0e6b327908aca29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _skinShopDisplay: {fileID: 4104293668468942028}
+  _skinShopRepresenter: {fileID: 4104293668468942028}
   _mainInteractionButton: {fileID: 4540756845717163365}
   _priceText: {fileID: 1259977169989487784}
 --- !u!114 &4266784340875570658 stripped

@@ -1,4 +1,4 @@
-﻿namespace Sources.ScriptableObjects
+﻿namespace Sources.StaticData
 {
     public enum StatisticType
     {

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Sources.ScriptableObjects;
+using Sources.StaticData;
 using UnityEngine;
 
 namespace Infrastructure.Services.DataProvider

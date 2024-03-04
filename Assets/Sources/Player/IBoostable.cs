@@ -2,9 +2,9 @@ namespace Sources.Player
 {
     public interface IBoostable
     {
-        public void IncrementBoostingValue(int amountToAdd);
-        public void DecrementBoostingValue(int amountToTake);
-        public int PreviewValueAfterApplying(int amountToApply);
-        public int PreviewValueAfterRemoving(int amountToApply);
+        public void Increment(int amountToAdd);
+        public void Decrement(int amountToTake);
+        public int GetValueWithApplying(int amountToApply);
+        public int GetValueWithRemoving(int amountToApply);
     }
 }

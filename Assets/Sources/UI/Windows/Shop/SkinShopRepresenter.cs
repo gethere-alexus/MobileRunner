@@ -1,7 +1,7 @@
 using System;
 using Infrastructure.Data;
-using Sources.ScriptableObjects;
 using Sources.Shop;
+using Sources.StaticData;
 using UnityEngine;
 using UnityEngine.UI;
 

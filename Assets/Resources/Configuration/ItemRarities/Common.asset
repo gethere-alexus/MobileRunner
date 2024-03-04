@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Common
   m_EditorClassIdentifier: 
   RarityType: Common
-  ItemFrame: {fileID: 21300000, guid: e6eea4f7cbb9f46f79c0fe06180fa5b3, type: 3}
+  ItemFrame: {fileID: 21300000, guid: 35d7e6588f1f34db1b9a5e62f4efdf77, type: 3}
   RarityParticle: {fileID: 960857902302324682, guid: dab0811ea4917944793247b6d67e1ef8,
     type: 3}

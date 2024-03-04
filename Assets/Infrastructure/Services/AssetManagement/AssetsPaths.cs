@@ -6,6 +6,7 @@
         public const string UIRoot = "UI/UIRoot/UIRoot";
         public const string UIShop = "UI/Shop/Shop_Canvas";
         public const string AvailableSkins = "Configuration/Skins";
-        public const string PreviewSpace = "UI/Shop/3DPreviewSpace";
+        public const string PreviewSpace = "UI/Shop/3DPreviewSpace"; 
+        public const string StatDescriptions = "Configuration/Statistics";
     }
 }

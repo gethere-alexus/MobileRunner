@@ -3,7 +3,7 @@ using Infrastructure.Services.DataProvider;
 using Infrastructure.Services.InputService;
 using Infrastructure.Services.StaticData;
 using Sources.Input;
-using Sources.ScriptableObjects;
+using Sources.StaticData;
 using UnityEngine;
 
 namespace Infrastructure.Services.Factory.Character

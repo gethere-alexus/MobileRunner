@@ -1,6 +1,6 @@
 ﻿using System;
 using Infrastructure.Data;
-using Sources.ScriptableObjects;
+using Sources.StaticData;
 using UnityEngine;
 
 namespace Sources.Shop

@@ -1,11 +1,11 @@
-using Sources.ScriptableObjects;
+using Sources.StaticData;
 
 namespace Sources.Player
 {
     [System.Serializable]
     public class Boost
     {
-        public StatisticDescription BoostData;
+        public StatisticDescription AplicableStatistic;
         public int BoostValue;
     }
 }

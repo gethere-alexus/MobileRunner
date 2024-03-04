@@ -1,22 +1,24 @@
-using Sources.ScriptableObjects;
+using Sources.StaticData;
 
 namespace Sources.Player
 {
     [System.Serializable]
     public class Statistic : IBoostable
     {
-        public StatisticDescription AplicableBoost;
+        public StatisticDescription StatDescription;
         public int DefaultValue;
         private int _currentValue;
 
-        public Statistic()
+        public Statistic(StatisticDescription statDescription, int defaultValue)
         {
+            StatDescription = statDescription;
+            DefaultValue = defaultValue;
             _currentValue = DefaultValue;
         }
 
-        public virtual void IncrementBoostingValue(int amountToAdd) => _currentValue += amountToAdd;
+        public virtual void Increment(int amountToAdd) => _currentValue += amountToAdd;
 
-        public virtual void DecrementBoostingValue(int amountToTake)
+        public virtual void Decrement(int amountToTake)
         {
             if (_currentValue - amountToTake > 0)
             {
@@ -24,10 +26,10 @@ namespace Sources.Player
             }
         }
 
-        public virtual int PreviewValueAfterApplying(int amountToApply) =>
+        public virtual int GetValueWithApplying(int amountToApply) =>
             DefaultValue + amountToApply;
 
-        public virtual int PreviewValueAfterRemoving(int amountToApply) =>
+        public virtual int GetValueWithRemoving(int amountToApply) =>
             DefaultValue - amountToApply;
     }
 }

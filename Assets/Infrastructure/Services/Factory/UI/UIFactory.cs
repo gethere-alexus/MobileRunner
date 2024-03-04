@@ -42,15 +42,12 @@ namespace Infrastructure.Services.Factory.UI
         {
             CreateUIRoot();
 
-            CreateUIMenu(out var instanceUI);
-            _characterFactory.CreateCharacterPreview();
-        }
-
-        private void CreateUIMenu(out GameObject instanceUI)
-        {
-            instanceUI = _assetProvider.Instantiate(AssetsPaths.UIMainMenu);
+            // building menu
+            GameObject instanceUI = _assetProvider.Instantiate(AssetsPaths.UIMainMenu);
             instanceUI.transform.SetParent(_uiRoot);
             RegisterObserver(instanceUI.GetComponentsInChildren<IDataReader>());
+            
+            _characterFactory.CreateCharacterPreview();
         }
 
         public void CreateShopWindow()
@@ -61,11 +58,15 @@ namespace Infrastructure.Services.Factory.UI
             Transform previewSpace = _assetProvider.Instantiate(AssetsPaths.PreviewSpace).transform;
             previewSpace.SetParent(instance.transform);
             
+            foreach (IDataReader dataReader in instance.GetComponentsInChildren<IDataReader>(true))
+            {
+                RegisterObserver(dataReader);
+            }
+            
             foreach (IShopRepresenter shop in instance.GetComponentsInChildren<IShopRepresenter>(true))
             {
                 shop.PreviewSpace = previewSpace;
                 shop.InitShop(_staticDataProvider.Skins, _progressProvider.GetProgress());
-                RegisterObserver(shop.SkinSkinShopInstance);
             }
             
             instance.transform.SetParent(_uiRoot);

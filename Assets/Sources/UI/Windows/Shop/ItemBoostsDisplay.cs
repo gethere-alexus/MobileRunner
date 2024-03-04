@@ -1,40 +1,44 @@
+using System;
+using Infrastructure.Data;
+using Infrastructure.Services.DataProvider;
 using Sources.Data;
 using Sources.Player;
-using Sources.ScriptableObjects;
+using Sources.StaticData;
 using Sources.UI.Elements;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Sources.UI.Windows.Shop
 {
-    public class ItemBoostsDisplay : MonoBehaviour
+    public class ItemBoostsDisplay : MonoBehaviour, IDataReader
     {
-        [FormerlySerializedAs("_skinShopDisplay")] [SerializeField] private SkinShopRepresenter _skinShopRepresenter;
-        [SerializeField] private CharacterConfig _playerConfig;
+        [SerializeField] private SkinShopRepresenter _itemShopRepresenter;
         [SerializeField] private Transform _boostStorage;
         [SerializeField] private BoostDescription _boostDescriptionTemplate;
 
+        private Statistic[] _playerStats;
+
         private void OnEnable()
         {
-            _skinShopRepresenter.ShopInitialized += SubscribeSkinShopEvents;
-            SubscribeSkinShopEvents();
+            _itemShopRepresenter.ShopInitialized += SubscribeItemShopEvents;
+            SubscribeItemShopEvents();
         }
 
-        private void SubscribeSkinShopEvents()
+        private void SubscribeItemShopEvents()
         {
-            if ( _skinShopRepresenter.SkinSkinShopInstance != null)
+            if (_itemShopRepresenter.SkinSkinShopInstance != null)
             {
-                _skinShopRepresenter.SkinSkinShopInstance.NewItemPreviewed += OnNewItemShowed;
+                _itemShopRepresenter.SkinSkinShopInstance.NewItemPreviewed += OnNewItemShowed;
             }
         }
 
         private void OnDisable()
         {
-            if ( _skinShopRepresenter.SkinSkinShopInstance != null)
+            if (_itemShopRepresenter.SkinSkinShopInstance != null)
             {
-                _skinShopRepresenter.SkinSkinShopInstance.NewItemPreviewed -= OnNewItemShowed;
+                _itemShopRepresenter.SkinSkinShopInstance.NewItemPreviewed -= OnNewItemShowed;
             }
-            _skinShopRepresenter.ShopInitialized -= SubscribeSkinShopEvents;
+
+            _itemShopRepresenter.ShopInitialized -= SubscribeItemShopEvents;
         }
 
         private void OnNewItemShowed(ItemData skin) =>
@@ -52,12 +56,17 @@ namespace Sources.UI.Windows.Shop
 
             foreach (var boost in itemStaticData.AppliedBoosts)
             {
-                Statistic stat = _playerConfig.GetStatInformation(boost.BoostData);
-                int valueAfterBoosting = stat.PreviewValueAfterApplying(boost.BoostValue);
+                Statistic stat = Array.Find(_playerStats,
+                    statistic => statistic.StatDescription == boost.AplicableStatistic);
+
+                int valueWithApplying = stat.GetValueWithApplying(boost.BoostValue);
 
                 Instantiate(_boostDescriptionTemplate, _boostStorage)
-                    .Construct(boost.BoostData.BoostSprite, boost.BoostValue, valueAfterBoosting);
+                    .Construct(boost.AplicableStatistic.BoostSprite, boost.BoostValue, valueWithApplying);
             }
         }
+
+        public void LoadData(PlayerProgress progress) =>
+            _playerStats = progress.PlayerStatistics;
     }
 }

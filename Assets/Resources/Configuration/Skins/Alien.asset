@@ -18,11 +18,14 @@ MonoBehaviour:
     Test Test Test Test Test Test '
   ItemRarity: {fileID: 11400000, guid: 42969f91a918ae340abd817a7a8f998b, type: 2}
   AppliedBoosts:
-  - BoostData: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b, type: 2}
+  - AplicableStatistic: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b,
+      type: 2}
     BoostValue: 100
-  - BoostData: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3, type: 2}
+  - AplicableStatistic: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3,
+      type: 2}
     BoostValue: 154
-  - BoostData: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da, type: 2}
+  - AplicableStatistic: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da,
+      type: 2}
     BoostValue: 9880
   ItemPrefab: {fileID: 7369448170708576210, guid: a2836f0676e46dc4685632e429aadbc8,
     type: 3}

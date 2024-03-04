@@ -4,8 +4,7 @@ using Infrastructure.Data;
 using Infrastructure.Services.DataProvider;
 using Infrastructure.Services.ServiceLocating;
 using Sources.Data;
-using Sources.ScriptableObjects;
-using UnityEngine;
+using Sources.StaticData;
 
 namespace Sources.Shop
 {
@@ -48,14 +47,11 @@ namespace Sources.Shop
         {
             // Set purchased skins
             string[] purchasedSkinsData = progress.PurchasedSkins;
-            string formattedList = "{" + string.Join(", ", purchasedSkinsData.Select(e => $"\"{e}\"")) + "}";
-            Debug.Log($"formated list : {formattedList}");
             PurchasedItems = Items.Where(data => purchasedSkinsData.Contains(data.Name)).ToList();
 
             // Set selected skin
             string selectedSkin = progress.SelectedSkin;
             SelectedItem = Items.First(item => item.Name == selectedSkin);
-            Debug.Log("Data Loaded");
         }
 
         public override void UpdateData()

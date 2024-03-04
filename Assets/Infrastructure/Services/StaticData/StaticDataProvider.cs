@@ -1,5 +1,5 @@
 ﻿using Infrastructure.Services.AssetManagement;
-using Sources.ScriptableObjects;
+using Sources.StaticData;
 
 namespace Infrastructure.Services.StaticData
 {
