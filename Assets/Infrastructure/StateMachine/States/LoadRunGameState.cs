@@ -2,12 +2,12 @@
 
 namespace Infrastructure.StateMachine.States
 {
-    public class LoadRunState : IState
+    public class LoadRunGameState : IGameState
     {
         private const string RunScene = "Run";
         private readonly SceneLoader _sceneLoader;
 
-        public LoadRunState(SceneLoader sceneLoader)
+        public LoadRunGameState(SceneLoader sceneLoader)
         {
             _sceneLoader = sceneLoader;
         }

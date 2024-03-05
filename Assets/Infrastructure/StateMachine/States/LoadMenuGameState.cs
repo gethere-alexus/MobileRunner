@@ -1,17 +1,16 @@
 ﻿using Infrastructure.SceneLoad;
-using Infrastructure.Services.Factory;
 using Infrastructure.Services.Factory.UI;
 
 namespace Infrastructure.StateMachine.States
 {
-    public class LoadMenuState : IState
+    public class LoadMenuGameState : IGameState
     {
         private const string MainMenu = "MainMenu";
 
         private readonly SceneLoader _sceneLoader;
         private readonly IUIFactory _uiFactory;
 
-        public LoadMenuState(IUIFactory uiFactory, SceneLoader sceneLoader)
+        public LoadMenuGameState(IUIFactory uiFactory, SceneLoader sceneLoader)
         {
             _uiFactory = uiFactory;
             _sceneLoader = sceneLoader;

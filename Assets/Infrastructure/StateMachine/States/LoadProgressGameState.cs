@@ -6,18 +6,17 @@ using Infrastructure.Services.SaveLoad;
 using Infrastructure.Services.ServiceLocating;
 using Sources.Player;
 using Sources.StaticData;
-using UnityEngine;
 
 namespace Infrastructure.StateMachine.States
 {
-    public class LoadProgressState : IState
+    public class LoadProgressGameState : IGameState
     {
         private const int BaseStatValue = 100;
         private readonly GameStateMachine _gameStateMachine;
         private readonly ISaveLoadService _saveLoad;
         private readonly IAssetProvider _assetsProvider;
 
-        public LoadProgressState(GameStateMachine gameStateMachine, ISaveLoadService saveLoadService,
+        public LoadProgressGameState(GameStateMachine gameStateMachine, ISaveLoadService saveLoadService,
             IAssetProvider assetsProvider)
         {
             _saveLoad = saveLoadService;
@@ -28,7 +27,7 @@ namespace Infrastructure.StateMachine.States
         public void Enter()
         {
             ConstructProgress();
-            _gameStateMachine.Enter<LoadMenuState>();
+            _gameStateMachine.Enter<LoadMenuGameState>();
         }
 
         public void Exit()

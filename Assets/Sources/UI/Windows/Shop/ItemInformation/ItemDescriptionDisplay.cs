@@ -1,29 +1,17 @@
-﻿using Sources.Data;
+using Sources.Data;
 using Sources.Shop;
-using Sources.Utils;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace Sources.UI.Windows.Shop
+namespace Sources.UI.Windows.Shop.ItemInformation
 {
-    public class MainButtonDisplay : MonoBehaviour
+    public class ItemDescriptionDisplay : MonoBehaviour
     {
-        [FormerlySerializedAs("_skinShopDisplay")] [SerializeField] private SkinShopRepresenter _skinShopRepresenter;
-        [SerializeField] private Button _mainInteractionButton;
-        [SerializeField] private TMP_Text _priceText;
-
-        private void ConstructDescription(ItemData obj) //TODO: REFACTOR BUTTONS
-        {
-            _priceText.text = obj.ItemStatus switch
-            {
-                ItemStatus.Purchasable => TextFormatter.DivideIntWithChar(obj.ItemInformation.Price, ','),
-                ItemStatus.Selectable => "Select",
-                ItemStatus.Selected => "Selected",
-                _ => _priceText.text
-            };
-        }
+        [SerializeField] private SkinShopRepresenter _skinShopRepresenter;
+        [SerializeField] private TMP_Text _itemName, _itemDescription;
+        [SerializeField] private Image _itemFrame;
 
         private void OnEnable()
         {
@@ -46,6 +34,14 @@ namespace Sources.UI.Windows.Shop
                 _skinShopRepresenter.SkinSkinShopInstance.NewItemPreviewed -= ConstructDescription;
             }
             _skinShopRepresenter.ShopInitialized -= SubscribeSkinShopEvents;
+        }
+
+        private void ConstructDescription(ItemData skin)
+        {
+            _itemFrame.sprite = skin.ItemInformation.ItemRarity.ItemFrame;
+            _itemName.text = skin.ItemInformation.Name;
+            //  _itemPrice.text = TextFormatter.DivideIntWithChar(skin.ItemInformation.Price, ',');
+            _itemDescription.text = skin.ItemInformation.Description;
         }
     }
 }

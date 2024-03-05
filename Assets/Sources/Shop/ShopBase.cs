@@ -55,7 +55,6 @@ namespace Sources.Shop
         private ItemData ConstructItemData(ItemStaticData itemStaticData)
         {
             ItemStatus itemStatus = ItemStatus.Purchasable;
-            string formattedList = "{" + string.Join(", ", PurchasedItems.Select(e => $"\"{e}\"")) + "}";
             if (PurchasedItems.Contains(itemStaticData))
             {
                 itemStatus = ItemStatus.Selectable;
@@ -67,5 +66,7 @@ namespace Sources.Shop
 
             return new ItemData(Items[_observingItemIndex], itemStatus);
         }
+
+        public ItemData ShowedItem => PreviewedItem;
     }
 }

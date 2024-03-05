@@ -8,5 +8,8 @@
         public const string AvailableSkins = "Configuration/Skins";
         public const string PreviewSpace = "UI/Shop/3DPreviewSpace"; 
         public const string StatDescriptions = "Configuration/Statistics";
+        public const string PurchaseButton = "UI/Shop/Buttons/Purchase_Panel";
+        public const string SelectButton = "UI/Shop/Buttons/Select_Panel";
+        public const string SelectedButton = "UI/Shop/Buttons/Selected_Panel";
     }
 }

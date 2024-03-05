@@ -17,6 +17,14 @@ namespace Infrastructure.Services.AssetManagement
             instance.transform.position = initialPosition;
             return instance;
         }
+
+        public GameObject Instantiate(string path, Transform parent)
+        {
+            var prefab = Resources.Load<GameObject>(path);
+            var instance = Object.Instantiate(prefab, parent);
+            return instance;
+        }
+
         public T[] LoadAll<T>(string path) where T : Object => 
             Resources.LoadAll<T>(path);
     }

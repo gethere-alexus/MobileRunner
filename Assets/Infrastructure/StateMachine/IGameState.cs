@@ -2,7 +2,7 @@
 
 namespace Infrastructure.StateMachine
 {
-    public interface IState : IExitableState
+    public interface IGameState : IExitableState
     {
         void Enter();
     }

@@ -1,5 +1,4 @@
-﻿using Infrastructure.Services.Factory;
-using Infrastructure.Services.Factory.UI;
+﻿using Infrastructure.Services.Factory.UI;
 using Sources.UI.Windows;
 
 namespace Infrastructure.Services.WindowInstantiator

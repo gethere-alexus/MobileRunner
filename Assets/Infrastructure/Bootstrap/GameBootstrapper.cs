@@ -10,7 +10,7 @@ namespace Infrastructure.Bootstrap
         private void Awake()
         {
             _gameInstance = new Game(this);
-            _gameInstance.StateMachine.Enter<BootstrapState>();
+            _gameInstance.StateMachine.Enter<BootstrapGameState>();
             
             DontDestroyOnLoad(this);
         }

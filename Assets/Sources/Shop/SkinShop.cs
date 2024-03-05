@@ -30,6 +30,7 @@ namespace Sources.Shop
 
             PreviewedItem = overridingData;
             SelectedItem = PreviewedItem.ItemInformation;
+            ShowSelectedItem();
             UpdateData();
         }
 

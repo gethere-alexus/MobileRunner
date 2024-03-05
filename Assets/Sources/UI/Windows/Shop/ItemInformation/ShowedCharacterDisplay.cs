@@ -1,17 +1,18 @@
 using Sources.Data;
+using Sources.Shop;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace Sources.UI.Windows.Shop
+namespace Sources.UI.Windows.Shop.ItemInformation
 {
     public class ShowedCharacterDisplay : MonoBehaviour
     {
+        [SerializeField] private SkinShopRepresenter _skinShopRepresenter;
+
         private const int PreviewLayer = 6;
 
-        [FormerlySerializedAs("_skinShopDisplay")] [SerializeField] private SkinShopRepresenter _skinShopRepresenter;
-
         private GameObject _playerInstance, _particlesInstance;
-        
+
 
         private void OnEnable()
         {
@@ -33,6 +34,7 @@ namespace Sources.UI.Windows.Shop
             {
                 _skinShopRepresenter.SkinSkinShopInstance.NewItemPreviewed -= ConstructPreview;
             }
+
             _skinShopRepresenter.ShopInitialized -= SubscribeSkinShopEvents;
         }
 
@@ -55,7 +57,7 @@ namespace Sources.UI.Windows.Shop
         {
             if (_particlesInstance != null)
                 Destroy(_particlesInstance);
-            
+
             _particlesInstance = Instantiate(particles, _skinShopRepresenter.PreviewSpace);
             SetObjLayer(_particlesInstance, PreviewLayer);
         }

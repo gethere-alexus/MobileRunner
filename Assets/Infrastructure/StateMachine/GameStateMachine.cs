@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using FMOD;
 using Infrastructure.SceneLoad;
 using Infrastructure.Services.AssetManagement;
 using Infrastructure.Services.Factory;
@@ -19,16 +20,16 @@ namespace Infrastructure.StateMachine
         {
             _states = new Dictionary<Type, IExitableState>()
             {
-                [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader, serviceLocator),
-                [typeof(LoadProgressState)] = new LoadProgressState(this, ServiceLocator.Container.Single<ISaveLoadService>(), 
+                [typeof(BootstrapGameState)] = new BootstrapGameState(this, sceneLoader, serviceLocator),
+                [typeof(LoadProgressGameState)] = new LoadProgressGameState(this, ServiceLocator.Container.Single<ISaveLoadService>(), 
                     ServiceLocator.Container.Single<IAssetProvider>()),
-                [typeof(LoadMenuState)] = new LoadMenuState(serviceLocator.Single<IUIFactory>(), sceneLoader),
-                [typeof(LoadRunState)] = new LoadRunState(sceneLoader)
+                [typeof(LoadMenuGameState)] = new LoadMenuGameState(serviceLocator.Single<IUIFactory>(), sceneLoader),
+                [typeof(LoadRunGameState)] = new LoadRunGameState(sceneLoader)
             };
         }
 
         // Enter state without payload
-        public void Enter<TState>() where TState : class, IState =>
+        public void Enter<TState>() where TState : class, IGameState =>
             ChangeState<TState>().Enter();
 
         // Enter state with payload
@@ -40,7 +41,6 @@ namespace Infrastructure.StateMachine
             _activeState?.Exit();
             TState state = GetState<TState>();
             _activeState = state;
-
             return state;
         }
 

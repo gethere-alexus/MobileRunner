@@ -12,7 +12,7 @@ using UnityEngine;
 
 namespace Infrastructure.StateMachine.States
 {
-    public class BootstrapState : IState
+    public class BootstrapGameState : IGameState
     {
         private const string Initial = "Bootstrap";
 
@@ -20,7 +20,7 @@ namespace Infrastructure.StateMachine.States
         private readonly SceneLoader _sceneLoader;
         private readonly ServiceLocator _services;
 
-        public BootstrapState(GameStateMachine stateMachine, SceneLoader sceneLoader, ServiceLocator services)
+        public BootstrapGameState(GameStateMachine stateMachine, SceneLoader sceneLoader, ServiceLocator services)
         {
             _stateMachine = stateMachine;
             _sceneLoader = sceneLoader;
@@ -68,7 +68,7 @@ namespace Infrastructure.StateMachine.States
 
         private void OnLoaded()
         {
-            _stateMachine.Enter<LoadProgressState>();
+            _stateMachine.Enter<LoadProgressGameState>();
         }
 
         public void Exit()

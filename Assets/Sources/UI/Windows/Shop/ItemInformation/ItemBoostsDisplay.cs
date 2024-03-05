@@ -3,11 +3,12 @@ using Infrastructure.Data;
 using Infrastructure.Services.DataProvider;
 using Sources.Data;
 using Sources.Player;
+using Sources.Shop;
 using Sources.StaticData;
 using Sources.UI.Elements;
 using UnityEngine;
 
-namespace Sources.UI.Windows.Shop
+namespace Sources.UI.Windows.Shop.ItemInformation
 {
     public class ItemBoostsDisplay : MonoBehaviour, IDataReader
     {
