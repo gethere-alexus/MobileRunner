@@ -31,7 +31,7 @@ namespace Sources.UI.Windows.Shop.Interaction.MainButton.StateMachine.States
             _buttonInstance.GetComponent<PurchaseButton>()
                 .ConstructButton(itemData.ItemInformation.Price, _targetButton);
             
-            _targetButton.onClick.AddListener(_shopRepresenter.SkinSkinShopInstance.PurchaseShowedItem);
+            _targetButton.onClick.AddListener(_shopRepresenter.SkinShopInstance.PurchaseShowedItem);
         }
 
         public void Exit()

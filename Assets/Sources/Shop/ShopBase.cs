@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using Infrastructure.Data;
 using Infrastructure.Services.DataProvider;
 using Sources.Data;
+using Sources.Money;
 using Sources.StaticData;
-using UnityEngine;
 
 namespace Sources.Shop
 {
     public abstract class ShopBase : IDataWriter
     {
+        protected readonly IWallet WalletInstance;
         protected readonly ItemStaticData[] Items;
         protected List<ItemStaticData> PurchasedItems = new();
 
@@ -21,9 +21,10 @@ namespace Sources.Shop
 
         public event Action<ItemData> NewItemPreviewed;
 
-        protected ShopBase(ItemStaticData[] items, PlayerProgress initProgress = null)
+        protected ShopBase(ItemStaticData[] items, IWallet wallet, PlayerProgress initProgress = null)
         {
             Items = items;
+            WalletInstance = wallet;
             LoadData(initProgress);
         }
 

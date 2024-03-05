@@ -23,19 +23,19 @@ namespace Sources.UI.Windows.Shop.Interaction.MainButton
 
         private void OnDisable()
         {
-            if (_skinShopRepresenter.SkinSkinShopInstance != null)
+            if (_skinShopRepresenter.SkinShopInstance != null)
             {
-                _skinShopRepresenter.SkinSkinShopInstance.NewItemPreviewed -= ConstructButton;
+                _skinShopRepresenter.SkinShopInstance.NewItemPreviewed -= ConstructButton;
             }
             _skinShopRepresenter.ShopInitialized -= SubscribeSkinShopEvents;
         }
 
         private void SubscribeSkinShopEvents()
         {
-            if (_skinShopRepresenter.SkinSkinShopInstance != null)
+            if (_skinShopRepresenter.SkinShopInstance != null)
             {
                 _buttonStateMachine = new ButtonStateMachine(_skinShopRepresenter, _interactionButton, ServiceLocator.Container.Single<IAssetProvider>());
-                _skinShopRepresenter.SkinSkinShopInstance.NewItemPreviewed += ConstructButton;
+                _skinShopRepresenter.SkinShopInstance.NewItemPreviewed += ConstructButton;
             }
         }
 

@@ -1,9 +1,9 @@
 using System;
 using Infrastructure.Data;
+using Sources.Money;
 using Sources.Shop;
 using Sources.StaticData;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Sources.UI.Windows.Shop
 {
@@ -14,14 +14,15 @@ namespace Sources.UI.Windows.Shop
         private SkinShop _skinSkinShopInstance;
         public event Action ShopInitialized;
 
-        public void InitShop(SkinStaticData[] skins, PlayerProgress initialProgress)
+        public void InitShop(SkinStaticData[] skins, PlayerProgress initialProgress, IWallet walletInstance)
         {
-            _skinSkinShopInstance = new SkinShop(skins, initialProgress);
+            _skinSkinShopInstance = new SkinShop(skins, walletInstance,initialProgress);
             ShopInitialized?.Invoke();
             _skinSkinShopInstance.ShowItemByIndex(0);
         }
 
-        public SkinShop SkinSkinShopInstance =>
+        public SkinShop SkinShopInstance =>
             _skinSkinShopInstance;
+        
     }
 }

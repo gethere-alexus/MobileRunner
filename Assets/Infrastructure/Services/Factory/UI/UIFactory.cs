@@ -3,7 +3,9 @@ using Infrastructure.Services.AssetManagement;
 using Infrastructure.Services.DataProvider;
 using Infrastructure.Services.Factory.Character;
 using Infrastructure.Services.StaticData;
+using Sources.Money;
 using Sources.Shop;
+using Sources.UI.Elements.Panels;
 using UnityEngine;
 
 namespace Infrastructure.Services.Factory.UI
@@ -17,6 +19,8 @@ namespace Infrastructure.Services.Factory.UI
 
         private List<IDataReader> _dataReaders { get; } = new List<IDataReader>();
         private List<IDataWriter> _dataWriters { get; } = new List<IDataWriter>();
+
+        private IWallet _walletInstance;
 
         private Transform _uiRoot;
 
@@ -46,6 +50,8 @@ namespace Infrastructure.Services.Factory.UI
             GameObject instanceUI = _assetProvider.Instantiate(AssetsPaths.UIMainMenu);
             instanceUI.transform.SetParent(_uiRoot);
             RegisterObserver(instanceUI.GetComponentsInChildren<IDataReader>());
+
+            _walletInstance = instanceUI.GetComponentInChildren<WalletView>().WalletInstance;
             
             _characterFactory.CreateCharacterPreview();
         }
@@ -66,7 +72,8 @@ namespace Infrastructure.Services.Factory.UI
             foreach (IShopRepresenter shop in instance.GetComponentsInChildren<IShopRepresenter>(true))
             {
                 shop.PreviewSpace = previewSpace;
-                shop.InitShop(_staticDataProvider.Skins, _progressProvider.GetProgress());
+                shop.InitShop(_staticDataProvider.Skins, _progressProvider.GetProgress(), _walletInstance);
+                RegisterObserver(shop.SkinShopInstance);
             }
             
             instance.transform.SetParent(_uiRoot);

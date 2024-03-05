@@ -27,7 +27,7 @@ namespace Sources.UI.Windows.Shop.Interaction.MainButton.StateMachine.States
             _buttonInstance = _assetProvider.Instantiate(AssetsPaths.SelectButton, _interactionButton.transform);
             _buttonInstance.GetComponent<SelectButton>().ConstructButton(_interactionButton);
             
-            _interactionButton.onClick.AddListener(_shopRepresenter.SkinSkinShopInstance.SelectShowedItem);
+            _interactionButton.onClick.AddListener(_shopRepresenter.SkinShopInstance.SelectShowedItem);
         }
 
         public void Exit()

@@ -21,17 +21,17 @@ namespace Sources.UI.Windows.Shop.ItemInformation
 
         private void SubscribeSkinShopEvents()
         {
-            if (_skinShopRepresenter.SkinSkinShopInstance != null)
+            if (_skinShopRepresenter.SkinShopInstance != null)
             {
-                _skinShopRepresenter.SkinSkinShopInstance.NewItemPreviewed += ConstructDescription;
+                _skinShopRepresenter.SkinShopInstance.NewItemPreviewed += ConstructDescription;
             }
         }
 
         private void OnDisable()
         {
-            if (_skinShopRepresenter.SkinSkinShopInstance != null)
+            if (_skinShopRepresenter.SkinShopInstance != null)
             {
-                _skinShopRepresenter.SkinSkinShopInstance.NewItemPreviewed -= ConstructDescription;
+                _skinShopRepresenter.SkinShopInstance.NewItemPreviewed -= ConstructDescription;
             }
             _skinShopRepresenter.ShopInitialized -= SubscribeSkinShopEvents;
         }

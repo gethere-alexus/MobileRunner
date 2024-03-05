@@ -12,7 +12,7 @@ namespace Sources.UI.Windows.Shop.Interaction
         private void OnEnable()
         {
             _shopRepresenter.ShopInitialized += AssignControlButtons;
-            if (_shopRepresenter.SkinSkinShopInstance != null)
+            if (_shopRepresenter.SkinShopInstance != null)
             {
                 AssignControlButtons();
             }
@@ -21,7 +21,7 @@ namespace Sources.UI.Windows.Shop.Interaction
         private void OnDisable()
         {
             _shopRepresenter.ShopInitialized -= AssignControlButtons;
-            if (_shopRepresenter.SkinSkinShopInstance != null)
+            if (_shopRepresenter.SkinShopInstance != null)
             {
                 _nextItemButton.onClick.RemoveAllListeners();
                 _previousItemButton.onClick.RemoveAllListeners();
@@ -30,8 +30,8 @@ namespace Sources.UI.Windows.Shop.Interaction
 
         private void AssignControlButtons()
         {
-            _nextItemButton.onClick.AddListener(_shopRepresenter.SkinSkinShopInstance.ShowNextItem);
-            _previousItemButton.onClick.AddListener(_shopRepresenter.SkinSkinShopInstance.ShowPreviousItem);
+            _nextItemButton.onClick.AddListener(_shopRepresenter.SkinShopInstance.ShowNextItem);
+            _previousItemButton.onClick.AddListener(_shopRepresenter.SkinShopInstance.ShowPreviousItem);
         }
     }
 }

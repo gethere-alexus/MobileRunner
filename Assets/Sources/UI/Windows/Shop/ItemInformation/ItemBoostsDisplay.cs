@@ -3,7 +3,6 @@ using Infrastructure.Data;
 using Infrastructure.Services.DataProvider;
 using Sources.Data;
 using Sources.Player;
-using Sources.Shop;
 using Sources.StaticData;
 using Sources.UI.Elements;
 using UnityEngine;
@@ -26,17 +25,17 @@ namespace Sources.UI.Windows.Shop.ItemInformation
 
         private void SubscribeItemShopEvents()
         {
-            if (_itemShopRepresenter.SkinSkinShopInstance != null)
+            if (_itemShopRepresenter.SkinShopInstance != null)
             {
-                _itemShopRepresenter.SkinSkinShopInstance.NewItemPreviewed += OnNewItemShowed;
+                _itemShopRepresenter.SkinShopInstance.NewItemPreviewed += OnNewItemShowed;
             }
         }
 
         private void OnDisable()
         {
-            if (_itemShopRepresenter.SkinSkinShopInstance != null)
+            if (_itemShopRepresenter.SkinShopInstance != null)
             {
-                _itemShopRepresenter.SkinSkinShopInstance.NewItemPreviewed -= OnNewItemShowed;
+                _itemShopRepresenter.SkinShopInstance.NewItemPreviewed -= OnNewItemShowed;
             }
 
             _itemShopRepresenter.ShopInitialized -= SubscribeItemShopEvents;
