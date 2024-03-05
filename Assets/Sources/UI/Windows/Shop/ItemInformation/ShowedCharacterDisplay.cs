@@ -1,5 +1,6 @@
 using Sources.Data;
 using Sources.Shop;
+using Sources.StaticData;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -38,7 +39,7 @@ namespace Sources.UI.Windows.Shop.ItemInformation
             _skinShopRepresenter.ShopInitialized -= SubscribeSkinShopEvents;
         }
 
-        private void ConstructPreview(ItemData e)
+        private void ConstructPreview(ItemData<SkinStaticData> e)
         {
             InstantiateParticles(e.ItemInformation.ItemRarity.RarityParticle.gameObject);
             InstantiateCharacter(e.ItemInformation.ItemPrefab);

@@ -3,12 +3,12 @@ using Sources.StaticData;
 
 namespace Sources.Data
 {
-    public class ItemData
+    public class ItemData<TItem> where TItem : ItemStaticData
     {
-        public ItemStaticData ItemInformation { get; }
+        public TItem ItemInformation { get; }
         public ItemStatus ItemStatus { get; }
 
-        public ItemData(ItemStaticData itemData, ItemStatus itemStatus)
+        public ItemData(TItem itemData, ItemStatus itemStatus)
         {
             ItemInformation = itemData;
             ItemStatus = itemStatus;

@@ -29,3 +29,4 @@ MonoBehaviour:
     BoostValue: 9880
   ItemPrefab: {fileID: 7369448170708576210, guid: a2836f0676e46dc4685632e429aadbc8,
     type: 3}
+  Character: 0

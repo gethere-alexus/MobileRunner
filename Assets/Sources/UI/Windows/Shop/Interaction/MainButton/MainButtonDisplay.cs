@@ -1,6 +1,7 @@
 ﻿using Infrastructure.Services.AssetManagement;
 using Infrastructure.Services.ServiceLocating;
 using Sources.Data;
+using Sources.StaticData;
 using Sources.UI.Windows.Shop.Interaction.MainButton.StateMachine;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,7 +13,7 @@ namespace Sources.UI.Windows.Shop.Interaction.MainButton
         [SerializeField] private SkinShopRepresenter _skinShopRepresenter;
         [SerializeField] private Button _interactionButton;
         
-        private ButtonStateMachine _buttonStateMachine;
+        private ButtonStateMachine<SkinStaticData> _buttonStateMachine;
         
 
         private void OnEnable()
@@ -34,14 +35,15 @@ namespace Sources.UI.Windows.Shop.Interaction.MainButton
         {
             if (_skinShopRepresenter.SkinShopInstance != null)
             {
-                _buttonStateMachine = new ButtonStateMachine(_skinShopRepresenter, _interactionButton, ServiceLocator.Container.Single<IAssetProvider>());
+                _buttonStateMachine = new ButtonStateMachine<SkinStaticData>(_skinShopRepresenter, _interactionButton, ServiceLocator.Container.Single<IAssetProvider>());
                 _skinShopRepresenter.SkinShopInstance.NewItemPreviewed += ConstructButton;
             }
         }
 
-        private void ConstructButton(ItemData obj)
+        private void ConstructButton(ItemData<SkinStaticData> obj)
         {
             _buttonStateMachine.EnterButtonState(obj);
         }
+        
     }
 }

@@ -27,7 +27,7 @@ namespace Infrastructure.Services.Factory.Character
         public void CreateCharacterPreview()
         {
             SkinStaticData selectedChar = _staticDataProvider.Skins
-                .First(data => data.Name == _progressProvider.GetProgress().SelectedSkin);
+                .First(data => data.Character == _progressProvider.GetProgress().SelectedSkin);
 
             Transform initPoint = GameObject.FindWithTag(SpawnPointTag).transform;
 

@@ -6,6 +6,7 @@ using Infrastructure.Services.SaveLoad;
 using Infrastructure.Services.ServiceLocating;
 using Sources.Player;
 using Sources.StaticData;
+using Sources.StaticData.CharacterTypes;
 
 namespace Infrastructure.StateMachine.States
 {
@@ -47,8 +48,8 @@ namespace Infrastructure.StateMachine.States
                 Level = 3,
                 CurrentXp = 150,
                 RequiredXp = 500,
-                SelectedSkin = "Invader",
-                PurchasedSkins = new []{ "Invader"},
+                SelectedSkin = CharacterType.Invader,
+                PurchasedSkins = new [] { CharacterType.Invader },
                 PlayerStatistics = ConstructStatistics(BaseStatValue)
             };
 

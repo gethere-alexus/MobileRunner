@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Sources.StaticData;
+using Sources.StaticData.CharacterTypes;
 using UnityEngine;
 
 namespace Infrastructure.Services.DataProvider
@@ -12,11 +13,11 @@ namespace Infrastructure.Services.DataProvider
         public static string ToJson(this object obj) =>
             JsonUtility.ToJson(obj);
 
-        public static string[] ToSerializableArray(this IEnumerable<ItemStaticData> items)
+        public static CharacterType[] ToSerializableArray(this IEnumerable<SkinStaticData> items)
         {
-            List<string> toReturn = new();
+            List<CharacterType> toReturn = new();
             
-            foreach (ItemStaticData item in items)
+            foreach (SkinStaticData item in items)
             {
                 toReturn.Add(item.ToSerializable());
             }
@@ -24,7 +25,7 @@ namespace Infrastructure.Services.DataProvider
             return toReturn.ToArray();
         }
 
-        public static string ToSerializable(this ItemStaticData item) => 
-            item.Name;
+        public static CharacterType ToSerializable(this SkinStaticData item) => 
+            item.Character;
     }
 }

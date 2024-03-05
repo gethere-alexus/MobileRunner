@@ -41,7 +41,7 @@ namespace Sources.UI.Windows.Shop.ItemInformation
             _itemShopRepresenter.ShopInitialized -= SubscribeItemShopEvents;
         }
 
-        private void OnNewItemShowed(ItemData skin) =>
+        private void OnNewItemShowed(ItemData<SkinStaticData> skin) =>
             ConstructBoostsView(skin.ItemInformation);
 
         private void ConstructBoostsView(ItemStaticData itemStaticData)

@@ -2,30 +2,31 @@
 using Infrastructure.Services.AssetManagement;
 using Sources.Data;
 using Sources.Shop;
+using Sources.StaticData;
 using Sources.UI.Windows.Shop.Interaction.MainButton.StateMachine.States;
 using UnityEngine.UI;
 
 namespace Sources.UI.Windows.Shop.Interaction.MainButton.StateMachine
 {
-    public class ButtonStateMachine
+    public class ButtonStateMachine<TItem> where TItem : ItemStaticData
     {
-        private readonly Dictionary<ItemStatus, IShopMainButtonState> _states;
-        private IShopMainButtonState _activeState;
+        private readonly Dictionary<ItemStatus, IShopMainButtonState<TItem>> _states;
+        private IShopMainButtonState<TItem> _activeState;
 
         public ButtonStateMachine(IShopRepresenter shopRepresenter, Button interactionButton, IAssetProvider assetProvider)
         {
-            _states = new Dictionary<ItemStatus, IShopMainButtonState>()
+            _states = new Dictionary<ItemStatus, IShopMainButtonState<TItem>>()
             {
-                { ItemStatus.Purchasable, new PurchaseButtonState(interactionButton, assetProvider,shopRepresenter) },
-                { ItemStatus.Selectable, new SelectButtonState(interactionButton, assetProvider, shopRepresenter) },
-                { ItemStatus.Selected, new SelectedButtonState(interactionButton, assetProvider)}
+                { ItemStatus.Purchasable, new PurchaseButtonState<TItem>(interactionButton, assetProvider,shopRepresenter) },
+                { ItemStatus.Selectable, new SelectButtonState<TItem>(interactionButton, assetProvider, shopRepresenter) },
+                { ItemStatus.Selected, new SelectedButtonState<TItem>(interactionButton, assetProvider)}
             };
         }
 
-        public void EnterButtonState(ItemData itemData) => 
+        public void EnterButtonState(ItemData<TItem> itemData) => 
             ChangeState(itemData);
 
-        private void ChangeState(ItemData itemData)
+        private void ChangeState(ItemData<TItem> itemData)
         {
             _activeState?.Exit();
             _activeState = _states[itemData.ItemStatus];

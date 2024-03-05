@@ -1,5 +1,6 @@
 using Sources.Data;
 using Sources.Shop;
+using Sources.StaticData;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -36,7 +37,7 @@ namespace Sources.UI.Windows.Shop.ItemInformation
             _skinShopRepresenter.ShopInitialized -= SubscribeSkinShopEvents;
         }
 
-        private void ConstructDescription(ItemData skin)
+        private void ConstructDescription(ItemData<SkinStaticData> skin)
         {
             _itemFrame.sprite = skin.ItemInformation.ItemRarity.ItemFrame;
             _itemName.text = skin.ItemInformation.Name;

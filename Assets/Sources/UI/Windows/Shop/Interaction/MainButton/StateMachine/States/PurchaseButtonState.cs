@@ -1,13 +1,14 @@
 ﻿using Infrastructure.Services.AssetManagement;
 using Sources.Data;
 using Sources.Shop;
+using Sources.StaticData;
 using Sources.UI.Elements.Buttons;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Sources.UI.Windows.Shop.Interaction.MainButton.StateMachine.States
 {
-    public class PurchaseButtonState : IShopMainButtonState
+    public class PurchaseButtonState<TItem> : IShopMainButtonState<TItem> where TItem : ItemStaticData
     {
         private readonly IAssetProvider _assetProvider;
         private readonly IShopRepresenter _shopRepresenter;
@@ -23,7 +24,7 @@ namespace Sources.UI.Windows.Shop.Interaction.MainButton.StateMachine.States
             _shopRepresenter = shopRepresenter;
         }
 
-        public void Enter(ItemData itemData)
+        public void Enter(ItemData<TItem> itemData)
         {
             _buttonInstance = _assetProvider.Instantiate(AssetsPaths.PurchaseButton, 
                 _targetButton.transform);

@@ -8,20 +8,20 @@ using Sources.StaticData;
 
 namespace Sources.Shop
 {
-    public abstract class ShopBase : IDataWriter
+    public abstract class ShopBase<TItem> : IDataWriter where TItem : ItemStaticData
     {
         protected readonly IWallet WalletInstance;
-        protected readonly ItemStaticData[] Items;
-        protected List<ItemStaticData> PurchasedItems = new();
+        protected readonly TItem[] Items;
+        protected List<TItem> PurchasedItems = new();
 
-        protected ItemData PreviewedItem;
-        protected ItemStaticData SelectedItem;
+        protected ItemData<TItem> PreviewedItem;
+        protected TItem SelectedItem;
 
         private int _observingItemIndex = 0;
 
-        public event Action<ItemData> NewItemPreviewed;
+        public event Action<ItemData<TItem>> NewItemPreviewed;
 
-        protected ShopBase(ItemStaticData[] items, IWallet wallet, PlayerProgress initProgress = null)
+        protected ShopBase(TItem[] items, IWallet wallet, PlayerProgress initProgress = null)
         {
             Items = items;
             WalletInstance = wallet;
@@ -53,7 +53,7 @@ namespace Sources.Shop
         public abstract void LoadData(PlayerProgress progress);
         public abstract void UpdateData();
 
-        private ItemData ConstructItemData(ItemStaticData itemStaticData)
+        private ItemData<TItem> ConstructItemData(TItem itemStaticData)
         {
             ItemStatus itemStatus = ItemStatus.Purchasable;
             if (PurchasedItems.Contains(itemStaticData))
@@ -65,9 +65,9 @@ namespace Sources.Shop
                 }
             }
 
-            return new ItemData(Items[_observingItemIndex], itemStatus);
+            return new ItemData<TItem>(Items[_observingItemIndex], itemStatus);
         }
 
-        public ItemData ShowedItem => PreviewedItem;
+        public ItemData<TItem> ShowedItem => PreviewedItem;
     }
 }

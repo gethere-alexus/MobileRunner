@@ -6,12 +6,13 @@ using Infrastructure.Services.ServiceLocating;
 using Sources.Data;
 using Sources.Money;
 using Sources.StaticData;
+using Sources.StaticData.CharacterTypes;
 
 namespace Sources.Shop
 {
-    public sealed class SkinShop : ShopBase
+    public sealed class SkinShop : ShopBase<SkinStaticData>
     {
-        public SkinShop(ItemStaticData[] items, IWallet wallet, PlayerProgress initProgress = null) : base(items, wallet, initProgress)
+        public SkinShop(SkinStaticData[] items, IWallet wallet, PlayerProgress initProgress = null) : base(items, wallet, initProgress)
         {
         }
 
@@ -26,8 +27,8 @@ namespace Sources.Shop
             if (!PurchasedItems.Contains(PreviewedItem.ItemInformation))
                 return;
 
-            ItemData overridingData =
-                new ItemData(PreviewedItem.ItemInformation, ItemStatus.Selected);
+            ItemData<SkinStaticData> overridingData =
+                new ItemData<SkinStaticData>(PreviewedItem.ItemInformation, ItemStatus.Selected);
 
             PreviewedItem = overridingData;
             SelectedItem = PreviewedItem.ItemInformation;
@@ -51,12 +52,12 @@ namespace Sources.Shop
         public override void LoadData(PlayerProgress progress)
         {
             // Set purchased skins
-            string[] purchasedSkinsData = progress.PurchasedSkins;
-            PurchasedItems = Items.Where(data => purchasedSkinsData.Contains(data.Name)).ToList();
+            CharacterType[] purchasedSkinsData = progress.PurchasedSkins;
+            PurchasedItems = Items.Where(data => purchasedSkinsData.Contains(data.Character)).ToList();
 
             // Set selected skin
-            string selectedSkin = progress.SelectedSkin;
-            SelectedItem = Items.First(item => item.Name == selectedSkin);
+            CharacterType selectedSkin = progress.SelectedSkin;
+            SelectedItem = Items.First(item => selectedSkin == item.Character);
         }
 
         public override void UpdateData()

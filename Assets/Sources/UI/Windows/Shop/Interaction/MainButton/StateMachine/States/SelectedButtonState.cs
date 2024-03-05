@@ -1,11 +1,12 @@
 ﻿using Infrastructure.Services.AssetManagement;
 using Sources.Data;
+using Sources.StaticData;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Sources.UI.Windows.Shop.Interaction.MainButton.StateMachine.States
 {
-    public class SelectedButtonState : IShopMainButtonState
+    public class SelectedButtonState<TItem> : IShopMainButtonState<TItem> where TItem : ItemStaticData
     {
         private readonly Button _interactionButton;
         private readonly IAssetProvider _assetProvider;
@@ -17,7 +18,7 @@ namespace Sources.UI.Windows.Shop.Interaction.MainButton.StateMachine.States
             _assetProvider = assetProvider;
         }
 
-        public void Enter(ItemData itemData)
+        public void Enter(ItemData<TItem> itemData)
         {
             _buttonInstance = _assetProvider.Instantiate(AssetsPaths.SelectedButton, _interactionButton.transform);
         }
