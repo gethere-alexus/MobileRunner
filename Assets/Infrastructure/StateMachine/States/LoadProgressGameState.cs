@@ -12,13 +12,16 @@ namespace Infrastructure.StateMachine.States
 {
     public class LoadProgressGameState : IGameState
     {
-        private const int BaseStatValue = 100;
-        private readonly GameStateMachine _gameStateMachine;
         private readonly ISaveLoadService _saveLoad;
+        private readonly IProgressProvider _progressProvider;
+        private readonly GameStateMachine _gameStateMachine;
+        private const int BaseStatValue = 100;
 
-        public LoadProgressGameState(GameStateMachine gameStateMachine, ISaveLoadService saveLoadService)
+        public LoadProgressGameState(GameStateMachine gameStateMachine, ISaveLoadService saveLoadService,
+            IProgressProvider progressProvider)
         {
             _saveLoad = saveLoadService;
+            _progressProvider = progressProvider;
             _gameStateMachine = gameStateMachine;
         }
 
@@ -34,8 +37,7 @@ namespace Infrastructure.StateMachine.States
         }
 
         private void ConstructProgress() =>
-            ServiceLocator.Container.Single<IProgressProvider>()
-                .UpdateData(_saveLoad.LoadProgress() ?? InitNewProgress());
+            _progressProvider.UpdateData(_saveLoad.LoadProgress() ?? InitNewProgress());
 
         private PlayerProgress InitNewProgress()
         {

@@ -1,24 +1,37 @@
 ﻿using System.IO;
 using Infrastructure.Data;
-using Infrastructure.Services.DataProvider;
 using UnityEngine;
 
 namespace Infrastructure.Services.SaveLoad
 {
     public class SaveLoadService : ISaveLoadService
     {
-        private const string ProgressDataKey = "ProgressData";
-        private const string SaveName = "Save.json";
+        private const string SaveName = "GameProgress.json";
+        private readonly string _savePath;
+
+        public SaveLoadService()
+        {
+            _savePath = Path.Combine(Application.persistentDataPath, SaveName);
+        }
 
         public void SaveProgress(PlayerProgress progressToSave)
         {
             string jsonSave = JsonUtility.ToJson(progressToSave);
-            string savePath = Path.Combine(Application.persistentDataPath, SaveName);
             
-            File.WriteAllText(savePath,jsonSave);
+            File.WriteAllText(_savePath,jsonSave);
         }
 
-        public PlayerProgress LoadProgress() =>
-             PlayerPrefs.GetString(ProgressDataKey)?.ToDeserialized<PlayerProgress>();
+        public PlayerProgress LoadProgress()
+        {
+            PlayerProgress toReturn = null;
+            if (File.Exists(_savePath))
+            {
+                string json = File.ReadAllText(_savePath);
+                toReturn = JsonUtility.FromJson<PlayerProgress>(json);
+                Debug.Log("File read");
+            }
+
+            return toReturn;
+        }
     }
 }
