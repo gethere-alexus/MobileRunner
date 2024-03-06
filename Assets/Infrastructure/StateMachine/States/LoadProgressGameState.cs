@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Infrastructure.Data;
-using Infrastructure.Services.AssetManagement;
 using Infrastructure.Services.DataProvider;
 using Infrastructure.Services.SaveLoad;
 using Infrastructure.Services.ServiceLocating;
@@ -15,14 +15,11 @@ namespace Infrastructure.StateMachine.States
         private const int BaseStatValue = 100;
         private readonly GameStateMachine _gameStateMachine;
         private readonly ISaveLoadService _saveLoad;
-        private readonly IAssetProvider _assetsProvider;
 
-        public LoadProgressGameState(GameStateMachine gameStateMachine, ISaveLoadService saveLoadService,
-            IAssetProvider assetsProvider)
+        public LoadProgressGameState(GameStateMachine gameStateMachine, ISaveLoadService saveLoadService)
         {
             _saveLoad = saveLoadService;
             _gameStateMachine = gameStateMachine;
-            _assetsProvider = assetsProvider;
         }
 
         public void Enter()
@@ -50,23 +47,20 @@ namespace Infrastructure.StateMachine.States
                 RequiredXp = 500,
                 SelectedSkin = CharacterType.Invader,
                 PurchasedSkins = new [] { CharacterType.Invader },
-                PlayerStatistics = ConstructStatistics(BaseStatValue)
+                StatValues = ConstructStats(BaseStatValue)
             };
 
             return toReturn;
         }
 
-        private Statistic[] ConstructStatistics(int baseValue)
+        private StatisticData[] ConstructStats(int baseStatValue)
         {
-            StatisticDescription[] statDescriptions =
-                _assetsProvider.LoadAll<StatisticDescription>(AssetsPaths.StatDescriptions);
-            List<Statistic> toReturn = new List<Statistic>();
-            foreach (var statDescription in statDescriptions)
-            {
-                Statistic toAdd = new Statistic(statDescription, baseValue);
-                toReturn.Add(toAdd);
-            }
-            return toReturn.ToArray();
+            List<StatisticData> statisticData = new();
+            
+            foreach (StatisticType type in Enum.GetValues(typeof(StatisticType)))
+                statisticData.Add(new StatisticData(type,baseStatValue));
+            
+            return statisticData.ToArray();
         }
     }
 }

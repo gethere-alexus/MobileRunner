@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using FMOD;
 using Infrastructure.SceneLoad;
-using Infrastructure.Services.AssetManagement;
 using Infrastructure.Services.Factory;
 using Infrastructure.Services.Factory.UI;
 using Infrastructure.Services.SaveLoad;
@@ -21,8 +20,7 @@ namespace Infrastructure.StateMachine
             _states = new Dictionary<Type, IExitableState>()
             {
                 [typeof(BootstrapGameState)] = new BootstrapGameState(this, sceneLoader, serviceLocator),
-                [typeof(LoadProgressGameState)] = new LoadProgressGameState(this, ServiceLocator.Container.Single<ISaveLoadService>(), 
-                    ServiceLocator.Container.Single<IAssetProvider>()),
+                [typeof(LoadProgressGameState)] = new LoadProgressGameState(this, ServiceLocator.Container.Single<ISaveLoadService>()),
                 [typeof(LoadMenuGameState)] = new LoadMenuGameState(serviceLocator.Single<IUIFactory>(), sceneLoader),
                 [typeof(LoadRunGameState)] = new LoadRunGameState(sceneLoader)
             };

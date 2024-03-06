@@ -41,19 +41,19 @@ namespace Infrastructure.StateMachine.States
             _services.RegisterSingle<IGameStateMachine>(_stateMachine);
             _services.RegisterSingle<IAssetProvider>(new AssetProvider());
             _services.RegisterSingle<IStaticDataProvider>(new StaticDataProvider(_services.Single<IAssetProvider>()));
-            _services.RegisterSingle<IProgressProvider>(new PersistentDataService());
-            
+            _services.RegisterSingle<ISaveLoadService>(new SaveLoadService());
+            _services.RegisterSingle<IProgressProvider>(new PersistentDataService(_services.Single<ISaveLoadService>()));
+
             _services.RegisterSingle<ICharacterFactory>(new CharacterFactory(_services.Single<IStaticDataProvider>(), 
                 _services.Single<IProgressProvider>(), 
                 _services.Single<IInputProcessingService>()));
-            
+
             _services.RegisterSingle<IUIFactory>(
                 new UIFactory(_services.Single<IAssetProvider>(),
                     _services.Single<IProgressProvider>(),
                     _services.Single<IStaticDataProvider>(),
                     _services.Single<ICharacterFactory>()));
-            
-            _services.RegisterSingle<ISaveLoadService>(new SaveLoadService(_services.Single<IProgressProvider>(), _services.Single<IUIFactory>()));
+
             _services.RegisterSingle<IWindowInstantiator>(new WindowsInstantiator(_services.Single<IUIFactory>()));
         }
 

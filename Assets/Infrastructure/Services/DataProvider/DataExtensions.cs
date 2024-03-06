@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Infrastructure.Data;
 using Sources.StaticData;
 using Sources.StaticData.CharacterTypes;
 using UnityEngine;
@@ -9,9 +10,6 @@ namespace Infrastructure.Services.DataProvider
     {
         public static T ToDeserialized<T>(this string json) =>
             JsonUtility.FromJson<T>(json);
-
-        public static string ToJson(this object obj) =>
-            JsonUtility.ToJson(obj);
 
         public static CharacterType[] ToSerializableArray(this IEnumerable<SkinStaticData> items)
         {

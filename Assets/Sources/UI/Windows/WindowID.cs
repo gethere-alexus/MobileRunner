@@ -2,7 +2,7 @@
 {
     public enum WindowID
     {
-        Unknown,
-        Shop,
+        Unknown = 0,
+        Shop = 1,
     }
 }

@@ -7,18 +7,12 @@ namespace Infrastructure.Data
     [Serializable]
     public class PlayerProgress
     {
-        public int Level { get; set; }
-        public int CurrentXp { get; set; }
-        public int RequiredXp { get; set; }
-        public int Money { get; set; }
-        public CharacterType SelectedSkin { get; set; }
-        public CharacterType[] PurchasedSkins { get; set; }
-        public Statistic[] PlayerStatistics { get; set; }
-
-        public PlayerProgress()
-        {
-           
-        }
-        
+        public int Level;
+        public int CurrentXp;
+        public int RequiredXp;
+        public int Money;
+        public CharacterType SelectedSkin;
+        public CharacterType[] PurchasedSkins;
+        public StatisticData[] StatValues; //health,damage,critical damage, etc
     }
 }

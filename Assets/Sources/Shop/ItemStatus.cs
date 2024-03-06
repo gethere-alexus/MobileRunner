@@ -2,8 +2,8 @@
 {
     public enum ItemStatus
     {
-        Purchasable,
-        Selectable,
-        Selected
+        Purchasable = 0,
+        Selectable = 1,
+        Selected = 2
     }
 }

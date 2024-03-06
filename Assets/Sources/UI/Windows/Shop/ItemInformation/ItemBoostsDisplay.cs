@@ -1,6 +1,8 @@
 using System;
 using Infrastructure.Data;
 using Infrastructure.Services.DataProvider;
+using Infrastructure.Services.ServiceLocating;
+using Infrastructure.Services.StaticData;
 using Sources.Data;
 using Sources.Player;
 using Sources.StaticData;
@@ -15,7 +17,7 @@ namespace Sources.UI.Windows.Shop.ItemInformation
         [SerializeField] private Transform _boostStorage;
         [SerializeField] private BoostDescription _boostDescriptionTemplate;
 
-        private Statistic[] _playerStats;
+        private StatisticData[] _playerStats;
 
         private void OnEnable()
         {
@@ -56,9 +58,9 @@ namespace Sources.UI.Windows.Shop.ItemInformation
 
             foreach (var boost in itemStaticData.AppliedBoosts)
             {
-                Statistic stat = Array.Find(_playerStats,
-                    statistic => statistic.StatDescription == boost.AplicableStatistic);
-
+                StatisticData stat = Array.Find(_playerStats,
+                    statistic => statistic.StatType == boost.AplicableStatistic.Statistic);
+                
                 int valueWithApplying = stat.GetValueWithApplying(boost.BoostValue);
 
                 Instantiate(_boostDescriptionTemplate, _boostStorage)
@@ -66,7 +68,13 @@ namespace Sources.UI.Windows.Shop.ItemInformation
             }
         }
 
-        public void LoadData(PlayerProgress progress) =>
-            _playerStats = progress.PlayerStatistics;
+        public void LoadData(PlayerProgress progress)
+        {
+            IStaticDataProvider staticDataProvider = ServiceLocator.Container.Single<IStaticDataProvider>();
+            
+            int arrayLenght = Enum.GetNames(typeof(StatisticType)).Length;
+            _playerStats = progress.StatValues;
+
+        }
     }
 }

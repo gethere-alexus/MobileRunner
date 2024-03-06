@@ -3,26 +3,25 @@ using Sources.StaticData;
 namespace Sources.Player
 {
     [System.Serializable]
-    public class Statistic : IBoostable
+    public class StatisticData : IBoostable
     {
-        public StatisticDescription StatDescription;
+        public StatisticType StatType;
         public int DefaultValue;
-        private int _currentValue;
 
-        public Statistic(StatisticDescription statDescription, int defaultValue)
+        public StatisticData(StatisticType statType, int defaultValue)
         {
-            StatDescription = statDescription;
+            StatType = statType;
             DefaultValue = defaultValue;
-            _currentValue = DefaultValue;
         }
 
-        public virtual void Increment(int amountToAdd) => _currentValue += amountToAdd;
+        public virtual void Increment(int amountToAdd) => 
+            DefaultValue += amountToAdd;
 
         public virtual void Decrement(int amountToTake)
         {
-            if (_currentValue - amountToTake > 0)
+            if (DefaultValue - amountToTake > 0)
             {
-                _currentValue -= amountToTake;
+                DefaultValue -= amountToTake;
             }
         }
 

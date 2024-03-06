@@ -1,9 +1,7 @@
 using Sources.Data;
-using Sources.Shop;
 using Sources.StaticData;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Sources.UI.Windows.Shop.ItemInformation

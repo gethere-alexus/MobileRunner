@@ -6,7 +6,8 @@ namespace Sources.UI.Elements
 {
     public class BoostDescription : MonoBehaviour
     {
-        public enum BoostTextFormat {BoostFirst,FinalValueFirst}
+        public enum BoostTextFormat {BoostFirst = 0,FinalValueFirst = 1
+        }
         [SerializeField] private Image _boostImage;
 
         [SerializeField] private TMP_Text _boostDescription;

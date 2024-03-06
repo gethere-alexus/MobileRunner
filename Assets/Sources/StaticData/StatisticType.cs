@@ -2,10 +2,10 @@
 {
     public enum StatisticType
     {
-        HealthBoost,
-        DamageBoost,
-        CriticalDamageBoost,
-        LuckBoost,
-        FireRateBoost
+        Health = 0,
+        Damage = 1,
+        CriticalDamage = 2,
+        FireRate = 3,
+        Luck = 4
     }
 }

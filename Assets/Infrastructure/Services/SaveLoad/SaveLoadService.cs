@@ -1,7 +1,6 @@
-﻿using Infrastructure.Data;
+﻿using System.IO;
+using Infrastructure.Data;
 using Infrastructure.Services.DataProvider;
-using Infrastructure.Services.Factory;
-using Infrastructure.Services.Factory.UI;
 using UnityEngine;
 
 namespace Infrastructure.Services.SaveLoad
@@ -9,19 +8,14 @@ namespace Infrastructure.Services.SaveLoad
     public class SaveLoadService : ISaveLoadService
     {
         private const string ProgressDataKey = "ProgressData";
-        
-        private readonly IUIFactory _uiFactory;
-        private readonly IProgressProvider _progressProvider;
+        private const string SaveName = "Save.json";
 
-        public SaveLoadService(IProgressProvider progressProvider,IUIFactory uiFactory)
+        public void SaveProgress(PlayerProgress progressToSave)
         {
-            _progressProvider = progressProvider;
-            _uiFactory = uiFactory;
-        }
-
-        public void SaveProgress()
-        {
-            PlayerPrefs.SetString(ProgressDataKey, _progressProvider.GetProgress().ToJson());
+            string jsonSave = JsonUtility.ToJson(progressToSave);
+            string savePath = Path.Combine(Application.persistentDataPath, SaveName);
+            
+            File.WriteAllText(savePath,jsonSave);
         }
 
         public PlayerProgress LoadProgress() =>
