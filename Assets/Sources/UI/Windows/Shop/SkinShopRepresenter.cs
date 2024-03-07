@@ -18,7 +18,7 @@ namespace Sources.UI.Windows.Shop
         {
             _skinSkinShopInstance = new SkinShop(skins, walletInstance,initialProgress);
             ShopInitialized?.Invoke();
-            _skinSkinShopInstance.ShowItemByIndex(0);
+            _skinSkinShopInstance.ShowSelectedItem();
         }
 
         public SkinShop SkinShopInstance =>

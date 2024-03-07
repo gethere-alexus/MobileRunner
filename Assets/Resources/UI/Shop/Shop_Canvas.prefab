@@ -1953,6 +1953,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3918709561813964781, guid: a04be55bbd418df489db180f97e93bbe,
         type: 3}
+      propertyPath: _displayDuration
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3918709561813964781, guid: a04be55bbd418df489db180f97e93bbe,
+        type: 3}
       propertyPath: _itemShopRepresenter
       value: 
       objectReference: {fileID: 4104293668468942028}

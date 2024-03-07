@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90e8c1e36f2e83d40b793467d4449d37, type: 3}
   m_Name: Damage
   m_EditorClassIdentifier: 
-  _statistic: 1
-  _boostSprite: {fileID: 21300000, guid: 413710b631bd5493ebbf1a29b2d82eb3, type: 3}
+  Statistic: 1
+  BoostSprite: {fileID: 21300000, guid: 5b8656d7924444c4aa787cedf8e54a8a, type: 3}

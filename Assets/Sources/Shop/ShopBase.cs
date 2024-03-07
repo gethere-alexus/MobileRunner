@@ -5,6 +5,7 @@ using Infrastructure.Services.DataProvider;
 using Sources.Data;
 using Sources.Money;
 using Sources.StaticData;
+using Sources.Utils;
 
 namespace Sources.Shop
 {
@@ -23,7 +24,8 @@ namespace Sources.Shop
 
         protected ShopBase(TItem[] items, IWallet wallet, PlayerProgress initProgress = null)
         {
-            Items = items;
+            Items = Sorter.SortItemsByPrice(items);
+            
             WalletInstance = wallet;
             LoadData(initProgress);
         }

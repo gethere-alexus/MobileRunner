@@ -15,7 +15,7 @@ namespace Infrastructure.Services.DataProvider
             _saveLoadService = saveLoad;
         }
 
-        public event Action OnDataUpdated;
+        public event Action DataUpdated;
 
         public PlayerProgress GetProgress() => 
             _progress;
@@ -23,7 +23,7 @@ namespace Infrastructure.Services.DataProvider
         public void UpdateData(PlayerProgress newData)
         {
             _progress = newData;
-            OnDataUpdated?.Invoke();
+            DataUpdated?.Invoke();
             _saveLoadService.SaveProgress(_progress);
         }
     }

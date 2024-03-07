@@ -6,7 +6,7 @@ namespace Infrastructure.Services.SaveLoad
 {
     public class SaveLoadService : ISaveLoadService
     {
-        private const string SaveName = "GameProgress.json";
+        public const string SaveName = "GameProgress.json";
         private readonly string _savePath;
 
         public SaveLoadService()

@@ -33,6 +33,7 @@ namespace Sources.Input
         {
             _inputProcessor.OnTouchStarted += OnTouchStarted;
             _inputProcessor.OnTouchPerformed += OnTouchPerformed;
+            _isSubscribed = true;
         }
 
         private void OnDisable()

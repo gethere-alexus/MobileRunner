@@ -1,9 +1,15 @@
+using System.Collections.Generic;
+using System.Linq;
 using Sources.StaticData;
 
 namespace Sources.Utils
 {
     public static class Sorter
     {
+        public static List<TItems> SortItemsByPrice<TItems>(List<TItems> partArrayToSort)
+            where TItems : ItemStaticData =>
+            SortItemsByPrice(partArrayToSort.ToArray()).ToList();
+
         public static TItems[] SortItemsByPrice<TItems>(TItems[] partArrayToSort) where TItems : ItemStaticData
         {
             TItems[] toReturn = partArrayToSort;

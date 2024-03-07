@@ -13,23 +13,26 @@ MonoBehaviour:
   m_Name: Female
   m_EditorClassIdentifier: 
   Name: Female
-  Price: 15000
+  Price: 1
   Description: 'Test Test Test Test Test Test Test Test Test Test Test Test Test
     Test Test Test Test Test Test '
   ItemRarity: {fileID: 11400000, guid: bbd6d0e99c31ea14ca4c633756932e1a, type: 2}
   AppliedBoosts:
-  - AplicableStatistic: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c,
-      type: 2}
-    BoostValue: 142
   - AplicableStatistic: {fileID: 11400000, guid: b6eea0846c97f7c4bad25b973de3a74b,
       type: 2}
-    BoostValue: 43
-  - AplicableStatistic: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3,
+    BoostValue: 600
+  - AplicableStatistic: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3,
       type: 2}
-    BoostValue: 234
+    BoostValue: 700
   - AplicableStatistic: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da,
       type: 2}
-    BoostValue: 123
+    BoostValue: 800
+  - AplicableStatistic: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3,
+      type: 2}
+    BoostValue: 900
+  - AplicableStatistic: {fileID: 11400000, guid: cf38a24841f6b2e428bbef1b8fe4bb9c,
+      type: 2}
+    BoostValue: 1000
   ItemPrefab: {fileID: 5824428352053320391, guid: 9c86e41b5e19b7447aa5c4f94049889d,
     type: 3}
   Character: 2

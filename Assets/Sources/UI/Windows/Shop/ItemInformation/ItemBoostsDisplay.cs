@@ -16,6 +16,7 @@ namespace Sources.UI.Windows.Shop.ItemInformation
         [SerializeField] private SkinShopRepresenter _itemShopRepresenter;
         [SerializeField] private Transform _boostStorage;
         [SerializeField] private BoostDescription _boostDescriptionTemplate;
+        [SerializeField] private float _displayDuration = 0.25f;
 
         private StatisticData[] _playerStats;
 
@@ -64,7 +65,7 @@ namespace Sources.UI.Windows.Shop.ItemInformation
                 int valueWithApplying = stat.GetValueWithApplying(boost.BoostValue);
 
                 Instantiate(_boostDescriptionTemplate, _boostStorage)
-                    .Construct(boost.AplicableStatistic.BoostSprite, boost.BoostValue, valueWithApplying);
+                    .Construct(boost.AplicableStatistic.BoostSprite, boost.BoostValue, valueWithApplying, _displayDuration);
             }
         }
 

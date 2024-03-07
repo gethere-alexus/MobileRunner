@@ -16,6 +16,8 @@ namespace Infrastructure.Services.Factory.Character
         private readonly IProgressProvider _progressProvider;
         private readonly IInputProcessingService _inputService;
 
+        private GameObject _previewInstance;
+
         public CharacterFactory(IStaticDataProvider staticDataProvider, IProgressProvider progressProvider,
             IInputProcessingService inputService)
         {
@@ -26,14 +28,18 @@ namespace Infrastructure.Services.Factory.Character
 
         public void CreateCharacterPreview()
         {
+            if (_previewInstance != null)
+                Object.Destroy(_previewInstance);
+            
             SkinStaticData selectedChar = _staticDataProvider.Skins
                 .First(data => data.Character == _progressProvider.GetProgress().SelectedSkin);
 
             Transform initPoint = GameObject.FindWithTag(SpawnPointTag).transform;
 
-            var instanceChar = Object.Instantiate(selectedChar.ItemPrefab, initPoint);
-            instanceChar.AddComponent<PlayerOverviewRotation>().Construct(_inputService,
-                instanceChar.GetComponent<Rigidbody>());
+            _previewInstance = Object.Instantiate(selectedChar.ItemPrefab, initPoint);
+            _previewInstance.AddComponent<PlayerOverviewRotation>().Construct(_inputService,
+                _previewInstance.GetComponent<Rigidbody>());
+            
         }
     }
 }

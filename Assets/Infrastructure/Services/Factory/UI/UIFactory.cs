@@ -31,7 +31,7 @@ namespace Infrastructure.Services.Factory.UI
             _staticDataProvider = staticDataProvider;
             _characterFactory = charFactory;
 
-            progressProvider.OnDataUpdated += OnDataUpdated;
+            progressProvider.DataUpdated += DataUpdated;
         }
 
         public void CreateUIRoot()
@@ -53,6 +53,7 @@ namespace Infrastructure.Services.Factory.UI
 
             _walletInstance = instanceUI.GetComponentInChildren<WalletView>().WalletInstance;
             
+            _progressProvider.DataUpdated += _characterFactory.CreateCharacterPreview;
             _characterFactory.CreateCharacterPreview();
         }
 
@@ -102,7 +103,7 @@ namespace Infrastructure.Services.Factory.UI
             }
         }
 
-        private void OnDataUpdated()
+        private void DataUpdated()
         {
             foreach (IDataReader reader in _dataReaders)
             {

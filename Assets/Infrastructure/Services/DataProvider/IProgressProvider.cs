@@ -8,6 +8,6 @@ namespace Infrastructure.Services.DataProvider
     {
         void UpdateData(PlayerProgress newData);
         PlayerProgress GetProgress();
-        event Action OnDataUpdated;
+        event Action DataUpdated;
     }  
 }

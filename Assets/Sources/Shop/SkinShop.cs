@@ -51,13 +51,26 @@ namespace Sources.Shop
 
         public override void LoadData(PlayerProgress progress)
         {
-            // Set purchased skins
+            SetPurchasedSkins(progress);
+            SetSelectedSkin(progress);
+        }
+
+        private void SetSelectedSkin(PlayerProgress progress)
+        {
+            CharacterType selectedSkinType = progress.SelectedSkin;
+            SkinStaticData progressSelectedSkin = Array.Find(Items, item => item.Character == selectedSkinType);
+
+            if (SelectedItem != progressSelectedSkin)
+            {
+                SelectedItem = progressSelectedSkin;
+                ShowSelectedItem();
+            }
+        }
+
+        private void SetPurchasedSkins(PlayerProgress progress)
+        {
             CharacterType[] purchasedSkinsData = progress.PurchasedSkins;
             PurchasedItems = Items.Where(data => purchasedSkinsData.Contains(data.Character)).ToList();
-
-            // Set selected skin
-            CharacterType selectedSkin = progress.SelectedSkin;
-            SelectedItem = Items.First(item => selectedSkin == item.Character);
         }
 
         public override void UpdateData()
