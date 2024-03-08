@@ -1,6 +1,8 @@
 ﻿using System;
 using Sources.Player;
 using Sources.StaticData.CharacterTypes;
+using Sources.StaticData.GunTypes;
+using UnityEngine.Serialization;
 
 namespace Infrastructure.Data
 {
@@ -13,6 +15,8 @@ namespace Infrastructure.Data
         public int Money;
         public CharacterType SelectedSkin;
         public CharacterType[] PurchasedSkins;
+        public GunType SelectedGun;
+        public GunType[] PurchasedGuns;
         public StatisticData[] StatValues; //health,damage,critical damage, etc
     }
 }

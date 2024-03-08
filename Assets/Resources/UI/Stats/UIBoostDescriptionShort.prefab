@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1f834f9186b3e54a864c4a9ff660d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _displayDelay: 0.1
   _boostImage: {fileID: 4192891132023148374}
   _boostDescription: {fileID: 5627114398051455824}
 --- !u!1 &1856045440790715248
@@ -280,7 +281,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +25% (1678)
+  m_text: +0% (0)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50c12c23294124aa48490c44ac65a9e4, type: 2}
   m_sharedMaterial: {fileID: 7746803525459343344, guid: 50c12c23294124aa48490c44ac65a9e4,

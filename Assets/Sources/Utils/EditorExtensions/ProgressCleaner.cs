@@ -1,7 +1,9 @@
-﻿using System.IO;
+﻿using System.Diagnostics;
+using System.IO;
 using Infrastructure.Services.SaveLoad;
 using UnityEditor;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 namespace Sources.Utils.EditorExtensions
 {
@@ -15,6 +17,11 @@ namespace Sources.Utils.EditorExtensions
                 File.Delete(progressPath);
             
             Debug.Log("Progress data were deleted");
+        }
+        [MenuItem("Extensions/ProgressCleaner/ShowProgress")]public static void OpenSave()
+        {
+            string progressPath = Application.persistentDataPath;
+            Process.Start("explorer.exe", progressPath.Replace("/", "\\"));
         }
     }
 }

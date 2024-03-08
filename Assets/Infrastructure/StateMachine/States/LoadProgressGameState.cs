@@ -7,6 +7,7 @@ using Infrastructure.Services.ServiceLocating;
 using Sources.Player;
 using Sources.StaticData;
 using Sources.StaticData.CharacterTypes;
+using Sources.StaticData.GunTypes;
 
 namespace Infrastructure.StateMachine.States
 {
@@ -49,6 +50,8 @@ namespace Infrastructure.StateMachine.States
                 RequiredXp = 500,
                 SelectedSkin = CharacterType.Invader,
                 PurchasedSkins = new [] { CharacterType.Invader },
+                SelectedGun = GunType.Pistol,
+                PurchasedGuns = new [] { GunType.Pistol },
                 StatValues = ConstructStats(BaseStatValue)
             };
 

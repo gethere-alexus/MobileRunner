@@ -4,7 +4,8 @@ using Infrastructure.Services.DataProvider;
 using Infrastructure.Services.Factory.Character;
 using Infrastructure.Services.StaticData;
 using Sources.Money;
-using Sources.Shop;
+using Sources.Shop.ShopRepresenters;
+using Sources.StaticData;
 using Sources.UI.Elements.Panels;
 using UnityEngine;
 
@@ -17,7 +18,7 @@ namespace Infrastructure.Services.Factory.UI
         private readonly IStaticDataProvider _staticDataProvider;
         private readonly ICharacterFactory _characterFactory;
 
-        private List<IDataReader> _dataReaders { get; } = new List<IDataReader>();
+        private List<IDataReader>_dataReaders { get; } = new List<IDataReader>();
         private List<IDataWriter> _dataWriters { get; } = new List<IDataWriter>();
 
         private IWallet _walletInstance;
@@ -60,25 +61,33 @@ namespace Infrastructure.Services.Factory.UI
         public void CreateShopWindow()
         {
             CreateUIRoot();
-            var instance = _assetProvider.Instantiate(AssetsPaths.UIShop);
+            var shopInstance = _assetProvider.Instantiate(AssetsPaths.UIShop);
             
             Transform previewSpace = _assetProvider.Instantiate(AssetsPaths.PreviewSpace).transform;
-            previewSpace.SetParent(instance.transform);
+            previewSpace.SetParent(shopInstance.transform);
             
-            foreach (IDataReader dataReader in instance.GetComponentsInChildren<IDataReader>(true))
+            foreach (IDataReader dataReader in shopInstance.GetComponentsInChildren<IDataReader>(true))
             {
                 RegisterObserver(dataReader);
             }
             
-            foreach (IShopRepresenter shop in instance.GetComponentsInChildren<IShopRepresenter>(true))
-            {
-                shop.PreviewSpace = previewSpace;
-                shop.InitShop(_staticDataProvider.Skins, _progressProvider.GetProgress(), _walletInstance);
-                RegisterObserver(shop.SkinShopInstance);
-            }
-            
-            instance.transform.SetParent(_uiRoot);
+            InstantiateShop(shopInstance, _staticDataProvider.Skins, previewSpace);
+            InstantiateShop(shopInstance, _staticDataProvider.Guns, previewSpace);
+
+            shopInstance.transform.SetParent(_uiRoot);
         }
+
+        private void InstantiateShop<TItem>(GameObject shopInstance, TItem[] items, Transform previewStorage)
+            where TItem : ItemStaticData
+        {
+            IShopRepresenter<TItem> shopRepresenter = shopInstance.GetComponentInChildren<IShopRepresenter<TItem>>(true);
+            
+            shopRepresenter.PreviewSpace = previewStorage;
+            shopRepresenter.InitShop(items, _progressProvider.GetProgress(), _walletInstance);
+            
+            RegisterObserver(shopRepresenter.ShopInstance);
+        }
+        
 
         public void ClearObservers()
         {

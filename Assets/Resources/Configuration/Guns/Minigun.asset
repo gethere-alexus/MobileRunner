@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f5a0c1af57404bb9a3874d01b954e3, type: 3}
+  m_Name: Minigun
+  m_EditorClassIdentifier: 
+  Name: M134 Minigun
+  Price: 10000
+  Description: 'Test Test Test Test Test Test Test Test Test '
+  ItemRarity: {fileID: 11400000, guid: 069a407403f75d149bde4fdc3765f349, type: 2}
+  AppliedBoosts:
+  - AplicableStatistic: {fileID: 11400000, guid: b8f01a20986dbea488e380d71e290ac3,
+      type: 2}
+    BoostValue: 500
+  - AplicableStatistic: {fileID: 11400000, guid: b7be498b5f0e8604aa5ef29f8cc230da,
+      type: 2}
+    BoostValue: 1500
+  - AplicableStatistic: {fileID: 11400000, guid: 95f28ded375e04249a8ae483a522f2d3,
+      type: 2}
+    BoostValue: 1000
+  ItemPrefab: {fileID: 2196376887939949475, guid: 79cfad6d28604f54a97b32d45af9d2b2,
+    type: 3}
+  Gun: 3

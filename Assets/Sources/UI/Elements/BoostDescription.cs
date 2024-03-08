@@ -7,8 +7,8 @@ namespace Sources.UI.Elements
 {
     public class BoostDescription : MonoBehaviour
     {
+        [SerializeField] private float _displayDelay = 0.01f;
         [SerializeField] private Image _boostImage;
-
         [SerializeField] private TMP_Text _boostDescription;
 
         public void Construct(Sprite statImage, int boostValue, int valueAfterBoost, float displayDuration = 1.0f)
@@ -23,6 +23,8 @@ namespace Sources.UI.Elements
             
             float boostResult = 0;
             float afterBoostResult = 0;
+
+            yield return new WaitForSeconds(_displayDelay);
             
             while (pastTime <= displayDuration)
             {

@@ -8,7 +8,7 @@ using Sources.Money;
 using Sources.StaticData;
 using Sources.StaticData.CharacterTypes;
 
-namespace Sources.Shop
+namespace Sources.Shop.Shops
 {
     public sealed class SkinShop : ShopBase<SkinStaticData>
     {
@@ -27,11 +27,11 @@ namespace Sources.Shop
             if (!PurchasedItems.Contains(PreviewedItem.ItemInformation))
                 return;
 
-            ItemData<SkinStaticData> overridingData =
-                new ItemData<SkinStaticData>(PreviewedItem.ItemInformation, ItemStatus.Selected);
+            ItemData overridingData =
+                new ItemData(PreviewedItem.ItemInformation, ItemStatus.Selected);
 
             PreviewedItem = overridingData;
-            SelectedItem = PreviewedItem.ItemInformation;
+            SelectedItem = PreviewedItem.ItemInformation as SkinStaticData;
             ShowSelectedItem();
             UpdateData();
         }
@@ -43,7 +43,7 @@ namespace Sources.Shop
             
             if (WalletInstance.TrySpendMoney(PreviewedItem.ItemInformation.Price))
             {
-                PurchasedItems.Add(PreviewedItem.ItemInformation);
+                PurchasedItems.Add(PreviewedItem.ItemInformation as SkinStaticData);
                 SelectShowedItem();
                 UpdateData();   
             }
@@ -53,6 +53,17 @@ namespace Sources.Shop
         {
             SetPurchasedSkins(progress);
             SetSelectedSkin(progress);
+        }
+
+        public override void UpdateData()
+        {
+            IProgressProvider progressProvider = ServiceLocator.Container.Single<IProgressProvider>();
+            PlayerProgress progressCopy = progressProvider.GetProgress();
+            
+            progressCopy.PurchasedSkins = PurchasedItems.ToSerializableArray();
+            progressCopy.SelectedSkin = SelectedItem.ToSerializable();
+            
+            progressProvider.UpdateData(progressCopy);
         }
 
         private void SetSelectedSkin(PlayerProgress progress)
@@ -71,17 +82,6 @@ namespace Sources.Shop
         {
             CharacterType[] purchasedSkinsData = progress.PurchasedSkins;
             PurchasedItems = Items.Where(data => purchasedSkinsData.Contains(data.Character)).ToList();
-        }
-
-        public override void UpdateData()
-        {
-            IProgressProvider progressProvider = ServiceLocator.Container.Single<IProgressProvider>();
-            PlayerProgress progressCopy = progressProvider.GetProgress();
-            
-            progressCopy.PurchasedSkins = PurchasedItems.ToSerializableArray();
-            progressCopy.SelectedSkin = SelectedItem.ToSerializable();
-            
-            progressProvider.UpdateData(progressCopy);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Infrastructure.Services.AssetManagement;
 using Sources.Data;
 using Sources.Shop;
+using Sources.Shop.ShopRepresenters;
 using Sources.StaticData;
 using Sources.UI.Elements.Buttons;
 using UnityEngine;
@@ -8,23 +9,23 @@ using UnityEngine.UI;
 
 namespace Sources.UI.Windows.Shop.Interaction.MainButton.StateMachine.States
 {
-    public class PurchaseButtonState<TItem> : IShopMainButtonState<TItem> where TItem : ItemStaticData
+    public class PurchaseButtonState<TItem> : IShopMainButtonState where TItem : ItemStaticData
     {
         private readonly IAssetProvider _assetProvider;
-        private readonly IShopRepresenter _shopRepresenter;
+        private readonly IShopRepresenter<TItem> _shopRepresenter;
         
         private readonly Button _targetButton;
         private GameObject _buttonInstance;
 
         public PurchaseButtonState(Button interactionButton, IAssetProvider assetProvider,
-            IShopRepresenter shopRepresenter)
+            IShopRepresenter<TItem> shopRepresenter)
         {
             _targetButton = interactionButton;
             _assetProvider = assetProvider;
             _shopRepresenter = shopRepresenter;
         }
 
-        public void Enter(ItemData<TItem> itemData)
+        public void Enter(ItemData itemData)
         {
             _buttonInstance = _assetProvider.Instantiate(AssetsPaths.PurchaseButton, 
                 _targetButton.transform);
@@ -32,7 +33,7 @@ namespace Sources.UI.Windows.Shop.Interaction.MainButton.StateMachine.States
             _buttonInstance.GetComponent<PurchaseButton>()
                 .ConstructButton(itemData.ItemInformation.Price, _targetButton);
             
-            _targetButton.onClick.AddListener(_shopRepresenter.SkinShopInstance.PurchaseShowedItem);
+            _targetButton.onClick.AddListener(_shopRepresenter.ShopInstance.PurchaseShowedItem);
         }
 
         public void Exit()

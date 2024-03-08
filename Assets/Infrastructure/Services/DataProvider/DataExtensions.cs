@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Infrastructure.Data;
 using Sources.StaticData;
 using Sources.StaticData.CharacterTypes;
+using Sources.StaticData.GunTypes;
 using UnityEngine;
 
 namespace Infrastructure.Services.DataProvider
@@ -25,5 +25,19 @@ namespace Infrastructure.Services.DataProvider
 
         public static CharacterType ToSerializable(this SkinStaticData item) => 
             item.Character;
+        public static GunType[] ToSerializableArray(this IEnumerable<GunStaticData> items)
+        {
+            List<GunType> toReturn = new();
+            
+            foreach (GunStaticData item in items)
+            {
+                toReturn.Add(item.ToSerializable());
+            }
+
+            return toReturn.ToArray();
+        }
+
+        public static GunType ToSerializable(this GunStaticData item) => 
+            item.Gun;
     }
 }

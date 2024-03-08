@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Sources.UI.Windows.Shop.Interaction.MainButton.StateMachine.States
 {
-    public class SelectedButtonState<TItem> : IShopMainButtonState<TItem> where TItem : ItemStaticData
+    public class SelectedButtonState : IShopMainButtonState
     {
         private readonly Button _interactionButton;
         private readonly IAssetProvider _assetProvider;
@@ -18,7 +18,7 @@ namespace Sources.UI.Windows.Shop.Interaction.MainButton.StateMachine.States
             _assetProvider = assetProvider;
         }
 
-        public void Enter(ItemData<TItem> itemData)
+        public void Enter(ItemData itemData)
         {
             _buttonInstance = _assetProvider.Instantiate(AssetsPaths.SelectedButton, _interactionButton.transform);
         }

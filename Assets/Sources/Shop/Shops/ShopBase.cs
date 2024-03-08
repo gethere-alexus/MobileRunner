@@ -7,7 +7,7 @@ using Sources.Money;
 using Sources.StaticData;
 using Sources.Utils;
 
-namespace Sources.Shop
+namespace Sources.Shop.Shops
 {
     public abstract class ShopBase<TItem> : IDataWriter where TItem : ItemStaticData
     {
@@ -15,12 +15,12 @@ namespace Sources.Shop
         protected readonly TItem[] Items;
         protected List<TItem> PurchasedItems = new();
 
-        protected ItemData<TItem> PreviewedItem;
+        protected ItemData PreviewedItem;
         protected TItem SelectedItem;
 
         private int _observingItemIndex = 0;
 
-        public event Action<ItemData<TItem>> NewItemPreviewed;
+        public event Action<ItemData> NewItemPreviewed;
 
         protected ShopBase(TItem[] items, IWallet wallet, PlayerProgress initProgress = null)
         {
@@ -55,7 +55,7 @@ namespace Sources.Shop
         public abstract void LoadData(PlayerProgress progress);
         public abstract void UpdateData();
 
-        private ItemData<TItem> ConstructItemData(TItem itemStaticData)
+        private ItemData ConstructItemData(TItem itemStaticData)
         {
             ItemStatus itemStatus = ItemStatus.Purchasable;
             if (PurchasedItems.Contains(itemStaticData))
@@ -67,9 +67,9 @@ namespace Sources.Shop
                 }
             }
 
-            return new ItemData<TItem>(Items[_observingItemIndex], itemStatus);
+            return new ItemData(Items[_observingItemIndex], itemStatus);
         }
 
-        public ItemData<TItem> ShowedItem => PreviewedItem;
+        public ItemData ShowedItem => PreviewedItem;
     }
 }
