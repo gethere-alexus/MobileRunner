@@ -4,7 +4,7 @@ using Infrastructure.Services.DataProvider;
 using Infrastructure.Services.Factory.Character;
 using Infrastructure.Services.StaticData;
 using Sources.Money;
-using Sources.Shop.ShopRepresenters;
+using Sources.Shop.Shop;
 using Sources.StaticData;
 using Sources.UI.Elements.Panels;
 using UnityEngine;
